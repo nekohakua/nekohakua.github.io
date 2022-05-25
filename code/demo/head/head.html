@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8">
+        <title>html</title>
+        <base href="http://www.runoob.com/images/" target="_blank">
+        <style type="text/css">
+            body {background-color:yellow}
+            p {color: blue}
+        </style>
+        <!-- 为搜索引擎定义关键词: -->
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <!-- 为网页定义描述内容: -->
+        <meta name="description" content="免费Web教程">
+        <!-- 定义网页作者: -->
+        <meta name="author" content="pwq">
+        <!-- 每10秒钟刷新当前页面: -->
+        <meta http-equiv="refresh" content="10">
+    </head>
+    <body>
+        <img src="logo.png"> - 注意这里我们设置了图片的相对地址。能正常显示是因为我们在 head 部分设置了 base 标签，该标签指定了页面上所有链接的默认 URL,所以该图片的访问地址为"http://www.runoob.com/images/logo.png"
+        <br><br>
+        <a href="http://www.runoob.com/">菜鸟教程</a> - 注意这个链接会在新窗口打开，即便它没有 target="_blank" 属性。因为在 base 标签里我们已经设置了 target 属性的值为 "_blank"。
+        <hr>
+        <p>这是蓝色的文本</p>
+        <hr>
+        <a href="http://www.runoob.com/" style="text-decoration:none">链接没有下横线</a>
+        <hr>
+    </body>
+</html>
