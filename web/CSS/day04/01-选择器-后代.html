@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 设置div的p */
+        div p {
+            color: red;
+        }
+
+        /* 如果注释 div p 两个p都变成绿色 */
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 后代：儿子 孙子 重孙子 -->
+    <p>这是一个p标签</p>
+    <div>
+        <p>这是div的儿子p</p>
+    </div>
+</body>
+</html>
