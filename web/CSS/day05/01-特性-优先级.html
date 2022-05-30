@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box {
+            color: orange;
+        }
+
+        .box {
+            color: blue;
+        }
+
+        body {
+            color: red;
+        }
+
+        /* !important不能提升继承的优先级，只要是继承优先级就是最低 */
+        div {
+            color: pink !important;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- 优先级公式:!important > 行内样式 > id选择器 > 类选择器 > 标签选择器 > 通配符选择器 > 继承 -->
+    <!-- 曰：谁更加精准谁的优先级就越高 -->
+    <div class="box" id="box" style="color: green;">测试优先级</div>
+</body>
+</html>
