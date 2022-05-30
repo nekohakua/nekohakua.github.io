@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- a标签的color继承会失败,所以标签自己有的就用自己的了 -->
+    <div>
+        <a href="#">超链接</a>
+        <!-- h系列的字体大小继承会失败，不是12px也不是原来的大小了 -->
+        <h1>一级标题</h1>
+    </div>
+
+    <h1>一级标题</h1>
+</body>
+</html>
