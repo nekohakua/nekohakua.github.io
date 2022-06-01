@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* 正确写法1 */
+            /* padding: 50px; */
+
+            /* 正确写法2 */
+            /* 如果设计稿没有边框线就不能用 */
+            /* border: 1px solid #000; */
+
+            /* 正确写法3(完美方法) */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+
+            /* 跟父级拉开距离可以在父级用padding,但是为了看问题就用了margin */
+            /* 想把儿子拉下来,结果父级也下来,曰:坑爹 */
+            margin-top: 50px;
+
+            /* 正确写法4 */
+            /* display: inline-block; */
+
+            /* 正确写法5:浮动 */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        /* 垂直布局的块级元素上下的margin会合并,结果为两个的最大值 */
+        .one {
+            /* margin: 50px; */
+            margin: 60px;
+        }
+
+        .two {
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">111</div>
+    <div class="two">222</div>
+</body>
+</html>

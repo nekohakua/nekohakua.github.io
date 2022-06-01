@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            /* 问题:上下没有变,左右变 */
+            /* margin: 100px; */
+
+            /* 问题:上下没有变,左右变 */
+            /* padding: 100px; */
+
+            /* 不转模式的可以加行高就可以改变垂直位置了 */
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内标签:如果通过margin/padding改变行内标签的位置,垂直位置无法生效 -->
+    <span>span</span>
+    <span>span</span>
+</body>
+</html>
