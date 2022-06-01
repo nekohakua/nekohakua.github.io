@@ -19,7 +19,7 @@
             color: red;
         }
 
-        /* !important不能提升继承的优先级，只要是继承优先级就是最低 */
+        /* !important不能提升继承的优先级，只要是继承优先级就是最低，两个最低有!important的优先级高，不然因为层叠性下面的生效 */
         div {
             color: pink !important;
         }
