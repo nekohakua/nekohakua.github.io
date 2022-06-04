@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        
+
+        }
+
+        .father::before {
+            /* 内容必须加 */
+            /* content: ""; */
+            content: "老鼠";
+            color: red;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* 伪元素默认是行内 */
+            display: block;
+            /* 加任何其他标签那种也可以 */
+        }
+
+        .father::after {
+            content: "大米";
+        }
+    </style>
+</head>
+<body>
+    <!-- 伪元素通过CSS创建，装饰不重要的小图 -->
+    <!-- 找父级，在父级里面创建子级标签 -->
+    <div class="father">爱</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* 防止外边距塌陷 */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table; 
+  }
+/* 清除浮动影响 */
+.clearfix:after {
+    clear:both;
+  }
+
+body {
+    background-color: #f3f5f7;
+}
+
+
+/* 版心 */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部 */
+.header {
+    height: 42px;
+    background-color: pink;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+    margin: 30px auto;
+}

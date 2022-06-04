@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动的标签时顶对其的 */
+        /* 浮动：在一行排列，宽高生效，具有行内块特点 */
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+
+            /* 脱离标准流的控制，不占有标准流位置 */
+            float: left;
+
+            margin-top: 50px;
+        }
+
+        .tow {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+
+            /* 脱离标准流的控制 */
+            float: left;
+
+            /* 浮动元素不能通过text-align:center或margin:0 auto居中，浮动优先级更高 */
+            margin: 0 auto;
+        }
+
+        /* 标准流第一个控制的标签 */
+        .three {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="tow">two</div>
+    <div class="three">three</div>
+</body>
+</html>
