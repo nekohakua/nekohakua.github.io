@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            /* 正圆法1 */
+            border-radius: 100px;
+
+            /* 正圆法2:50%是取盒子尺寸的一半 */
+            /* 正圆必须是正方形 */
+            border-radius: 50%;
+        }
+
+        .two {
+            width: 400px;
+            height: 200px;
+            background-color: blue;
+            /* 胶囊法:要保证是长方形,取高度一半  */
+            /* border-radius: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+
+    <div class="two"></div>
+</body>
+</html>

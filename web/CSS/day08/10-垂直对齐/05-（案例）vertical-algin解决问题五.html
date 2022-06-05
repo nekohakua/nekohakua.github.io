@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 600px;
+      height: 600px;
+      background-color: pink;
+      line-height: 600px;
+      text-align: center;
+    }
+
+    /* line-height: 600px让文字垂直居中 */
+    /* line-height: 600px;和vertical-align: middle;让图和文字垂直居中,text-align: center水平居中*/
+    /* 浏览器解析行内和行内块是当作文字处理,我们看是图,浏览器看是文字,所以有基线问题 */
+    img {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <img src="../images/1.jpg" alt="">
+  </div>
+</body>
+</html>

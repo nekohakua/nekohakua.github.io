@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            position: relative;
+            margin: 0 auto;
+            width: 1226px;
+            height: 600px;
+
+        }
+
+        .mask {
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            /* 宽度默认继承父级的,但是绝对定位具备行内块特点,但是没有宽度也没有内容就不会显示 */
+            /* width: 1226px; */
+            /* 如果子级和父级宽度一样也可以这样写 */
+            width: 100%;
+            height: 150px;
+            background-color: rgba(0,0,0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="./images/bg.jpg" alt="">
+        <div class="mask">11</div>
+    </div>
+</body>
+</html>

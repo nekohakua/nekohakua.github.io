@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 不同布局元素的层级关系:标准流 < 浮动 < 定位 (同级时,HTML写在下面的覆盖上面的,记忆:后来者居上);
+            但是可以通过设置提高优先级,z-index:整数;数大者高级,默认值为0;z-index必须配合定位生效;
+        */
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .one {
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            background-color: pink;
+
+            z-index: 1;
+        }
+
+        .two {
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>
