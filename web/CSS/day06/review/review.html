@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 01 -->
+    <!-- <style>
+        li:first-child {
+            background-color: pink;
+        }
+
+        li:last-child {
+            background-color: red;
+        }
+
+        li:nth-child(3) {
+            background-color: green;
+        }
+
+        li:nth-last-child(3) {
+            background-color: blue;
+        }
+    </style> -->
+
+    <!-- 02 -->
+    <!-- <style>
+        /* li:nth-child(2n) {
+            background-color: pink;
+        } */
+
+        /* li:nth-child(2n+1) {
+            background-color: red;
+        } */
+
+        /* li:nth-child(-n+5) {
+            background-color: pink;
+        } */
+
+        li:nth-child(n+5) {
+            background-color: pink;
+        }
+    </style> -->
+
+    <!-- 03 -->
+    <!-- <style>
+        /* li:first-child a {
+            color: green;
+        } */
+
+        li:first-child a:nth-child(3){
+            color: red;
+        }
+    </style> -->
+
+    <!-- 04 -->
+    <!-- <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .father::before {
+            content: "老鼠";
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .father::after {
+            content: "大米";
+        }
+    </style> -->
+
+    <!-- 05 -->
+    <!-- <style>
+        div {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+        }
+
+        .one {
+            background-color: pink;
+        }
+
+        .two {
+            background-color: green;
+        }
+    </style> -->
+
+    <!-- 06 -->
+    <!-- <style>
+        img {
+            float: left;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .one {
+            float: left;
+        }
+
+        .two {
+            float: left;
+        }
+    </style> -->
+
+    <!-- 07 -->
+    <!-- <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+
+        .three {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+    </style> -->
+
+    <!-- 11 12 13 14-->
+    <style>
+        .top {
+            width: 1000px;
+            /* height: 300px; */
+            background-color: #ccc;
+            margin: 0 auto;
+
+            /* 法5： */
+            overflow: hidden;
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .right {
+            float: right;
+            width: 790px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .buttom {
+            height: 200px;
+            background-color: blue;
+        }
+
+        /* 法2：额外标签 */
+        /* .clearfix {
+            clear: both;
+        } */
+
+        /* 法3：单伪元素 */
+        /* .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        } */
+
+        /* 法4：双伪元素法 */
+        /* .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both;
+        } */
+    </style>
+    
+</head>
+<body>
+    <!-- 01 02-->
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul> -->
+
+    <!-- 03 -->
+    <!-- <ul>
+        <li>
+            <a href="#">我是第1个li里面的a1</a>
+            <a href="#">我是第1个li里面的a2</a>
+            <a href="#">我是第1个li里面的a3</a>
+            <a href="#">我是第1个li里面的a4</a>
+            <a href="#">我是第1个li里面的a5</a>
+
+        </li>
+        <li><a href="#">我是第2个li里面的a</a></li>
+        <li><a href="#">我是第3个li里面的a</a></li>
+        <li><a href="#">我是第4个li里面的a</a></li>
+        <li><a href="#">我是第5个li里面的a</a></li>
+        <li><a href="#">我是第6个li里面的a</a></li>
+        <li><a href="#">我是第7个li里面的a</a></li>
+        <li><a href="#">我是第8个li里面的a</a></li>
+    </ul> -->
+
+    <!-- 04 -->
+    <!-- <div class="father">爱</div> -->
+
+    <!-- 05 -->
+    <!-- <div class="one">one</div>
+    <div class="two">two</div> -->
+
+    <!-- 06 -->
+    <!-- <div class="one">one</div>
+    <div class="two">two</div>
+
+    <img src="../images/1.jpg" alt="">
+    作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕    作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕    作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕    作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕    作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕    作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕作用1：图文环绕 -->
+
+    <!-- 07 -->
+    <!-- <div class="one">one</div>
+    <div class="two">two</div>
+    <div class="three">three</div> -->
+
+    <!-- 11 12 13 14-->
+    <div class="top clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- 法2：额外标签 -->
+        <!-- <div class="clearfix"></div> -->
+    </div>
+    <div class="buttom"></div>
+</body>
+</html>
