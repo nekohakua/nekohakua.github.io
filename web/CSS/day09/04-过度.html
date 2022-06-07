@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 过度配合hover使用,谁变化谁加过度属性 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            /* 法1 */
+            /* transition: width 1s, background-color 2s; */
+
+            /* 法2：工作时，一般这样写 */
+            /* all是hover里有且这里有的属性 */
+            transition: all 1s;
+        }
+
+        .box:hover {
+            width: 600px;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
