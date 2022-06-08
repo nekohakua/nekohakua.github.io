@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学成在线</title>
+    <title>我的学成在线</title>
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+    <!-- CSS最终呈现应该:总体先写 浮动/display; 盒子模型；文字样式。 -->
 
-    <!-- 头部 -->
+    <!-- header头部:负责头部区域的样式  wrapper:只负责版心效果，需要版心居中调用一次就可以-->
     <div class="header wrapper">
-        <!-- 标题 -->
         <h1>
-            <a href="#"><img src="./images/logo.png" alt=""></a> 
+            <a href="#"><img src="./images/logo.png" alt=""></a>
         </h1>
 
         <!-- 导航 -->
         <div class="nav">
             <ul>
+                <!-- 想在一行排，第一个想法就是浮动 -->
                 <li><a href="#">首页</a></li>
                 <li><a href="#">课程</a></li>
                 <li><a href="#">职业规划</a></li>
@@ -27,18 +28,19 @@
 
         <!-- 搜索 -->
         <div class="search">
-            <input type="text" placeholder="请输入关键词">
+            <input type="text" placeholder="输入关键词">
+            <!-- 修图大师不太准，最好看原图的像素 -->
             <button></button>
         </div>
 
         <!-- 用户 -->
         <div class="user">
             <img src="./images/user.png" alt="">
-            张三
+            <span>lilei</span>
         </div>
     </div>
 
-    <!-- 轮播 -->
+    <!-- 轮播图banner -->
     <div class="banner">
         <div class="wrapper">
             <div class="left">
@@ -57,17 +59,18 @@
             <div class="right">
                 <h2>我的课程表</h2>
                 <div class="content">
+                    <!-- 用其他也行 -->
                     <dl>
                         <dt>继续学习 程序语言设计</dt>
-                        <dd>正在学习-使用对象</dd>
+                        <dd>正在学习-使用对象</dt>
                     </dl>
                     <dl>
                         <dt>继续学习 程序语言设计</dt>
-                        <dd>正在学习-使用对象</dd>
+                        <dd>正在学习-使用对象</dt>
                     </dl>
                     <dl>
                         <dt>继续学习 程序语言设计</dt>
-                        <dd>正在学习-使用对象</dd>
+                        <dd>正在学习-使用对象</dt>
                     </dl>
                 </div>
                 <a href="#" class="more">全部课程</a>
@@ -75,9 +78,9 @@
         </div>
     </div>
 
-    <!-- 精品课程 -->
+    <!-- 精品推荐 -->
     <div class="goods wrapper">
-        <h2>精品课程</h2>
+        <h2>精品推荐</h2>
         <ul>
             <li><a href="#">JQuery</a></li>
             <li><a href="#">JQuery</a></li>
@@ -89,19 +92,25 @@
         <a href="#" class="xingqu">修改兴趣</a>
     </div>
 
-    <!-- 精品推荐 -->
-    <div class="box wrapper clearfix">
+    <!-- 精品推荐课程 -->
+    <div class="box wrapper">
+        <!-- 精品推荐的标题 -->
         <div class="title">
             <h2>精品推荐</h2>
             <a href="#">查看全部</a>
         </div>
-        <div class="content">
+
+        <!-- 精品推荐的内容 -->
+        <!-- 把这里的浮动清除掉 -->
+        <!-- 动态列表不方便加高度 -->
+        <div class="content clearfix">
             <ul>
                 <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
+                        <!-- 定位的hot小图 -->
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
                 </li>
@@ -112,64 +121,56 @@
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
                         <p><span>高级</span>  •  1125人在学习</p>
                         <img src="./images/hot.png" alt="" class="hot">
                     </a>
-                </li>
-                <li>
+                </li>                <li>
                     <a href="#">
                         <img src="./images/course07.png" alt="">
                         <h3>Think PHP 5.0 博客系统实战项目演练</h3>
@@ -181,14 +182,15 @@
         </div>
     </div>
 
-    <!-- 脚 -->
+    <!-- 版权 -->
+    <!-- 注意要清除浮动的影响 -->
     <div class="footer">
         <div class="wrapper">
             <div class="left">
                 <img src="./images/logo.png" alt="">
-                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br>
                     © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
-                <a href="#">下载APP</a>
+                    <a href="#">下载APP</a>
             </div>
             <div class="right">
                 <dl>
@@ -207,8 +209,8 @@
                     <dd><a href="#">合作导师</a></dd>
                 </dl>
             </div>
-
         </div>
     </div>
+
 </body>
 </html>

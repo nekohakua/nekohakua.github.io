@@ -235,3 +235,109 @@ h1 {
     color: #00a4ff;
 }
 
+/* 精品推荐 */
+.box {
+    margin-top: 36px;
+}
+
+.box .title {
+    height: 41px;
+}
+
+.box .title h2 {
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.box .title a {
+    float: right;
+    margin-right: 35px;
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.box .content li {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 225px;
+    height: 270px;
+    background-color: #fff;
+}
+
+.box .content .hot {
+    position: absolute;
+    top: 4px;
+    right: -6px;
+}
+
+.box .content li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.box .content h3 {
+    font-size: 14px;
+    margin: 20px;
+    font-size: 14px;
+    color: #606060;
+}
+
+.box .content p {
+    margin: 0 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.box .content span {
+    font-size: 14px;
+    color: #ff7c2d;
+}
+
+/* 脚 */
+.footer {
+    height: 417px;
+    /* background-color: pink; */
+    background-color: #ffffff;
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.footer .left {
+    float: left;
+    width: 462px;
+}
+
+.footer .left img {
+    margin-bottom: 25px;
+}
+
+.footer .left p {
+    color: #666666;
+    font-size: 12px;
+}
+
+.footer .left a {
+    display: block;
+    margin-top: 15px;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    color: #00a4ff;
+    border: 1px solid #00a4ff;
+}
+
+.footer .right {
+    float: right;
+}
+
+.footer .right dl {
+    float: left;
+    margin-left: 120px;
+}
+
+
+

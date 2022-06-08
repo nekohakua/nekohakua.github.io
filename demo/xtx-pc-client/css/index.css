@@ -1,0 +1,539 @@
+/* -------------------------------xtx-entry的样式 */
+.xtx-entry {
+  height: 500px;
+  background-color: #f5f5f5;
+}
+
+.xtx-entry .container {
+  position: relative;
+  height: 500px;
+  /* ps */
+  /* background-color: pink; */
+}
+
+
+/* ---------------------banner的样式 */
+.xtx-entry .container .banner {
+  height: 500px;
+  /* ps */
+  /* background-color: skyblue; */
+  /* 溢出隐藏 */
+  overflow: hidden;
+}
+
+.xtx-entry .banner ul {
+  /* 让内部的轮播图有足够空间一行中显示 */
+  width: 200%;
+}
+
+.xtx-entry .banner li {
+  float: left;
+}
+
+.xtx-entry .banner .prev,
+.xtx-entry .banner .next {
+  position: absolute;
+  top: 228px;
+  left: 260px;
+  width: 45px;
+  height: 45px;
+  /* background-color: rgba(0,0,0,.2); */
+  background: rgba(0,0,0,.2) url('../images/sprites.png') 14px -60px;
+  border-radius: 50%;
+}
+
+.xtx-entry .banner .next {
+  left: 1185px;
+  background-position: -23px -60px;
+}
+
+.xtx-entry .indicator {
+  position: absolute;
+  left: 672px;
+  bottom: 31px;
+}
+
+.xtx-entry .indicator li {
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background-color: rgba(255,255,255,.4);
+  border-radius: 50%;
+}
+
+.xtx-entry .indicator li.active {
+  background-color: #fff;
+}
+
+/* -------------------category的样式 */
+.xtx-entry .category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 251px;
+  height: 500px;
+  background-color: rgba(0,0,0,.8);
+}
+
+.xtx-entry .category li {
+  /* 父相 */
+  position: relative;
+  height: 50px;
+  padding-left: 36px;
+  line-height: 50px;
+}
+
+.xtx-entry .category a {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.xtx-entry .category a::after {
+  content: '';
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  width: 6px;
+  height: 11px;
+  /* ps */
+  /* background-color: red; */
+  background: url('../images/sprites.png') -40px -111px;
+}
+
+.xtx-entry .category span {
+  font-size: 14px;
+}
+
+.xtx-entry .category span:first-child {
+  margin-left: 15px;
+}
+
+.xtx-entry .category li:hover {
+  background-color: #27ba9b;
+}
+
+/* ---------------------------xtx-new-goods的样式 */
+.xtx-new-goods {
+  height: 520px;
+  /* ps */
+  /* background-color: pink; */
+}
+
+.xtx-new-goods .goods-hd {
+  height: 114px;
+  line-height: 114px;
+}
+
+.xtx-new-goods .goods-hd h2 {
+  float: left;
+  height: 114px;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.xtx-new-goods .goods-hd span {
+  margin-left: 34px;
+  font-size: 16px;
+  color: #999999;
+}
+
+.xtx-new-goods .goods-hd .more {
+  float: right;
+  color: #999;
+}
+
+.xtx-new-goods .goods-hd .more::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  margin-left: 13px;
+  background: url('../images/sprites.png') 0px -111px;
+}
+
+.xtx-new-goods .goods-list {
+  height: 405px;
+  /* ps */
+  /* background-color: purple; */
+  line-height: 1;
+}
+
+.xtx-new-goods .goods-list li {
+  position: relative;
+  top: 0;
+  float: left;
+  width: 304px;
+  height: 405px;
+  margin-right: 8px;
+  background-color: #f0f9f4;
+  text-align: center;
+  /* 过渡 */
+  transition: top .3s , box-shadow .3s;
+}
+
+.xtx-new-goods .goods-list li:hover {
+  top: -3px;
+  box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+.xtx-new-goods .goods-list li:last-child {
+  margin-right: 0;
+}
+
+.xtx-new-goods .goods-list img {
+  width: 100%;
+}
+
+.xtx-new-goods .goods-list .title {
+  height: 40px;
+  margin-top: 22px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.xtx-new-goods .goods-list .price {
+  color: #9a2e1f;
+  font-size: 23px;
+}
+
+.xtx-new-goods .price span {
+  font-size: 17px;
+}
+
+/* ------------------------xtx-fresh-goods的样式 */
+.xtx-fresh-goods {
+  height: 706px;
+  /* ps */
+  /* background-color: pink; */
+}
+
+.xtx-fresh-goods .goods-hd {
+  height: 96px;
+  line-height: 96px;
+  /* ps */
+  /* background-color: skyblue; */
+  /* 精准布局 */
+}
+
+.xtx-fresh-goods .goods-hd h2 {
+  float: left;
+  height: 96px;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.xtx-fresh-goods .goods-hd .more {
+  float: right;
+  color: #999;
+}
+
+.xtx-fresh-goods .goods-hd .more::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  margin-left: 13px;
+  background: url('../images/sprites.png') 0px -111px;
+}
+
+.xtx-fresh-goods .goods-hd .tabs {
+  float: right;
+  margin-right: 52px;
+}
+
+.xtx-fresh-goods .tabs li {
+  float: left;
+}
+
+.xtx-fresh-goods .tabs a {
+  padding: 2px 7px;
+  margin-right: 6px;
+}
+
+.xtx-fresh-goods .tabs a.active {
+  background-color: #27ba9b;
+  color: #fff;
+}
+
+.xtx-fresh-goods .goods-content {
+  height: 617px;
+  /* ps */
+  /* background-color: cyan; */
+}
+
+.xtx-fresh-goods .goods-pic {
+  width: 240px;
+  height: 610px;
+  /* ps */
+  /* background-color: yellow; */
+}
+
+.xtx-fresh-goods .goods-pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.xtx-fresh-goods .goods-list {
+  width: 1000px;
+  height: 610px;
+  /* ps */
+  /* background-color: green; */
+}
+
+.xtx-fresh-goods .goods-list li {
+  /* 父相 */
+  position: relative;
+  float: left;
+  width: 242px;
+  height: 304px;
+  border: 2px solid transparent;
+  /* 自动内减 */
+  box-sizing: border-box;
+  margin-left: 8px;
+  margin-bottom: 3px;
+  /* ps */
+  /* background-color: orange; */
+  /* 溢出隐藏 */
+  overflow: hidden;
+  /* 过渡 */
+  /* transition: border-color .3s; */
+}
+
+.xtx-fresh-goods .goods-list .img-box {
+  height: 204px;
+  /* ps */
+  /* background-color: yellow; */
+  text-align: center;
+}
+
+.xtx-fresh-goods .img-box img {
+  width: 184px;
+  height: 184px;
+  margin-top: 8px;
+}
+
+.xtx-fresh-goods .info {
+  padding-left: 29px;
+  padding-right: 47px;
+  line-height: 1.2;
+}
+
+.xtx-fresh-goods .info h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.xtx-fresh-goods .info .type {
+  height: 28px;
+}
+
+.xtx-fresh-goods .info .price {
+  color: #9a2e1f;
+  font-size: 22px;
+}
+
+.xtx-fresh-goods .price span {
+  font-size: 17px;
+}
+
+.xtx-fresh-goods .goods-list .find {
+  position: absolute;
+  left: 0;
+  bottom: -84px;
+  /* 开发中的辅助设置 */
+  /* top: 0; */
+  width: 242px;
+  height: 84px;
+  background-color: #27ba9b;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  /* 过渡 */
+  transition: bottom .3s;
+}
+
+.xtx-fresh-goods .goods-list li:hover {
+  border-color: #27ba9b;
+}
+
+.xtx-fresh-goods .goods-list li:hover .find {
+  bottom: 0;
+}
+
+.xtx-fresh-goods .find p:nth-child(1) {
+  width: 125px;
+  border-bottom: 1px solid #a9dbcc;
+  padding-bottom: 7px;
+  margin: 19px auto 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.xtx-fresh-goods .find p:nth-child(2) {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* --------------------------------topics的样式 */
+.xtx-topics {
+  height: 512px;
+  margin-top: 53px;
+  background-color: #f5f5f5;
+}
+
+.xtx-topics .container {
+  height: 512px;
+  /* ps */
+  /* background-color: pink; */
+}
+
+.xtx-topics .goods-hd {
+  height: 115px;
+  /* ps */
+  /* background-color: orange; */
+  line-height: 115px;
+}
+
+.xtx-topics .goods-hd h2 {
+  float: left;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.xtx-topics .goods-hd .more {
+  float: right;
+  color: #999;
+}
+
+.xtx-topics .goods-hd .more::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  margin-left: 13px;
+  background: url('../images/sprites.png') 0px -111px;
+}
+
+.xtx-topics .goods-list li {
+  float: left;
+  width: 404px;
+  height: 356px;
+  margin-right: 13px;
+  background-color: #fff;
+}
+
+.xtx-topics .goods-list li:last-child {
+  margin-right: 0;
+}
+
+.xtx-topics li:nth-child(1) .box {
+  position: relative;
+  height: 288px;
+  /* ps */
+  /* background-color: skyblue; */
+  background: url('../uploads/topic_goods_1.jpg');
+  background-size: 100% 100%;
+}
+
+.xtx-topics li:nth-child(2) .box {
+  position: relative;
+  height: 288px;
+  background: url('../uploads/topic_goods_2.jpg');
+  background-size: 100% 100%;
+}
+
+.xtx-topics li:nth-child(3) .box {
+  position: relative;
+  height: 288px;
+  background: url('../uploads/topic_goods_3.jpg');
+  background-size: 100% 100%;
+}
+
+.xtx-topics .goods-list .box::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0,0,0,.3); */
+  /* 拓展：线性渐变 */
+  background-image: linear-gradient( to top,rgba(0,0,0,.8) , transparent 50%);
+}
+
+.xtx-topics .goods-list .info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 67px;
+  padding-left: 14px;
+  /* 自动内减 */
+  box-sizing: border-box;
+  /* ps */
+  /* background-color: orange; */
+}
+
+.xtx-topics .info h3 {
+  height: 33px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.xtx-topics .info .type {
+  color: #999999;
+}
+
+.xtx-topics .info .price {
+  position: absolute;
+  top: 12px;
+  left: 302px;
+  width: 81px;
+  height: 27px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 27px;
+  color: #9a2e1f;
+}
+
+.xtx-topics .social {
+  height: 67px;
+  /* ps */
+  /* background-color: orange; */
+  font-size: 14px;
+  line-height: 67px;
+}
+
+
+.xtx-topics .social span:nth-child(1) {
+  margin-left: 17px;
+}
+
+.xtx-topics .social span:nth-child(2) {
+  margin-left: 24px;
+}
+
+.xtx-topics .social span:nth-child(3) {
+  float: right;
+  margin-right: 18px;
+}
+
+.xtx-topics .social span::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  /* background-color: red; */
+  background: url('../images/sprites.png');
+  vertical-align: middle;
+}
+
+.xtx-topics .social span:nth-child(1)::before {
+  background-position: -119px -109px;
+}
+
+.xtx-topics .social span:nth-child(2)::before {
+  background-position: -159px -109px;
+}
+
+.xtx-topics .social span:nth-child(3)::before {
+  background-position: -199px -109px;
+}
