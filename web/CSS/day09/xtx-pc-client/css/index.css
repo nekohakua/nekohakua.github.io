@@ -1,0 +1,38 @@
+/* banner */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: pink;
+}
+
+/* 因为banner中心是img，侧导航等盒子盖在上面，所以要用定位，而不是浮动了 */
+
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0,0,0, .8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    /* block宽度和父级一样的*/
+    padding-left: 35px;
+    padding-right: 19px;
+    display: block;
+    /* width: 250px; */
+    height: 50px;
+    background-color: pink;
+}

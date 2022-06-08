@@ -165,3 +165,78 @@
     text-align: center;
     line-height: 15px;
 }
+
+/* 版权footer */
+.footer {
+    height: 343px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1393px;
+}
+
+.footer .top {
+    padding-top: 59px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 1px solid #434343;
+}
+
+.footer .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+    /* 字居中 */
+    line-height: 58px;
+    /* background-color: pink; */
+}
+
+.footer .top li:last-child {
+    margin-right: 0;
+}
+
+/* 伪元素的标签是行内 */
+/* 记得：如果行内块和行内文字在vertical-align: middle;加了，行高加了还没有完美居中就用定位/浮动 */
+.footer .top li::before {
+    /* 图居中 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* display: inline-block; */
+    content: "";
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    /* 居中 */
+    /* vertical-align: middle; */
+}
+
+.footer .top li span {
+    margin-left: 77px;
+    font-size: 28px;
+    color: #fff;
+}
+
+/* 第二个li里面的berfore添加背景图位置属性 */
+.footer .top li:nth-child(2)::before {
+    background-position: -64px 0;
+}
+
+.footer .bottom {
+    padding-top: 40px;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer .bottom a {
+    color: #999;
+    font-size: 14px;
+}
+
+.footer .bottom p {
+    margin-bottom: 20px;
+}
