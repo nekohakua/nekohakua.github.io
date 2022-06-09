@@ -28,11 +28,229 @@
 }
 
 .banner .aside a {
+    position: relative;
     /* block宽度和父级一样的*/
     padding-left: 35px;
     padding-right: 19px;
     display: block;
     /* width: 250px; */
     height: 50px;
+    /* background-color: pink; */
+    color: #fff;
+}
+
+.banner .aside span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+/* 在a的最后添加一个> */
+.banner .aside a::after {
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: "";
+    width: 6px;
+    height: 11px;
+    /* background-color: red; */
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+}
+
+/* 箭头 */
+.prev,
+.next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0,0,0, .2);
+    background-image: url(../images/sprites.png);
+    border-radius: 50%;
+}
+
+/* 一个背景图的位置要负责改变箭头在盒子里面的位置和改变精灵图的位置，导致精灵图测量不准 */
+/* 法2：书写标签时，a负责盒子，里面再添加一个span负责箭头 */
+.prev {
+    left: 260px;
+    /* 法1：书写背景图位置属性，用浏览器调试工具调试合适位置 */
+    background-position: 14px -60px;
+}
+
+.next {
+    right: 10px;
+    background-position: -23px -60px;
+}
+
+/* 圆点 */
+.banner ol {
+    position: absolute;
+    bottom: 31px;
+    left: 680px;
+    width: 200px;
+    height: 10px;
+    /* background-color: pink; */
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255, .4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner ol .current {
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+/* 宽高不写，靠内容撑开 */
+
+.goods .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    float: left;
+    height: 114px;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.goods .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a,
+.shengxian .hd .more {
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,
+.shengxian .hd .more::after {
+    content: "";
+    display: inline-block;
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    /* background-color: green; */
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+/* 看谁和第一个li对齐，就是谁影响了（h2），就找到那个给它检查（h2的高117比父级的多了3像素） */
+/* 所以给h2一个高114 */
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd li:last-child {
+    margin-right: 0;
+}
+
+.goods .bd li img {
+    /* 图片的高会等比例缩放 */
+    width: 304px;
+}
+
+.goods .bd li h3 {
+    /* 因为文字有行高，所以给修图大师测量的更小的值 */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods .bd li div {
+    color: #912e1f;
+    font-size: 17px;
+}
+
+.goods .bd li span {
+    font-size: 23px;
+}
+
+/* b是行内 */
+.goods .bd li b {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    /* 因为base.css设置了默认的行高是1.5倍，所以这里设置一下 */
+    line-height: 24px;
+}
+
+/* 生鲜 */
+.shengxian .hd {
+    height: 96px;
+    /* background-color: pink; */
+    line-height: 69px;
+}
+
+.shengxian .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.shengxian .hd .more {
+    float: right;
+}
+
+.shengxian .hd ul {
+    float: right;
+    margin-right: 65px;
+}
+
+.shengxian .hd ul li {
+    float: left;
+}
+
+.shengxian .hd li a {
+     padding: 2px 7px;
+     margin-right: 6px;
+}
+
+.shengxian .hd li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.shengxian .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
     background-color: pink;
+}
+
+.shengxian .bd .right {
+    float: left;
+    width: 1000px;
+    height: 610px;
+    background-color: blue;
 }
