@@ -1,20 +1,13 @@
-/* 各个页面相同的样式表：如 版心，头，尾 */
-
-/* 版心 */
 .wrapper {
     width: 1240px;
     margin: 0 auto;
 }
 
-/* 快捷导航 */
 .shortcut {
     height: 52px;
-    background-color: #333;
-}
-
-.shortcut .wrapper {
-    height: 52px;
     /* background-color: pink; */
+    background-color: #333333;
+    line-height: 52px;
 }
 
 .shortcut .wrapper ul {
@@ -23,83 +16,84 @@
 
 .shortcut .wrapper li {
     float: left;
-    line-height: 52px;
 }
 
+.shortcut .wrapper a {
+    padding-right: 18px;
+    padding-left: 18px;
+    font-size: 12px;
+    color: #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+}
+
+/* ! */
 .shortcut .wrapper li:last-child a {
     border-right: 0;
 }
 
-.shortcut .wrapper a {
-    padding: 0 16px;
-    border-right: 1px solid #666;
-    font-size: 14px;
-    color: #dcdcdc;
-}
-
 .shortcut .wrapper a span {
-    /* 行内，行内块，浏览器把图片当文字处理，基线对齐 */
     display: inline-block;
     margin-right: 8px;
     width: 11px;
     height: 16px;
+    /* background-color: pink; */
     background-image: url(../images/sprites.png);
     background-position: -160px -70px;
-    /* 解决对不齐 */
     vertical-align: middle;
 }
 
-/* 头部 */
+/* ! */
 .header {
     margin: 30px auto;
     height: 70px;
     /* background-color: pink; */
 }
 
+/* ! */
 .logo {
     float: left;
-    width: 207px;
+    width: 208px;
+    height: 70px;
+}
+
+.header .logo a {
+    display: block;
+    width: 208px;
     height: 70px;
     /* background-color: pink; */
-}
-
-/* logo 搜索引擎优化的做法 */
-/* ? */
-.logo h1 {
-    width: 207px;
-    height: 70px;
-}
-
-.logo h1 a {
-    display: block;
-    width: 207px;
-    height: 70px;
     background-image: url(../images/logo.png);
     background-size: contain;
-    /* 字号归零，看不见h1的字了 */
     font-size: 0;
 }
 
-/* 导航最外面的标签，所以浮动只是浮动整体外面的标签，要让li浮动要在li设置浮动 */
-.nav {
-    /* 不写宽度是因为固定死不好，万一字数多就不好了， 让字自己撑开*/
-    margin-left: 40px;
+/* x */
+/* .header .logo h1 {
+    float: left;
+    width: 208px;
+    height: 70px;
+    background-color: pink;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    font-size: 0;
+} */
+
+.header .nav {
     float: left;
     height: 70px;
-    /* background-color: pink; */
+    margin-left: 40px;
 }
 
-.nav li {
+.header .nav li {
     float: left;
     margin-right: 47px;
     line-height: 70px;
 }
 
-.nav li a {
+.header .nav a {
     padding-bottom: 7px;
 }
 
-.nav li a:hover {
+.header .nav a:hover {
     color: #27ba9b;
     border-bottom: 1px solid #27ba9b;
 }
@@ -107,21 +101,17 @@
 .search {
     position: relative;
     float: left;
-    /* 量时点搜索区域移动到logo区域 */
     margin-top: 24px;
-    /* 82 - 48 */
     margin-left: 48px;
     width: 172px;
     height: 30px;
-    /* background-color: red; */
+    /* background-color: pink; */
     border-bottom: 2px solid #e7e7e7;
 }
 
 .search input {
-    /* 搜一搜的边距 */
     padding-left: 30px;
     width: 172px;
-    /* 30 - 2 */
     height: 28px;
 }
 
@@ -133,14 +123,11 @@
 .search span {
     position: absolute;
     left: 2px;
-    top: 0;
-    /* dib */
-    /* display: inline-block; */
+    top: 0px;
     width: 18px;
     height: 18px;
-    /* background-color: pink; */
     background-image: url(../images/sprites.png);
-    background-position: -79px -69px;
+    background-position: -80px -70px;
 }
 
 .car {
@@ -150,52 +137,43 @@
     margin-left: 15px;
     width: 23px;
     height: 23px;
-    /* background-color: blue; */
     background-image: url(../images/sprites.png);
     background-position: -119px -69px;
 }
 
 .car span {
-    /* 绝对标签又行内块特点，所以宽高可以加了，所以不用转换模式了 */
     position: absolute;
-    /* 浏览器调试工具调 */
     right: -13px;
     top: -6px;
     width: 20px;
     height: 15px;
     background-color: #e26237;
     border-radius: 8px;
-
     font-size: 13px;
     text-align: center;
     line-height: 15px;
 }
 
-/* 版权footer */
+/* footer */
 .footer {
-    height: 343px;
+    height: 341px;
     background-color: #333;
 }
 
-.footer .wrapper {
-    width: 1393px;
-}
-
 .footer .top {
-    padding-top: 59px;
-    padding-left: 135px;
-    height: 175px;
+    padding: 58px 112px 55px;
+    width: 1241px;
+    height: 171px;
     border-bottom: 1px solid #434343;
 }
 
 .footer .top li {
     position: relative;
     float: left;
-    margin-right: 300px;
-    width: 195px;
-    height: 58px;
-    /* 字居中 */
-    line-height: 58px;
+    margin-right: 210px;
+    width: 196px;
+    height: 60px;
+    line-height: 60px;
     /* background-color: pink; */
 }
 
@@ -203,35 +181,33 @@
     margin-right: 0;
 }
 
-/* 伪元素的标签是行内 */
-/* 记得：如果行内块和行内文字在vertical-align: middle;加了，行高加了还没有完美居中就用定位/浮动 */
 .footer .top li::before {
-    /* 图居中 */
     position: absolute;
     left: 0;
     top: 0;
-    /* display: inline-block; */
     content: "";
     width: 58px;
     height: 58px;
+    /* background-color: pink; */
     background-image: url(../images/sprites.png);
-    /* 居中 */
-    /* vertical-align: middle; */
 }
 
-.footer .top li span {
+.footer .top span {
     margin-left: 77px;
     font-size: 28px;
     color: #fff;
 }
 
-/* 第二个li里面的berfore添加背景图位置属性 */
 .footer .top li:nth-child(2)::before {
-    background-position: -64px 0;
+    background-position: -65px 0;
+}
+
+.footer .top li:nth-child(3)::before {
+    background-position: -130px 0;
 }
 
 .footer .bottom {
-    padding-top: 40px;
+    padding: 40px;
     color: #999;
     font-size: 14px;
     text-align: center;
