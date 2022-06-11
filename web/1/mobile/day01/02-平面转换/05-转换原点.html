@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 250px;
+            border: 1px solid #000;
+            transition: all 2s;
+            /* 围着这个点转，改变的是转换的中心点，所以也可以改位移，缩放中心点 */
+            /* 也可以填像素 */
+            transform-origin: right bottom;
+            transform-origin: left bottom;
+
+        }
+
+        img:hover {
+            /* 顺时针 */
+            transform: rotate(360deg);
+            /* 逆时针 */
+            /* transform: rotate(-360deg); */
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/rotate.png" alt="">
+</body>
+</html>

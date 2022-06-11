@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            transition: all .5s;
+        }
+
+        .father:hover .son {
+            /* transform: translate(100px, 50px); */
+
+            /* 200px,50px */
+            /* transform: translate(100%, 50%); */
+
+            /* transform: translate(-100%, 50%); */
+
+            /* 只给一个值控制水平 */
+            /* transform: translate(100px); */
+
+            transform: translateX(100px);
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+</body>
+</html>
