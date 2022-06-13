@@ -22,10 +22,31 @@
         height: 112px;
         border: 5px solid #000;
         margin: 100px auto;
+        overflow: hidden;
       }
 
-      
+      .box ul {
+        /* 浮动时容下所有图片 */
+        /* width: 1400px; */
+        width: 2000px;
+        animation: move 7s infinite linear;
+      }
 
+      .box li {
+        float: left;
+      }
+
+      /* 定义动画:位移, ul左侧移动到1400px */
+      @keyframes move {
+        to {
+          transform: translateX(-1400px);
+        }
+      }
+
+      /* 用户鼠标移入box,动画暂停 */
+      .box:hover ul {
+        animation-play-state: paused;
+      }
       
     </style>
   </head>
@@ -39,6 +60,10 @@
         <li><img src="./images/5.jpg" alt="" /></li>
         <li><img src="./images/6.jpg" alt="" /></li>
         <li><img src="./images/7.jpg" alt="" /></li>
+        <!-- 保证显示区域不能留白,因为区域3张所以补充3个 -->
+        <li><img src="./images/1.jpg" alt="" /></li>
+        <li><img src="./images/2.jpg" alt="" /></li>
+        <li><img src="./images/3.jpg" alt="" /></li>
       </ul>
     </div>
   </body>

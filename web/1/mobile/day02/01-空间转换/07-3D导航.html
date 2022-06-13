@@ -24,11 +24,16 @@
             width: 100px;
             height: 40px;
             line-height: 40px;
+            /* 两个状态的变化用过度,多个状态的变化用动画(中间过程可以控制,比如循环) */
             transition: all .5s;
             transform-style: preserve-3d;
 
             /* 辅助看看立体盒子 */
             /* transform: rotateX(-20deg) rotateY(30deg); */
+
+            /* 测试空间缩放效果,遇见的不多 */
+            transform: scaleZ(5);
+            transform: scale3d(0.5, 1.1, 2);
         }
 
         /* a是行内 */

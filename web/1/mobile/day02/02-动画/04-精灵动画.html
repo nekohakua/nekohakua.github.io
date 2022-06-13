@@ -3,18 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>精灵动画</title>
+  <!-- 补间动画工作出现多,steps(逐帧动画)是配合精灵图的 -->
   <style>
     .box {
       /* 1680/12 */
       width: 140px;
       height: 140px;
-      /* border: 1px solid #000; */
+      border: 1px solid #000;
+
+      /* 盒子开始定位也是0,0; 动画开始也是0,0*/
       background-image: url(./images/bg.png);
 
+      /* 补间动画 */
+      animation: move 1s;
+
+      /* 逐帧动画,12是精灵图的小图个数 */
+      /* 多组动画 */
+      animation: 
+      move 1s steps(12) infinite,
+      run 1.5s forwards linear;
     }
 
+    @keyframes move {
+      /* from {
+        background-position: 0 0;
+      } */
+      to {
+        /* 精灵图的长度 */
+        /* 正数右移动(像padding-left: 20px),负数让背景左移动 */
+        background-position: -1680px 0;
+      }
+    }
 
-
+    /* 定义一个盒子移动到800px的动画 */
+    @keyframes run {
+      /* 动画的开始状态和盒子默认样式相同时,可以省略开始的状态的代码 */
+      /* from {
+        transform: translateX(0);
+      } */
+      to {
+        transform: translateX(800px);
+      }
+    }
 
   </style>
 </head>

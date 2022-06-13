@@ -11,13 +11,39 @@
             height: 100px;
             background-color: pink;
 
+            /* 使用动画 */
+            animation: change 1s;
+
+            animation: change2 1s;
             
         }
 
         /* 一. 定义动画：从200变大到600 */
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
         
 
         /* 二. 定义动画：200 到 500*300 到 800*500 */
+        /* 百分比是动画总时长的占比 */
+        @keyframes change2 {
+            0% {
+                width: 200px;
+            }
+            50% {
+                width: 500px;
+                height: 300px;
+            }
+            100% {
+                width: 800px;
+                height: 500px;
+            }
+        }
         
     </style>
 </head>

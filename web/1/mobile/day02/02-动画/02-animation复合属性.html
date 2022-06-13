@@ -11,6 +11,23 @@
             height: 100px;
             background-color: pink;
             
+            /* [没有顺序]动画名称(必写) 动画时长(必写) 速度曲线(linear,) 延迟时间 重复次数 动画方向 执行完毕时状态 */
+            /* 如果又两个时间值,第一个是动画时长,第二个是延迟时间 */
+            animation: change 1s linear;
+
+            /* steps(3)分步动画,分成3步;重复3次 */
+            animation: change 1s steps(3) 1s 3;
+
+            /* infinite:无限循环;alternate:轮流 */
+            /* 重要 */
+            animation: change 1s infinite alternate;
+
+            /* 执行完毕时状态不能添加:重复次数 动画方向 */
+            /* backwards(没写默认为这个):回到初值 */
+            animation: change 1s backwards;
+            /* forwards:停留在结束的状态 */
+            /* 重要 */
+            animation: change 1s forwards;
         }
 
         @keyframes change {

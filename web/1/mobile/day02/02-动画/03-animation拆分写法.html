@@ -11,11 +11,17 @@
             height: 100px;
             background-color: pink;
 
+            animation-name: change;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            /* 工作一般用复合属性 */
             
         }
 
         .box:hover {
-           
+        /* 暂停 */
+            animation-play-state: running;
+            animation-play-state: paused;
         }
 
 
