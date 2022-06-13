@@ -1,0 +1,198 @@
+<!-- 01-01 01-02 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all .5s;
+        }
+
+        .box:hover {
+            transform: translate3d(10px, 20px, 50px);
+            transform: translateZ(199px);
+        }
+
+        body {
+            perspective: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 01-03 01-04 01-05-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            margin: 100px auto;
+            perspective: 1000px;
+        }
+
+        img {
+            width: 300px;
+            transition: all 2s;
+        }
+
+        .box img:hover {
+            transform: rotateZ(390deg);
+            transform: rotateX(69deg);
+            transform: rotateX(-49deg);
+            transform: rotateY(59deg);
+            transform: rotateY(-77deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../01-空间转换/images/hero.jpeg" alt="">
+    </div>
+</body>
+</html> -->
+
+<!-- 01-06 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cube {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+
+        .cube div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .front {
+            background-color: orange;
+            transform: translateZ(200px);
+        }
+
+        .back {
+            background-color: green;
+        }
+
+        .cube:hover {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="front">前面</div>
+        <div class="back">后面</div>
+    </div>
+</body>
+</html> -->
+
+<!-- 01-07 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .navs {
+            width: 300px;
+            height: 40px;
+            margin: 50px auto;
+        }
+
+        .navs li {
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            transition: all .5s;
+            transform-style: preserve-3d;
+
+            /* ! */
+            /* transform: rotateX(-20deg) rotateY(30deg); */
+        }
+
+        .navs li a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .navs li a:first-child {
+            background-color: pink;
+            transform: translateZ(20px);
+
+        }
+
+        .navs li a:last-child {
+            background-color: blue;
+            transform: rotateX(90deg) translateZ(20px);
+
+        }
+
+        .navs li:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="navs">
+        <ul>
+            <li>
+                <a href="#">首页</a>
+                <a href="#">Index</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">注册</a>
+                <a href="#">Register</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

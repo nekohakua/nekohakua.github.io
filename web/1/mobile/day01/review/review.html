@@ -1,0 +1,658 @@
+<!-- 01-01 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01-字体图标/iconfont/iconfont.css">
+    <style>
+        .iconfont {
+            font-size: 60px;
+        }
+
+        i {
+            font-size: 99px;
+        }
+    </style>
+</head>
+<body>
+    <i class="iconfont icon-favorites-fill"></i>
+</body>
+</html> -->
+
+<!-- 01-02 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../01-字体图标/iconfont/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ! */
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav {
+            /* ! */
+            width: 200px;
+
+            margin: 50px auto;
+            font-size: 12px;
+        }
+
+        .orange {
+            color: #f40;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="iconfont icon-cart-Empty-fill orange"></span>
+                    <span>购物车</span>
+                    <span class="iconfont icon-arrow-down"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+<!-- 02-01 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+
+        .son {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            transition: all .5s;
+        }
+
+        .father:hover .son {
+            /* transform: translate(100%, -50px); */
+            /* transform: translate(100px); */
+            transform: translateY(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html> -->
+
+<!-- 02-02 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+
+        .son {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html> -->
+
+<!-- 02-03 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1366px;
+            height: 600px;
+            margin: 0 auto;
+            background-image: url(../02-平面转换/03-案例-双开门/images/bg.jpg);
+            overflow: hidden;
+        }
+
+        .box::before,
+        .box::after {
+            float: left;
+            content: "";
+            width: 50%;
+            height: 100%;
+            background-image: url(../02-平面转换/03-案例-双开门/images/fm.jpg);
+            transition: all .5s;
+        }
+
+        .box::after {
+            background-position: right 0;
+        }
+
+        .box:hover::before {
+            transform: translateX(-100%);
+        }
+
+        .box:hover::after {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 02-04 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 230px;
+            transition: all 2s;
+        }
+
+        img:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../02-平面转换/images/rotate.png" alt="">
+</body>
+</html> -->
+
+<!-- 02-05 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 250px;
+            border: 1px solid #000;
+            transition: all 2s;
+            transform-origin: right bottom;
+        }
+
+        img:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../02-平面转换/images/rotate.png" alt="">
+</body>
+</html> -->
+
+<!-- 02-06 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        img {
+            width: 200px;
+            transition: all 8s;
+        }
+
+        .box:hover img {
+            transform: translateX(600px) rotateZ(720deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../02-平面转换/images/tyre1.png" alt="">
+    </div>
+</body>
+</html> -->
+
+<!-- 02-07 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 210px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .box img {
+            width: 100%;
+            transition: all .5s;
+        }
+
+        .box:hover img {
+            transform: scale(0.8);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../02-平面转换/images/product.jpg" alt="">
+    </div>
+</body>
+</html> -->
+
+<!-- 02-08 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .box p {
+            color: #3b3b3b;
+            padding: 10px 10px 0 10px;
+        }
+
+        .box .pic {
+            position: relative;
+        }
+
+        .box .pic::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* ! */
+            /* margin-top: -29px;
+            margin-left: -29px; */
+            content: "";
+            width: 58px;
+            height: 58px;
+            background-image: url(../02-平面转换/08-和平精英-缩放/images/play.png);
+            transform: translate(-50%, -50%) scale(4);
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        .box li:hover .pic::after {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+
+        .box li {
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="pic"><img src="../02-平面转换/08-和平精英-缩放/images/party.jpeg" alt=""></div>
+                    <p>【和平精英】“初火”音乐概念片：四圣觉醒......</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+<!-- 03-01 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(
+                pink,
+                blue,
+                red
+            );
+
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0, .5)
+            );
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 03-02 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box img {
+            width: 300px;
+        }
+
+        .box {
+            position: relative;
+        }
+
+        .box .title {
+            position: absolute;
+            left: 15px;
+            bottom: 20px;
+            width: 260px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .box .mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 212px;
+            transition: all .5s;
+
+            /* ! */
+            opacity: 0;
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0, .6)
+            );
+            
+        }
+
+        .box:hover .mask {
+            /* ! */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../03-渐变/images/product.jpeg" alt="">
+        <div class="title">OceanStor Pacific 海量存储斩获2021 Interop金奖</div>
+        <div class="mask"></div>
+    </div>
+</body>
+</html> -->
+
+<!-- 04 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../04-综合案例/iconfont/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1110px;
+            height: 247px;
+            margin: 20px auto;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .box li {
+            position: relative;
+            float: left;
+            width: 350px;
+            height: 247px;
+            margin-right: 30px;
+            overflow: hidden;
+        }
+
+        .box li:last-child {
+            margin-right: 0;
+        }
+
+        .box .txt {
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            width: 350px;
+            height: auto;
+            padding: 20px 30px;
+            color: #fff;
+            /* background-color: pink; */
+            transition: transform .5s;
+        }
+
+        .box .txt h4 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 2em;
+            color: #fff;
+        }
+
+        .box .txt h5 {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.5em;
+            color: #fff;
+        }
+
+        .box .txt p {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .box .txt p .iconfont {
+            color: #c7000b;
+            vertical-align: middle;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .box .mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 350px;
+            height: 247px;
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0, .6)
+            );
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        .box li:hover img {
+            transform: scale(1.1);
+        }
+
+        .box li img {
+            transition: all .5s;
+        }
+
+        .box li:hover .mask {
+            opacity: 1;
+        }
+
+        .box li:hover .txt {
+            transform: translateY(-50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="pic">
+                        <img src="../04-综合案例/images/product.jpeg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h4>产品</h4>
+                        <h5>OceanStor Pacific 海量存储斩获2021 Interop金奖</h5>
+                        <p>
+                            <span>了解更多</span>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </p>
+                        <div class="mask"></div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="pic">
+                        <img src="../04-综合案例/images/huawei1.jpeg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h4>行业洞察</h4>
+                        <h5>迈向智能世界2030</h5>
+                        <p>
+                            <span>了解更多</span>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </p>
+                    </div>
+                    <div class="mask"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="pic">
+                        <img src="../04-综合案例/images/huawei2.jpeg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h4>《ICT新视界》刊首语</h4>
+                        <h5>笃行致远，共建具有获得感、幸福感、安全感的智慧城市</h5>
+                        <p>
+                            <span>了解更多</span>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </p>
+                    </div>
+                    <div class="mask"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
