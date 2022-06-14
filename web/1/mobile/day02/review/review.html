@@ -115,7 +115,7 @@
 </html> -->
 
 <!-- 01-07 -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -193,6 +193,297 @@
                 <a href="#">Register</a>
             </li>
         </ul>
+    </div>
+</body>
+</html> -->
+
+<!-- 02-01 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            
+            animation: change 1s;
+            animation: change2 2s;
+        }
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+
+        @keyframes change2 {
+            0% {
+                width: 200px;
+            }
+            50% {
+                width: 800px;
+                height: 500px;
+            }
+            100% {
+                width: 800px;
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 02-02 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            animation: change 1s linear;
+            animation: change 1s steps(3) 1s 3;
+            animation: change 1s infinite alternate;
+            animation: change 1s backwards;
+            animation: change 1s forwards;
+        }
+
+        @keyframes change {
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 02-03 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            animation-name: change;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes change {
+            form {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 02-04 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 140px;
+            height: 140px;
+            border: 1px solid #000;
+            background-image: url(../02-动画/images/bg.png);
+            animation: move 1s;
+            animation: 
+            move 1s steps(12) infinite,
+            run 3s linear forwards;
+        }
+
+        @keyframes move {
+            to {
+                background-position: -1680px 0;
+            }
+        }
+
+        @keyframes run {
+            to {
+                transform: translateX(800px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html> -->
+
+<!-- 03-01 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .box {
+            width: 600px;
+            height: 112px;
+            border: 5px solid #000;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .box ul {
+            width: 2000px;
+            animation: move 7s linear infinite;
+        }
+
+        .box li {
+            float: left;
+        }
+
+        .box:hover ul {
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            100% {
+                transform: translateX(-1400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/5.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/6.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/7.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="../03-综合案例/01-走马灯/images/3.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+<!-- 03-02 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background: url(../03-综合案例/02-全民出游季/images/f1_1.jpg) no-repeat center 0;
+            background-size: cover;
+        }
+
+        .cloud img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+        }
+
+        .cloud img:first-child {
+            margin-left: -300px;
+            top: 20px;
+            animation: cloud 1s infinite linear alternate;
+        }
+
+        .cloud img:nth-child(2) {
+            margin-left: 450px;
+            top: 100px;
+            animation: cloud 1.6s infinite linear alternate 0.35s;
+        }
+
+        .cloud img:nth-child(3) {
+            margin-left: -550px;
+            top: 200px;
+            animation: cloud 2s infinite linear alternate .068s;
+        }
+
+        @keyframes cloud {
+            to {
+                transform: translateX(30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud">
+        <img src="../03-综合案例/02-全民出游季/images/yun1.png" alt="">
+        <img src="../03-综合案例/02-全民出游季/images/yun2.png" alt="">
+        <img src="../03-综合案例/02-全民出游季/images/yun3.png" alt="">
     </div>
 </body>
 </html>
