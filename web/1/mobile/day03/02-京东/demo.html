@@ -17,6 +17,11 @@
         }
         
         .toolbar {
+            /* 固定定位 */
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            /* 百分比布局/流式布局是古老的解决方案（2011年）：高度写死，宽度自适应。现在要求高宽都自适应 */
             width: 100%;
             height: 50px;
             background-color: pink;
@@ -25,6 +30,12 @@
         
         .toolbar li img {
             height: 100%;
+        }
+
+        .toolbar li {
+            float: left;
+            width: 20%;
+            height: 50px;
         }
     </style>
 </head>

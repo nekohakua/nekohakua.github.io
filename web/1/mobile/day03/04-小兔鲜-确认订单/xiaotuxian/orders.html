@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>确认订单</title>
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/orders.css">
+</head>
+<body>
+    <!-- 主题内容，滑动查看 -->
+    <div class="main">
+        <!-- 用户信息 -->
+        <div class="user_msg pannel">
+            <div class="location">
+                <i class="iconfont icon-location"></i>
+            </div>
+            <div class="user">
+                <div class="top">
+                    <h5>林丽</h5>
+                    <p>1356589268</p>
+                </div>
+                <div class="bottom">
+                    北京市 海定区北京市 海定区北京市 海定区北北京市 海定区
+                </div>
+            </div>
+            <div class="more">
+                <i class="iconfont icon-more"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部支付，固定定位 -->
+    <div class="pay">
+        <div class="left">
+            <!-- 因为266.00来源数据库,所以用单独标签i,这样后面可以改,span为了是颜色 -->
+            合计：<span class="red">$<i>266.00</i></span>
+        </div>
+        <div class="right">
+            <a href="#">去支付</a>
+        </div>
+    </div>
+</body>
+</html>

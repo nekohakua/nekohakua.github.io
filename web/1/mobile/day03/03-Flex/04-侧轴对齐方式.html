@@ -13,7 +13,17 @@
         }
 
         .box {
-            
+            display: flex;
+
+            /* 默认值 */
+            align-items: flex-start;
+
+            align-items: flex-end;
+
+            align-items: center;
+
+            /* 拉伸填满，没有高度时的默认值是拉伸填满，有高度就是flex-start（子级有高度不会拉伸，去掉才会拉伸） */
+            align-items: stretch;
 
             height: 300px;
             margin: auto;
@@ -22,13 +32,9 @@
         
         .box div {
             width: 100px;
-            height: 100px;
+            /* height: 100px; */
             background-color: pink;
         }
-
-        /* 单独设置某个弹性盒子的侧轴对齐方式 */
-        
-        
     </style>
 </head>
 

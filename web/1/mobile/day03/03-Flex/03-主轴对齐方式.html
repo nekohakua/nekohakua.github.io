@@ -13,10 +13,24 @@
         }
 
         .box {
+            display: flex;
+            justify-content: center;
+
+            /* 默认值 */
+            justify-content: flex-start;
+
+            justify-content: flex-end;
             
+            /* 间距出现在弹性盒子(子级)之间 */
+            justify-content: space-between;
+
+            /* 所有地方间距一样 */
+            justify-content: space-evenly;
+
+            /* 间距加在盒子两侧，即子级之间的距离是父级两头距离的2倍 */
+            justify-content: space-around;
             
             height: 200px;
-            margin: auto;
             border: 1px solid #000;
         }
         

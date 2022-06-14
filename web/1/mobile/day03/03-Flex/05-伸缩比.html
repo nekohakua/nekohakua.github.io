@@ -12,6 +12,7 @@
         }
 
         .box {
+            display: flex;
             height: 300px;
             border: 1px solid #000;
         }
@@ -26,8 +27,14 @@
             width: 50px;
         }
 
-        
+        .box div:nth-child(2) {
+            /* 占用父级剩余的部分，一共2+1=3份，自己占用2份 */
+            flex: 2;
+        }
 
+        .box div:nth-child(3) {
+            flex: 1;
+        }
         
     </style>
 </head>
