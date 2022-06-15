@@ -45,5 +45,6 @@ button {
   clear: both;
 }
 .clearfix {
+  /* zoom是IE专用属性,设置zoom:1可以在IE6下清除浮动、解决margin导致的重叠等问题。 */
   *zoom: 1;
 }
