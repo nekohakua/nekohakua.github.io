@@ -13,6 +13,21 @@
         }
 
         .box {
+            /* 弹性布局的子级可以伸缩，即使子级宽高设置了100px，如果一行排多个且父级宽不够时，子级宽会缩小 */
+            display: flex;
+
+            /* 默认不换行 */
+            flex-wrap: nowrap;
+
+            /* 弹性盒子换行 */
+            flex-wrap: wrap;
+
+            /* 调节行对齐方式，取值和 justify-content:基本一样(没有space-every)*/
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+            
+
             height: 500px;
             border: 1px solid #000;
         }

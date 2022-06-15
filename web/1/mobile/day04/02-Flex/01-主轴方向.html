@@ -17,6 +17,17 @@
         }
 
         .box li {
+            display: flex;
+
+            /* 修改主轴方向为column（主轴默认row），而侧轴换成row了 */
+            flex-direction: column;
+
+            /* 实现盒子水平居中 */
+            align-items: center;
+
+            /* 垂直居中 */
+            justify-content: center;
+
             width: 80px;
             height: 80px;
             border: 1px solid #ccc;
