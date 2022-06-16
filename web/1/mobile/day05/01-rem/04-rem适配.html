@@ -13,6 +13,31 @@
             padding: 0;
         }
         
+        /* 1.不同视口，HTML标签字号不同，字号是视口宽度的1/10 */
+        @media (width:320px) {
+            html {
+                font-size: 32px;
+            }
+        }
+
+        @media (width:375px) {
+            html {
+                font-size: 37.5px;
+            }
+        }
+
+        @media (width:414px) {
+            html {
+                font-size: 41.4px;
+            }
+        }
+
+        /* 2.书写盒子尺寸，单位rem */
+        .box {
+            width: 5rem;
+            height: 3rem;
+            background-color: pink;
+        }
         
     </style>
 </head>
