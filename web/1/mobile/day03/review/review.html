@@ -271,13 +271,14 @@
             background-color: #f7f7f7;
         }
 
+        .rest div:nth-child(3) .red,
         .red {
             color: #cf4444;
         }
 
         .pannel {
             /* background-color: #fff; */
-            background-color: skyblue;
+            /* background-color: skyblue; */
             border-radius: 5px;
             margin-bottom: 10px;
         }
@@ -313,7 +314,7 @@
 
         .user_msg .user .top {
             display: flex;
-            background-color: pink;
+            /* background-color: pink; */
         }
 
         .user_msg .user .top h5 {
@@ -328,10 +329,109 @@
         .user_msg .more {
             width: 44px;
             height: 44px;
-            background-color: pink;
+            /* background-color: pink; */
             text-align: center;
             line-height: 44px;
             color: #808080;
+        }
+
+        .goods {
+            display: flex;
+            padding: 11px 0 11px 11px;
+        }
+
+        .goods .pic {
+            width: 85px;
+            height: 85px;
+            margin-right: 10px;
+        }
+
+        .goods .info {
+            flex: 1;
+        }
+
+        .goods .info h5 {
+            font-size: 13px;
+            color: #262626;
+            font-weight: 400;
+        }
+
+        .goods .info p {
+            width: 95px;
+            height: 20px;
+            margin: 5px 0;
+            background-color: #f7f7f7;
+            font-size: 12px;
+            color: #888;
+            border-radius: 2px;
+        }
+
+        .goods .info p span:first-child {
+            margin-right: 5px;
+        }
+
+        .goods .info .price {
+            font-size: 12px;
+        }
+
+        .goods .info .price .red i {
+            font-size: 16px;
+        }
+
+        .goods .info .price span:last-child {
+            margin-left: 5px;
+            /* color: #999; */
+            text-decoration: line-through;
+        }
+
+        .goods .count {
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            line-height: 44px;
+        }
+
+        .rest {
+            padding: 15px;
+        }
+
+        .rest {
+            padding: 15px;
+        }
+
+        .rest div {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .rest div:last-child {
+            margin-bottom: 0;
+        }
+
+        .rest .freight,
+        .rest div:nth-child(2n+1) {
+            justify-content: space-between;
+        }
+
+        .rest div:nth-child(2) h5 {
+            margin-right: 20px;
+        }
+
+        .rest h5,
+        .rest p {
+            font-size: 13px;
+            color: #262626;
+            font-weight: 400;
+        }
+
+        .rest div:nth-child(2) .remark {
+            font-size: 12px;
+            color: #989898;
+        }
+
+        .rest .icon-more {
+            margin-left: 4px;
+            font-size: 13px;
         }
 
         .pay {
@@ -343,7 +443,7 @@
             align-items: center;
             width: 100%;
             height: 80px;
-            background-color: pink;
+            /* background-color: pink; */
             padding: 0 11px;
             border-top: 1px solid #ededed;
         }
@@ -380,17 +480,66 @@
             </div>
             <div class="user">
                 <div class="top">
-                    <h5>林立</h5>
-                    <p>13893427489</p>
+                    <h5>林莉</h5>
+                    <p>18500667882</p>
                 </div>
                 <div class="bottom">
-                    深圳市 宝安区 法定福利1哈洛夫进入34
+                    北京市  海淀区  中关村软件园   信息科技大厦1号楼410#   
                 </div>
             </div>
             <div class="more">
                 <i class="iconfont icon-more"></i>
             </div>
         </div>
+
+        <div class="pannel goods">
+            <div class="pic">
+                <a href="#"><img src="../04-小兔鲜-确认订单/xiaotuxian/uploads/pic.png" alt=""></a>
+            </div>
+            <div class="info">
+                <h5>康尔贝 非接触式红外体温仪 
+                    领券立减30元 婴儿级材质 测温…</h5>
+                <p><span>粉色</span>   <span>红外体温计</span></p>
+                <div class="price">
+                    <span class="red">￥ <i>266</i></span>
+                    <span>￥<i>299</i></span>
+                </div>
+            </div>
+            <div class="count">
+                <i class="iconfont icon-x"></i>
+                <span>1</span>
+            </div>
+        </div>
+
+        <section class="pannel rest">
+            <div>
+                <h5>配送方式</h5>
+                <p>顺丰快递</p>
+            </div>
+            <div>
+                <h5>买家备注</h5>
+                <p class="remark">希望可以尽快发货，谢谢~</p>
+            </div>
+            <div>
+                <h5>支付方式</h5>
+                <p>支付宝<span class="iconfont icon-more"></span></p>
+            </div>
+        </section>
+
+        <section class="pannel rest">
+            <div>
+                <h5>商品总价</h5>
+                <p>￥ <span>299.00</span></p>
+            </div>
+            <div  class="freight">
+                <h5>运费</h5>
+                <p>￥ <span>0.00</span></p>
+            </div>
+            <div>
+                <h5>折扣</h5>
+                <p class="red">- ￥ <span>30.00</span></p>
+            </div>
+        </section>
     </div>
 
     <div class="pay">

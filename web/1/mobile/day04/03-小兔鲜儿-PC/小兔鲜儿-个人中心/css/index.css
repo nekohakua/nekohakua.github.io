@@ -88,6 +88,7 @@ ul {
   display: inline-block;
   width: 20px;
   height: 16px;
+  /* 定位手机精灵图 */
   position: relative;
   top: 3px;
   background-position: -160px -70px;
@@ -95,6 +96,7 @@ ul {
 
 .xtx_topnav .xtx_navs a {
   display: inline-block;
+  /* 右边框和文本一样高 */
   line-height: 1;
   padding: 0 15px;
   border-right: 2px solid #666;
