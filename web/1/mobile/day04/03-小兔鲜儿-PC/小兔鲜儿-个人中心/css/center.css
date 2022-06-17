@@ -132,10 +132,10 @@
 
 /* 弹性盒子单单加下面的省略号不能省略 */
 .orders .goods .txt h5 {
+    overflow: hidden;
     text-overflow: ellipsis;
     /* 禁止文件自动换行。 */
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .orders li .status {
