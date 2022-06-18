@@ -31,17 +31,87 @@ body {
 
     // 活动
     .item {
+        position: relative;
         margin-bottom: (10 / @rootSize);
 
         // 图片
         .pic {
             height: (160 / @rootSize);
+
+            // 收藏小图标
+            i {
+                position: absolute;
+                top: (15 / @rootSize);
+                right: (18 / @rootSize);
+                font-size: (24 / @rootSize);
+                color: #fff;
+            }
+
+            // 活动状态
+            .active {
+                position: absolute;
+                top: (-4 / @rootSize);
+                left: (15 / @rootSize);
+                width: (68 / @rootSize);
+                height: (29 / @rootSize);
+                background-image: url(../images/status_active.png);
+                background-size: contain;
+                font-size: (12 / @rootSize);
+                color: #fff;
+                text-align: center;
+                // 因为图片底部小尖，所有给比29小的
+                line-height: (25 / @rootSize);
+
+                // 活动结束后灰色图片
+                // .active.off {} 交集选择器 必须同时是这两个类 以后用js换图
+                &.off {
+                    background-image: url(../images/status_default.png);
+                }
+            }
+
+            // 这样加也可以
+            // .off {
+            //     // 活动结束后灰色图片
+            // }
+
         }
 
         // 文字
         .txt {
             padding: (10 / @rootSize);
             background-color: #fff;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+
+                h5 {
+                    width: (290 / @rootSize);
+                    font-size: (15 / @rootSize);
+                    color: #3C3C3C;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: (15 / @rootSize);
+                    color: #FE6249;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                margin-top: (10 / @rootSize);
+
+                p {
+                    margin-right: (15 / @rootSize);
+                    // 字体图标在.iconfont有自己的字号，这里本来是16px，所以下面对字体图标没有效果
+                    font-size: (11 / @rootSize);
+                    i {
+                        font-size: (11 / @rootSize);
+                    }
+                    color: #B4B4B4;
+                }
+            }
         }
     }
 }
@@ -51,7 +121,27 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
     width: 100%;
     height: (50 / @rootSize);
     background-color: #FECA49;
+
+    text-align: center;
+    a {
+        font-size: (11 / @rootSize);
+        color: #D78B09;
+
+        // 用i标签的权重不够高，不会生效，所以用原来的类选择器
+        .iconfont {
+            font-size: (24 / @rootSize);
+        }
+
+        &.current {
+            color: #fff;
+        }
+    }
 }
