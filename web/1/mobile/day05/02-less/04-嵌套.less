@@ -1,0 +1,14 @@
+/* 作用：快速生成后代选择器 */
+.father {
+    width: 100px;
+    .son {
+        color: pink;
+        /* 生成新的当前选择器的伪类,作用方便代码迁移，因为都在一个{}里 */
+        &:hover {
+            color: green;
+        }
+    }
+    &:hover {
+        color: orange;
+    }
+}

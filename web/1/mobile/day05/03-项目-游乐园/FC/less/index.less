@@ -1,0 +1,57 @@
+@import './base.less';
+@import './normalize.less';
+
+// 37.5是设计稿宽度的十分之一【记得切换到标准像素】
+@rootSize: 37.5rem;
+
+body {
+    background-color: #F0F0F0;
+}
+
+// 主题内容
+.main {
+    padding-bottom: (50 / @rootSize);
+
+    // banner
+    .banner {
+        // 方便图片底部的小圆点准确定位,基于160px来定位
+        height: (160 / @rootSize);
+    }
+
+    // 活动标题
+    .title {
+        height: (40 / @rootSize);
+        line-height: (40 / @rootSize);
+        padding-left: (15 / @rootSize);
+        h4 {
+            font-size: (14 / @rootSize);
+            color: #3c3c3c;
+        }
+    }
+
+    // 活动
+    .item {
+        margin-bottom: (10 / @rootSize);
+
+        // 图片
+        .pic {
+            height: (160 / @rootSize);
+        }
+
+        // 文字
+        .txt {
+            padding: (10 / @rootSize);
+            background-color: #fff;
+        }
+    }
+}
+
+// 顶部工具栏
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: (50 / @rootSize);
+    background-color: #FECA49;
+}
