@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>栅格系统-类</title>
-
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
     <style>
         div {
             height: 50px;
@@ -16,8 +16,14 @@
 </head>
 <body>
     <!-- 版心样式:自带左右各15px的padding -->
+    <div class="container">1</div>
+
+    <div class="container">
+        <!-- row:左右-15px【作用：抵消container类的左右15px间距】；也可以自己加padding左右：0 -->
+        <div class="row">2</div>
+    </div>
 
     <!-- 宽度100%:自带左右各15px的padding -->
-
+    <div class="container-fluid">3</div>
 </body>
 </html>

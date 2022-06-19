@@ -1,0 +1,61 @@
+// banner
+.carousel {
+    // 如果视口宽度<768,图250 (两个<,从大到小的顺序层叠)
+    // 如果视口宽度<992,图400
+    // 如果视口宽度>992,图500
+
+    // 想把本来的height:auto,给层叠掉,但是不想用这个类层叠:.carousel-inner>.item>a>img(检查轮播图元素知道的)
+    img {
+        // 确保能够层叠掉
+        height: 100%!important;
+
+        // 宽度本来初始化就是100%就不用写了
+    }
+
+    @media (max-width: 992px) {
+        // 让图片的父级变,图就会变
+        .item {
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .item {
+            height: 250px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .item {
+            height: 500px;
+        }
+    }
+}
+
+// 头部
+.navbar-default {
+    background-color: transparent;
+    border: 0;
+}
+
+// 开源项目区
+.project {
+    padding-top: 30px;
+    text-align: center;
+
+    .container {
+        div {
+            // background-color: pink;
+            a {
+                // 为了看起来有间距，不能给父级的div加间距，因为4个div的每一个都是width:25%，加了间距会换行显示，所以靠内容（a）撑开，因为container有默认的左右15间距
+    
+                display: block;
+    
+                // 随便给个高试试
+                height: 200px;
+                background-color: skyblue;
+            }
+        }
+
+    }
+}

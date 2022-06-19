@@ -11,8 +11,33 @@
             视口宽度 >= 992px，网页背景色是 绿色
             视口宽度 >= 1200px，网页背景色是 skyblue
          */
-        
 
+         /* css都有层叠性，所以媒体查询也有层叠性 */
+         /* 所以用min-width【从小到大写】 max-width【从大到小写】*/
+
+         @media (min-width: 1200px) {
+            body {
+                background-color: skyblue;
+            }
+         }
+
+         @media (min-width: 768px) {
+            body {
+                background-color: pink;
+            }
+         }
+
+         @media (min-width: 992px) {
+            body {
+                background-color: green;
+            }
+         }
+
+         /* @media (min-width: 1200px) {
+            body {
+                background-color: skyblue;
+            }
+         } */
 
     </style>
 </head>

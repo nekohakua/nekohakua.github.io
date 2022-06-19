@@ -7,9 +7,19 @@
     <title>Document</title>
     <style>
         /* 视口宽度小于等于768px， 网页背景色是粉色 */
-        
+        @media (max-width: 768px) {
+            body {
+                background-color: pink;
+            }
+            
+        }
 
         /* 视口宽度大于等于1200px， 网页背景色是skyblue */
+        @media (min-width: 1200px) {
+            body {
+                background-color: skyblue;
+            }
+        }
         
     </style>
 </head>

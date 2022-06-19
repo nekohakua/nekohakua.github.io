@@ -12,18 +12,31 @@
         }
 
         .box {
+            display: flex;
             width: 100%;
         }
 
         .left {
+            /* 弹性布局：如果能够撑的下宽度是300px，如果撑不下就被挤扁，宽度小于300px */
             width: 300px;
             min-height: 500px;
             background-color: pink;
         }
 
         .main {
+            /* 标准流宽度是父级的100% */
+
+            /* 掏去左边的300px,剩下的都是我的，这样左边的300px不会被挤扁了 */
+            flex: 1;
             min-height: 500px;
             background-color: skyblue;
+        }
+
+        /* 如果检测到视口宽度小于768px,认为是移动端，left就隐藏 */
+        @media (max-width:768px) {
+            .left {
+                display: none;
+            }
         }
 
     </style>
