@@ -1,0 +1,165 @@
+@import './base.less';
+
+@vw: 3.75vw;
+@color: #fb7299;
+
+// 头部固定区域
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    // 把头部权重调高一点,飞到最顶层,滑动时避免看不见图标等
+    z-index: 1;
+    // 因为要固定定位,所以要写宽,而不是用默认的宽,因为默认的宽是充满的,但是定位后会脱标不生效
+    width: 100%;
+    height: (84 / @vw);
+    // background-color: pink;
+    // 滑动时避免背景色透明
+    background-color: #fff;
+
+    // top
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: (44 / @vw);
+        padding-left: (18 / @vw);
+        padding-right: (12 / @vw);
+        // background-color: green;
+
+        .left {
+            .iconfont {
+                font-size: (28 / @vw);
+                color: @color;
+            }
+        }
+
+        .right {
+            // a的宽高就生效
+            display: flex;
+
+            
+            .iconfont {
+                font-size: (22 / @vw);
+                color: #ccc;
+            }
+
+            // a里面的img在base.less已经是width:100%,会等于父级宽度，所以设置a的宽度让img一样宽,高度同理。
+            .login {
+                width: (24 / @vw);
+                height: (24 / @vw);
+                margin-left: (24 / @vw);
+            }
+
+            .download {
+                width: (72 / @vw);
+                height: (24 / @vw);
+                margin-left: (24 / @vw);
+            }
+        }
+    }
+
+    // bottom
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+
+        height: (40 / @vw);
+        border-bottom: 1px solid #eee;
+
+        .tab {
+            ul {
+                display: flex;
+                li {
+                    padding: 0 (16 / @vw);
+                    a {
+                        display: block;
+                        height: (38 / @vw);
+                        // 本来是40，因为底部有线，所以小一点
+                        line-height: (38 / @vw);
+                        font-size: (14 / @vw);
+                        &.current {
+                            color: @color;
+                            border-bottom: 2px solid @color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .more {
+            a {
+                display: block;
+                width: (40 / @vw);
+                height: (40 / @vw);
+                // background-color: pink;
+                text-align: center;
+                line-height: (40 / @vw);
+                // 字体图标在.iconfont有自己的字号，所以下面对字体图标大小没有效果
+                // font-size: (22 / @vw);
+                color: #ccc;
+
+                .iconfont {
+                   font-size: (22 / @vw);
+                }
+            }
+        }
+    }
+}
+
+// 视频区域
+.video_content {
+    padding: (84 / @vw) (5 / @vw) 0;
+
+    .video_list {
+        display: flex;
+
+        // 视频一行排不下就换行
+        flex-wrap: wrap;
+
+        a {
+            width: 50%;
+            padding: (8 / @vw) (5 / @vw);
+            background-color: pink;
+            font-size: (12 / @vw);
+
+            .txt {
+                margin-top: (5 / @vw);
+            }
+
+            .pic {
+                position: relative;
+
+                .count {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    // 定位脱标,所以加上
+                    width: 100%;
+                    padding: (8 / @vw);
+                    // 教程方法
+                    // background-image: linear-gradient(
+                    //     to top,
+                    //     rgba(0,0,0, .6),
+                    //     rgba(0,0,0, 0)
+                    // );
+                    // 现在b站方法
+                    background-image: linear-gradient(
+                        0deg,
+                        rgba(0,0,0,.85),
+                        transparent
+                    );
+                    color: #fff;
+
+                    // 给上一级的p加
+                    i {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

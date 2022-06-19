@@ -1,5 +1,16 @@
+// out: ./
 * {
     margin: 0;
     padding: 0;
+}
+
+// 不要vw和vh混用，因为全面屏会有影响。
+// 比如iphone6【375 * 667】，iponex【375 * 812】的图会高一些，所以他们的比例不一样了。
+// 如果宽高都是vw/vh就比例没问题了
+// 68 * 29
+.box {
+    width: (68 / 3.75vw);
+    height: (29 / 6.67vh);
+    background-color: pink;
 }
 
