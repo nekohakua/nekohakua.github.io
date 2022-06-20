@@ -120,9 +120,15 @@ h1 {
     line-height: 42px;
 }
 
-.user img {
+.user .avatar {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    /* background-color: pink; */
     /* 调节图片垂直方式，middle居中 */
     vertical-align: middle;
+    background-image: url(../images/user.ico);
+    border-radius: 50%;
 }
 
 .banner {
@@ -361,4 +367,19 @@ h1 {
 .footer .right dl {
     float: left;
     margin-left: 120px;
+}
+
+.footer .right dt {
+    font-size: 16px;
+    color: #333;
+}
+
+.footer .right a {
+    font-size: 12px;
+    color: #333;
+    line-height: 12px;
+}
+
+.footer .right dl dd:nth-child(2) {
+    margin-top: 4px;
 }
