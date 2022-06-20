@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾讯全端</title>
+    <!-- 因为bootstrap里面包含了类似base.css的初始化样式，所以不用新建base.css等 -->
+    <!-- <link rel="stylesheet" href="./lib/bootstrap-3.4.1-dist/css/bootstrap.min.css"> -->
+    <!-- 因为默认的bootstrap不能满足需求,所以定制一个.定制要找到要改的东西的名字,然后点击官网的定制,找到要改的名称,
+        这里是定制>Grid system>@grid-float-breakpoint的值改成@screen-md-min,然后点击下载解压到项目里重新引入 -->
+    <!-- 新定制效果:当浏览器视口（viewport）的宽度小于 @grid-float-breakpoint 值时，
+        导航条内部的元素变为折叠排列，也就是变现为移动设备展现模式； -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- 去bootstrap官网找需要的复制来,然后检查元素删除不需要的,剩下的改改样式(比如改导航的背景色,检查从外层到内的找,找到就干掉它) -->
+    <!-- 头部 -->
+    <!-- navbar-fixed-top 是固定在顶部,在官网找到的 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <!-- container-fluid是宽度100% -->
+        <!-- <div class="container-fluid"> -->
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">博客</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Tweb Conf</a></li>
+                <li><a href="#">SuperStar</a></li>
+                <li><a href="#">Web前端</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    <!-- 头部 -->
+
+    <!-- banner -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+        
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="./uploads/banner_1.jpg" alt="...">
+                <div class="carousel-caption">
+                    ...
+                </div>
+            </div>
+            <div class="item">
+                <img src="./uploads/banner_2.jpg" alt="...">
+                <div class="carousel-caption">
+                    ...
+                </div>
+            </div>
+            <div class="item">
+                <img src="./uploads/banner_3.jpg" alt="...">
+                <div class="carousel-caption">
+                    ...
+                </div>
+            </div>
+            <div class="item">
+                <img src="./uploads/banner_4.jpg" alt="...">
+                <div class="carousel-caption">
+                    ...
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- banner -->
+
+    <!-- 开源项目区 -->
+    <div class="project">
+        <!-- h2在官网的全局css的排版里 -->
+        <h3 class="h2">OpenSource/开源项目</h3>
+        <p>种类众多的开源项目，让你爱不释手</p>
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a href="https://github.com/AlloyTeam/omi">
+                    <article>
+                        <div>
+                            <img src="./images/omi.png" alt="">
+                        </div>
+                        <h3>OMI</h3>
+                        <p>开放现代的Web组件化框架</p>
+                    </article>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a href="https://github.com/AlloyTeam/omi">
+                    <article>
+                        <div>
+                            <img src="./images/omi.png" alt="">
+                        </div>
+                        <h3>OMI</h3>
+                        <p>开放现代的Web组件化框架</p>
+                    </article>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a href="https://github.com/AlloyTeam/omi">
+                    <article>
+                        <div>
+                            <img src="./images/omi.png" alt="">
+                        </div>
+                        <h3>OMI</h3>
+                        <p>开放现代的Web组件化框架</p>
+                    </article>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a href="https://github.com/AlloyTeam/omi">
+                    <article>
+                        <div>
+                            <img src="./images/omi.png" alt="">
+                        </div>
+                        <h3>OMI</h3>
+                        <p>开放现代的Web组件化框架</p>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 先引入jquery.js后引入bootstrap.min.js，因为bootstrap.min.js要调用jquery.js。所以按照这个顺序 -->
+    <script src="./lib/js/jquery.js"></script>
+    <!-- bootstrap.js也可以，不过性能没有min好 -->
+    <script src="./lib/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+    <!-- 记得看看官网的全局CSS样式的快速浮动/清除浮动/响应式工具 -->
+
+    <!-- 什么网站适合大量响应式的(淘宝京东轮播图部分响应式,因为电商站内容多,所以分为PC和移动端两个网站):企业站/内容少的网站 -->
+</body>
+</html>
