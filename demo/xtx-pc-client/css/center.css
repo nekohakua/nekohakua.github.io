@@ -1,0 +1,257 @@
+.xtx_body {
+    padding: 30px 0 85px;
+    background-color: #f6f6f6;
+    
+}
+
+.xtx_body .wrapper {
+    display: flex;
+}
+
+/* 侧边栏 */
+.xtx_body .aside {
+    width: 227px;
+    /* 高度动态，应该不加一般高 */
+    /* 没有内容时，高度也是500px */
+    min-height: 500px;
+    margin-right: 18px;
+    /* background-color: pink; */
+}
+
+/* 主题内容 */
+.xtx_body .main {
+    flex: 1;
+    min-height: 500px;
+    /* background-color: skyblue; */
+}
+
+/* 账户概览 */
+.overview {
+    display: flex;
+    height: 132px;
+    margin-bottom: 18px;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+/* 每个div分1分，一个两份，所以平均 */
+.overview div {
+    /* 让a在一行排 */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.overview div:first-child {
+    border-right: 1px solid #f4f4f4;
+}
+
+.overview div a img {
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+.overview div span {
+    font-size: 25px;
+    color: #e05e30;
+}
+
+.overview div p {
+    font-size: 16px;
+}
+
+/* 吧概览最后一个图变18px */
+.overview div a:last-child img {
+    width: 18px;
+}
+
+/* 公共样式 */
+.pannel {
+    padding: 28px 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.pannel .pannel_title {
+    display: flex;
+    justify-content: space-between;
+    /* 21+23 */
+    height: 45px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.pannel .pannel_title h4 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 400;
+}
+
+.pannel .pannel_title a {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #999;
+}
+
+/* 侧边栏 */
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside .avatar {
+    margin-top: 36px;
+    margin-bottom: 10px;
+    width: 85px;
+    height: 85px;
+}
+
+.aside .vip {
+    position: relative;
+    margin-top: 6px;
+    width: 93px;
+    height: 26px;
+    background-image: linear-gradient(264deg, 
+        #e05e2f 0%, 
+        #ea745e 95%);
+    border-radius: 26px;
+}
+
+.aside .vip img {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.aside .vip i {
+    position: absolute;
+    left: 28px;
+    top: 2px;
+}
+
+.aside .info {
+    display: flex;
+    margin-left: -55px;
+    width: 56px;
+    height: 345px;
+    /* background-color: skyblue; */
+}
+
+.aside .info dt {
+    margin-top: 70px;
+    margin-bottom: 10px;
+    width: 80px;
+    color: #333;
+    font-size: 18px;
+}
+
+.aside .info dd {
+    position: relative;
+    font-size: 14px;
+    color: #666;
+    line-height: 34px;
+}
+
+.aside .info dd:nth-child(2) a {
+    color: #5cb99e;
+}
+
+.aside .info dd span {
+    position: absolute;
+    left: -16px;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    background-color: #5eb69c;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+/* 订单内容 */
+.orders li {
+    display: flex;
+    height: 137px;
+    /* 和标题的底线重合 */
+    margin-top: -1px;
+    margin-bottom: 20px;
+    border: 1px solid #f4f4f4;
+}
+
+.orders li:last-child {
+    margin-bottom: 0;
+}
+
+.orders li .goods {
+    display: flex;
+    align-items: center;
+    padding: 17px 0 14px 12px;
+    flex: 1;
+    margin-right: 120px;
+}
+
+.orders .goods .pic {
+    width: 107px;
+    height: 107px;
+}
+
+/* 弹性盒子溢出省略号 */
+.orders .goods .txt {
+    /* 掏去pic剩下的给txt； */
+    flex: 1;
+    /* 溢出省略号；法2：连文字到省略号的距离给宽 */
+    /* 因为弹性盒子的尺寸可以倍内容撑开，不换行的文字可以这个盒子的尺寸 */
+    width: 0;
+}
+
+/* 弹性盒子单单加下面的省略号不能省略 */
+.orders .goods .txt h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 禁止文件自动换行。 */
+    white-space: nowrap;
+}
+
+.orders li .status {
+    width: 120px;
+    color: #e05e30;
+    font-size: 14px;
+    line-height: 137px;
+}
+
+.orders li .pay {
+    width: 200px;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+
+.orders li .action {
+    width: 180px;
+}
+
+.orders li .common {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 因为弹性盒子，a宽高生效 */
+.orders li .action a:first-child {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #5eb69c;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+}
