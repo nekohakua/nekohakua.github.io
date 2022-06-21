@@ -1,0 +1,45 @@
+/* 02-08禁止导出在第一行写// out: false */
+/* 02-01 */
+.father {
+  color: red;
+  width: 375px;
+  width: 1.81333333rem;
+}
+.father .son {
+  width: 100px;
+}
+/* 02-02 */
+/* 块注释会生成对应的css */
+/* 02-03 */
+.box {
+  width: 110px;
+  width: 90px;
+  width: 1000px;
+  width: 10px;
+}
+/* 02-04 */
+.father {
+  width: 100px;
+}
+.father .son {
+  color: pink;
+}
+.father .son:hover {
+  color: green;
+}
+.father:hover {
+  color: orange;
+}
+/* 02-05 */
+.box {
+  color: pink;
+}
+/* 02-06 */
+.father {
+  color: red;
+  width: 375px;
+  width: 1.81333333rem;
+}
+.father .son {
+  width: 100px;
+}

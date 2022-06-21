@@ -1,0 +1,50 @@
+// out: ./
+
+/* 02-08禁止导出在第一行写// out: false */
+
+/* 02-01 */
+.father {
+    color: red;
+    width: 10 * 37.5px;
+    width: (68 / 37.5rem);
+
+    .son {
+        width: 100px;
+    }
+}
+
+/* 02-02 */
+// 单行注释不会生成对应的css
+/* 块注释会生成对应的css */
+
+/* 02-03 */
+.box {
+    width: 100 + 10px;
+    width: 100 - 10px;
+    width: 100 * 10px;
+    width: (100 / 10px);
+}
+
+/* 02-04 */
+.father {
+    width: 100px;
+    .son {
+        color: pink;
+        &:hover {
+            color: green;
+        }
+    }
+    &:hover {
+        color: orange;
+    }
+}
+
+/* 02-05 */
+@mycolor: pink;
+
+.box {
+    color: @mycolor;
+}
+
+/* 02-06 */
+@import '../02-less/01-体验less.less';
