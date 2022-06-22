@@ -1,0 +1,138 @@
+@import '../../FC/less/base.less';
+@import '../../FC/less/normalize.less';
+
+@rem: 37.5rem;
+
+body {
+    background-color: #F0F0F0;
+}
+
+// 主体内容
+.main {
+    padding-bottom: (50 / @rem);
+
+    // banner
+    .banner {
+        height: (160 / @rem);
+    }
+
+    // 活动标题
+    .title {
+        height: (40 / @rem);
+        line-height: (40 / @rem);
+        padding-left: (15 / @rem);
+
+        h4 {
+            font-size: (14 / @rem);
+            color: #3C3C3C;
+        }
+    }
+
+    // 活动
+    .item {
+        position: relative;
+        margin-bottom: (10 / @rem);
+
+        // 图片
+        .pic {
+            height: (160 / @rem);
+
+            i {
+                position: absolute;
+                top: (15 / @rem);
+                right: (18 / @rem);
+                font-size: (24 / @rem);
+                color: #fff;
+            }
+
+            .active {
+                position: absolute;
+                left: (15 / @rem);
+                top: (-4 / @rem);
+                width: (68 / @rem);
+                height: (29 / @rem);
+                background-image: url(../../FC/images/status_active.png);
+                background-size: contain;
+                font-size: (12 / @rem);
+                color: #fff;
+                text-align: center;
+                line-height: (25 / @rem);
+
+                &.off {
+                    background-image: url(../../FC/images/status_default.png);
+                }
+            }
+        }
+
+        // 文字区域
+        .txt {
+            padding: (10 / @rem);
+            background-color: #fff;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+
+            h5 {
+                width: (290 / @rem);
+                color: #3C3C3C;
+                font-size: (15 / @rem);
+
+                font-weight: 400;
+            }
+
+            p {
+                font-size: (15 / @rem);
+                color: #FE6249;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            margin-top: (10 / @rem);
+
+            p {
+                margin-right: (15 / @rem);
+                font-size: (11 / @rem);
+                color: #B4B4B4;
+
+                .iconfont {
+                    font-size: (11 / @rem);
+                }
+            }
+        }
+
+    }
+
+}
+
+// 底部工具栏
+// .footer {
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: (50 / @rem);
+    background-color: #FECA49;
+    // 水平居中
+    text-align: center;
+
+    a {
+        font-size: (11 / @rem);
+        color: #D78B09;
+
+        .iconfont {
+            font-size: (24 / @rem);
+        }
+
+        // .current {
+        &.current {
+            color: #fff;
+        }
+    }
+}
