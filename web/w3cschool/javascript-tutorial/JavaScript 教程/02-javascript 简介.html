@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>我的第一段 JavaScript</h1>
+    <div>
+        <p>JavaScript 能够直接写入 HTML 输出流中：</p>
+        <script>
+            document.write("<h1>document.write:这是一个标题</h1>");
+            document.write("<p>document.write:这是一个段落。</p>");
+        </script>
+        <p>
+            您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+            如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+        </p>
+    </div><hr>
+
+    <div>
+        <p>JavaScript 能够对事件作出反应。比如对按钮的点击：</p>
+        <!-- alert() 函数在 JavaScript 中并不常用，但它对于代码测试非常方便。 -->
+        <button type="button" onclick="alert('alert() 函数在 JavaScript 中并不常用，但它对于代码测试非常方便。迎')">点我!</button>
+    </div><hr>
+
+    <div>
+        <p id="demo0">JavaScript 能改变 HTML 元素的内容。</p>
+        <button type="button" onclick="changeContent()">改变 HTML 元素的内容</button>
+        <script>
+            function changeContent() {
+                x=document.getElementById("demo0");
+                x.innerHTML="Hello JavaScript!";
+            }
+        </script>
+    </div><hr>
+
+    <div>
+        <p id="demo1">JavaScript 能改变 HTML 元素的样式。</p>
+        <button type="button" onclick="changeStyle()">点击改变颜色</button>
+        <script>
+            function changeStyle() {
+                x=document.getElementById('demo1');
+                x.style.color="#ff0000";  
+            }
+        </script>
+    </div><hr>
+
+    <div>
+        <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+        <input type="text" id="demo2">
+        <button type="button" onclick="number()">点击</button>
+        <script>
+            function number() {
+                var x=document.getElementById("demo2").value;
+                // 如果要在生产环境中使用，需要严格判断，如果输入的空格，或者连续空格 isNaN 是判别不出来的。
+                if (x=="" || isNaN(x)) {
+                    alert("不是数字");
+                } else {
+                    alert("是数字");
+                }
+            }
+        </script>
+    </div><hr>
+
+    <div>
+        <p>点击灯泡就可以打开或关闭这盏灯</p>
+        <img src="../images/pic_bulboff.gif" alt="" id="myimage" onclick="changeImage()" width="100" height="160">
+        <script>
+            function changeImage() {
+                element=document.getElementById('myimage');
+                //通过查看src中是否有bulbon这个单词来判断当前状态并切换到另外一种状态
+                if (element.src.match("bulbon")) {
+                    element.src="../images/pic_bulboff.gif";
+                } else {
+                    element.src="../images/pic_bulbon.gif";
+                }
+            }
+        </script>
+    </div><hr>
+
+</body>
+</html>
