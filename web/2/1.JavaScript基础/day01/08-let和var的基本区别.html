@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let解决了var的变量提升，全局变量，没有块级作用域等等缺点
+        // 不合理但不报错
+        age = 18
+        var age
+        console.log(age)
+
+        // 报错
+        // age2 = 19
+        // let age2
+        // console.log(age2);
+
+        // 不合理但不报错
+        var age3 = 20
+        var age3 = 21
+        console.log(age3);
+    </script>
+</body>
+</html>
