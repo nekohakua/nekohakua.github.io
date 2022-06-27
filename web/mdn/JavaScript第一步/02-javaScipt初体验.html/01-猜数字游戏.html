@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>猜数字游戏</h1>
+    <p>我刚才随机选定了一个100以内的自然数。看你能否在 10 次以内猜中它。每次我都会告诉你所猜的结果是高了还是低了。</p>
+    <div class="form">
+        <!-- <label> 元素（标签）表示用户界面中某个元素的说明。 -->
+        <label for="guessField">请猜数：</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="确定" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        // 生成随机数1-100
+        let randomNumber = Math.floor(Math.random() * 100) + 1
+        const guesses = document.querySelector('.guesses')
+        const lastResult = document.querySelector('.lastResult')
+        const lowOrHi = document.querySelector('.lowOrHi')
+        const guessSubmit = document.querySelector('.guessSubmit')
+        // 使用 document 对象的 querySelector() 方法可以获得这个引用。
+        // 因为 guessField 现在包含一个指向 <input> 元素的引用，它现在就能够访问一系列的属性（存储于对象内部的基础变量，其中一些的值无法改变）和方法（存储在对象内部的基础函数）。
+        const guessField = document.querySelector('.guessField')
+        let guessCount = 1
+        let resetButton
+
+        // 这一行通过 focus() (en-US) 方法让光标在页面加载完毕时自动放置于 <input>  输入框内，这意味着玩家可以马上开始第一次猜测，而无需点击输入框。
+        guessField.focus()
+
+        function checkGuess() {
+            // 应用了内置的 Number() 方法，只是为了确保该值是一个数字。
+            let userGuess = Number(guessField.value)
+            if (guessCount === 1) {
+                guesses.textContent = '上次猜的数：'
+            }
+            guesses.textContent += userGuess + ' '
+
+            if (userGuess === randomNumber) {
+                lastResult.textContent = '恭喜你！猜对了'
+                lastResult.style.backgroundColor = 'green'
+                lowOrHi.textContent = ''
+                setGameOver()
+            } else if (guessCount === 10) {
+                lastResult.textContent = 'GAME OVER'
+                setGameOver()
+            } else {
+                lastResult.textContent = '你猜错了！'
+                lastResult.style.backgroundColor = 'red'
+                if (userGuess < randomNumber) {
+                    lowOrHi.textContent = '你猜低了'
+                } else if (userGuess > randomNumber) {
+                    lowOrHi.textContent = '你猜高了'
+                }
+            }
+
+            guessCount++
+            guessField.value = ''
+            guessField.focus()
+        }
+
+        guessSubmit.addEventListener('click', checkGuess)
+
+        function setGameOver() {
+            // 将 disable 属性设置为 true 来禁用表单文本输入和按钮。
+            guessField.disabled = true
+            guessSubmit.disabled = true
+            // 创建一个新的  <button> 元素，设置它的文本为“开始新游戏”，并把它添加到当前 HTML 的底部。
+            resetButton = document.createElement('button')
+            resetButton.textContent = '开始游戏'
+            document.body.appendChild(resetButton)
+            resetButton.addEventListener('click', resetGame)
+        }
+
+        function resetGame() {
+            guessCount = 1
+            // 清除所有信息段落。
+            // 这段代码通过 querySelectorAll() 方法创建了一个包含 <div class="resultParas"> 内所有段落的变量，然后通过循环迭代，删除每个段落的文本内容。
+            const resetParas = document.querySelectorAll('.resultParas p')
+            for (let i = 0; i < resetParas.length; i++) {
+                resetParas[i].textContent = ''
+            }
+
+            resetButton.parentNode.removeChild(resetButton)
+            guessField.disabled = false
+            guessSubmit.disabled = false
+            guessField.value = ''
+            guessField.focus()
+            // 设置 lastResult 段落的背景颜色。
+            lastResult.style.backgroundColor = 'white'
+            // 生成一个新的随机数，这样就可以猜测新的数字了！
+            randomNumber = Math.floor(Math.random() * 100) + 1
+        }
+    </script>
+</body>
+</html>

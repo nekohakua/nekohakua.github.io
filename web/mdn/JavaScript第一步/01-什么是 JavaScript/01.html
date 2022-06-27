@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            display: inline-block;
+            padding: 3px 10px;
+            /* text-align: center; */
+            font-family: sans-serif, ‘黑体’;
+            /* 字母间距 */
+            letter-spacing: 1px;
+            /* uppercase这个关键字强制所有字符被转换为大写。 */
+            text-transform: uppercase;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid rgba(0, 0, 200, .6);
+            background: rgba(0, 0, 200, .3);
+            color: rgba(0, 0, 200, .6);
+            box-shadow: 1px 1px 2px rgba(0, 0, 200, .4);
+        }
+    </style>
+</head>
+<body>
+    <p>玩家1：小明</p>
+
+    <script>
+        const para = document.querySelector('p')
+        para.addEventListener('click', updateName)
+
+        function updateName() {
+            let name = prompt('请输入你的名字：')
+            para.textContent = '玩家1：' + name
+        }
+    </script>
+
+    <!-- 脚本阻塞问题实际有两种解决方案 —— async 和 defer。
+    如果脚本无需等待页面解析，且无依赖独立运行，那么应使用 async。
+    如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 defer，
+    将关联的脚本按所需顺序置于 HTML 中。 -->
+    <!-- <script async src="js/vendor/jquery.js"></script>
+    <script async src="js/script2.js"></script>
+    <script async src="js/script3.js"></script> -->
+
+    <!-- <script defer src="js/vendor/jquery.js"></script>
+    <script defer src="js/script2.js"></script>
+    <script defer src="js/script3.js"></script> -->
+
+</body>
+</html>
