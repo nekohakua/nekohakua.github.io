@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 表单取到的类型是字符串
+        let num = prompt('请输入一个数字')
+        console.log(num, typeof num) //string
+
+        // 隐式转换：
+        // 1.+号两边只要一个是字符串都会把另外一边转换字符串
+        // 2.除了+号的算数运算符，比如- * /号都会把数据转换成数字类型
+        console.log(10 + '10') // 1010
+        console.log(10 - '10') // 0
+
+        // 小技巧：+号作为正号来解析可以转换成number
+        console.log(+'10')
+        console.log(-'10')
+        // 10+ +'10'
+        console.log(typeof (10 + + '10'))
+    </script>
+</body>
+</html>

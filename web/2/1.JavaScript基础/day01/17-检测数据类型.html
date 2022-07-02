@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 返回数据类型 
+        console.log(typeof 123)
+        console.log(typeof '123')
+        console.log(typeof true)
+        console.log(typeof undefined)
+        // 类型：object
+        console.log(typeof null)
+
+        // typeof会先算123,后'123',相当于：console.log('number' + '123')
+        console.log(typeof 123 + '123')
+
+        console.log(typeof (123 + '123'))
+
+        console.log(typeof (123 + + '123'))
+    </script>
+</body>
+</html>

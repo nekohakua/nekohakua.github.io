@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(true)
+        console.log(false)
+
+        // 只声明不赋值就undefined
+        // 使用场景：判断用户是否输入值了，为undefined就是没有输入
+        let age
+        console.log(age);
+
+        function fun(x, y) {
+            // 没有传值就用后面的0和1
+            x = x || 0
+            y = y || 1
+            console.log(x, y);
+        }
+        fun()
+
+        // undefined:没有赋值 null：赋值了，但为空
+        // null使用场景：把null作为尚未创建的对象（大白话：将来有个变量放的是一个对象，但是对象没有创建好，可以先给null）
+        let obj = null
+        console.log(obj);
+    </script>
+</body>
+</html>

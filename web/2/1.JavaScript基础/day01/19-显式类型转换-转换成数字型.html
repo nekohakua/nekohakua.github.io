@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = '10'
+        // 转换成数值型
+        console.log(Number('10'))
+        console.log(Number('10.111'))
+        // 转换成数值型，只保留整数,没有四舍五入
+        console.log(parseInt('10.1111'))
+        // 转换成数值型，保留小数
+        console.log(parseFloat('10.1111'))
+
+        // 区别：Number()只能放数字类型的字符，不能放abc等，否则返回是 NaN(not a number)
+        console.log(Number('10.111abc'))
+        // parseInt用于过滤非parseInt的，只能识别数字开头的,不是数字开头的返回NaN
+        console.log(parseInt('100px'))
+        console.log(parseInt('abc100px'))
+    </script>
+</body>
+</html>
