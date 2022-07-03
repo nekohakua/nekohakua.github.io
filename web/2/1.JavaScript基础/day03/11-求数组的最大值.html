@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [2, 6, 1, 77, 52, 25, 7]
+        let max = arr[0]
+        // console.log(max)
+        // 循环数组
+        for (let i = 1; i < arr.length; i++) {
+            // max 小于后面的值，就需要把值给我，这样保证max里面放的最大值
+            if (max < arr[i]) {
+                max = arr[i]
+            }
+        }
+        console.log(max)
+    </script>
+</body>
+
+</html>

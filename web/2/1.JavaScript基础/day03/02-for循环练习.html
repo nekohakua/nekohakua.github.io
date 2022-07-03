@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 利用for循环输出多少岁了
+        // for (let i = 1; i <= 100; i++) {
+        //     document.write(`我今年${i}岁了 <br>`)
+        // }
+
+        // 2. 求 1~100 偶数的累加和
+        // let sum = 0   // 值
+        // for (let i = 1; i <= 100; i++) {
+        //     // 筛选偶数
+        //     if (i % 2 === 0) {
+        //         // sum = sum + i
+        //         sum += i
+        //     }
+        // }
+        // document.write(sum)
+
+        // 3. 页面打印5个小星星
+        // for (let i = 1; i <= 5; i++) {
+        //     document.write('◇')
+        // }
+
+        // 1. 循环的最大价值就是遍历数组
+        let arr = ['马超', '赵云', '张飞', '关羽', '黄忠', 'pink老师']
+        // console.log(arr)
+        // document.write(arr)
+        // document.write(arr[0])
+        // document.write(arr[1])
+        // document.write(arr[2])
+        // document.write(arr[3])
+        // document.write(arr[4])
+        // 利用循环的方式
+        document.write(arr.length)
+
+        // 2. arr.length  数组的长度  通过他可以告诉我们数组里面有几个元素
+        for (let i = 0; i < arr.length; i++) {
+            document.write(` <br>名字是: ${arr[i]}`)
+        }
+    </script>
+</body>
+</html>
