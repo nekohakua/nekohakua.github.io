@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 输出1-100个数字
+        let i = 1
+        while (i <= 100) {
+            document.write(`<p>是：${i}</p>`)
+            i++
+        }
+
+        // 计算1-100的累加和
+        let j = 1
+        let sum = 0
+        while (j <= 100) {
+            sum = sum + j
+            j++
+        }
+        console.log(sum) // 5050
+
+        // 计算1-100的所有偶数和 奇数和
+        let k = 1
+        let sum1 = 0
+        let sum2 = 0
+        while (k <= 100) {
+            if (k % 2 === 0) {
+                sum1 = sum1 + k
+            } else {
+                sum2 = sum2 + k
+            }
+            k++
+        }
+        console.log(`偶数和：${sum1}`) //2550
+        console.log(`奇数和：${sum2}`) //2500
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 逻辑与 一假则假
+        console.log(true && true)
+        console.log(true && false)
+
+        // 逻辑或 一真则真
+        console.log(false || true)
+        console.log(false|| false)
+
+        // 逻辑非 取反
+        console.log(!true)
+        console.log(!false)
+
+        // &&和||的逻辑短路， &&左边遇见false后面就不执行了并返回最后执行的表达式的值，||左边遇见true后面同理
+        console.log(false && 20) //false
+        console.log(undefined && 20) //undefined
+        console.log(null && 20) //null
+        console.log(0 && 20) //0
+        console.log('' && 20) //
+        // 除了这6个当作false其他都当作true: false 0 '' undefined null NaN
+        // NaN不是自己NaN
+        console.log(10 && 20) //20,因为10不是false就往后看，返回最后执行的
+
+        console.log(false || 20) //20
+        console.log(undefined || 20) //20
+        console.log(null || 20) //20
+        console.log(0 || 20) // 20
+        console.log(10 || 20) //10
+
+
+        function fun(x, y) {
+            x = x || 0 //没有传值x为undefined,||遇true短路，所以x||0返回0，所以x = 0;y同理
+            y = y || 1
+            console.log(x + y)
+        }
+        fun()
+
+    </script>
+</body>
+</html>

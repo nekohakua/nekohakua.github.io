@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = 1
+        while (i <= 6) {
+            if (i === 3) {
+                document.write(`我不要吃第${i}个包子，因为有虫子<br>`)
+                i++
+                // continue结束本次循环，进行下一次循环
+                // 遇见continue跳回while (i <= 6)，后面不执行了：
+                // document.write(`我要吃第${i}个包子<br>`)
+                // i++ 
+                continue
+            }
+            document.write(`我要吃第${i}个包子<br>`)
+            i++
+        }
+
+        document.write(`<br><br><br><br>`)
+
+        let j = 1
+        while (j <= 6) {
+            if (j === 3) {
+                document.write(`我不要吃第${j}个包子，因为有毒<br>`)
+                j++
+                // 跳出所在的循环
+                break
+            }
+            document.write(`我要吃第${j}个包子<br>`)
+            j++
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(3 > 5) //false
+        console.log(5 >= 5) //true
+        // == 数值相等,不管数据类型
+        console.log(5 == '5') //true
+        console.log(5 == 'pink') //false
+        // 一样用===,数值相等，数据类型一样
+        console.log(5 === '5') //false
+        console.log(5 === 5) //true
+        console.log(4 !== 5) //true
+
+        // ASC2码比较，r在p的后面，所以r大
+        console.log('pink' > 'red') //false
+        // k前面有，后面没有，所以前面大
+        console.log('pink' > 'pin') //true
+
+        // NaN不是任何东西
+        console.log(1 === NaN) //false
+        console.log(NaN === NaN) //false
+
+        // 小数的精度不一样
+        console.log(0.1 + 0.2 === 0.3) //false
+        console.log(0.1 + 0.2) //0.30000000000000004
+
+        // 比较运算符会隐式转换
+        console.log(3 > '2')  //true，'2'转换成数据型了
+    </script>
+</body>
+</html>

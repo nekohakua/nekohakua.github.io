@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 以后有api更好获取时间
+        let time = +prompt('请输入小时：')
+        if (time <= 12) {
+            document.write(`上午好`)
+        // 不用 time >= 12 && time <= 18了，因为会依次往下判断
+        } else if (time <= 18) {
+            document.write(`下午好`)
+        } else if (time <= 24) {
+            document.write(`晚上好`)
+        } else {
+            document.write(`请输入0-24`)
+        }
+    </script>
+</body>
+</html>

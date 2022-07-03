@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if 里面的会转换成布尔型
+        // 除了这6个当作false其他都当作true: false 0 '' undefined null NaN
+        if ('true') {
+            alert(11)
+        } else {
+            alert(00)
+        }
+
+        // 不要写这样，因为难看
+        if (1 === 1) console.log(1)
+        // 应该这样写好看
+        if (1 === 1) {
+            console.log(1)
+        }
+    </script>
+</body>
+</html>

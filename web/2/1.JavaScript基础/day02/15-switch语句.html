@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 是===的
+        // 比if else效率高，因为它不会一个个找，会一个个建立表，啪一下匹配到那个值
+        // 适合值判断，不适合区间判断
+        // 没有break会判断穿透
+        switch (2) {
+            case 1:
+                alert(1)
+                break
+            case 2:
+                alert(2)
+        
+            case 3:
+                alert(3)
+                break
+            default:
+                alert('没有数据')
+        }
+    </script>
+</body>
+</html>
