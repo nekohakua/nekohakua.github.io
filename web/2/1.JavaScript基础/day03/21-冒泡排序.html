@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 一共需要arr.length - 1趟
+        // 每一趟需要arr.length - i - 1次交换
+
+        let arr = [2, 6, 4, 3, 5, 1]
+        // 1. 外层循环控制  趟数   循环 4次   arr.length - 1
+        for (let i = 0; i < arr.length - 1; i++) {
+            // 2. 里层的循环 控制 一趟交换几次  arr.length - i - 1 次序
+            for (let j = 0; j < arr.length - i - 1; j++) {
+                // 交换两个变量
+                // arr[0] > arr[0 + 1] 即2 6
+                if (arr[j] > arr[j + 1]) {
+                    let temp = arr[j]
+                    arr[j] = arr[j + 1]
+                    arr[j + 1] = temp
+                }
+            }
+        }
+        console.log(arr)
+    </script>
+</body>
+</html>

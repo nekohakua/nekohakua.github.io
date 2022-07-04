@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            display: flex;
+            width: 700px;
+            height: 300px;
+            border-left: 1px solid pink;
+            border-bottom: 1px solid pink;
+            margin: 50px auto;
+            justify-content: space-around;
+            align-items: flex-end;
+            text-align: center;
+        }
+
+        .box>div {
+            display: flex;
+            width: 50px;
+            background-color: pink;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box div span {
+
+            margin-top: -20px;
+        }
+
+        .box div h4 {
+            margin-bottom: -35px;
+            width: 70px;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box">
+        <div style="height: 123px;">
+            <span>123</span>
+            <h4>第1季度</h4>
+        </div>
+        <div style="height: 156px;">
+            <span>156</span>
+            <h4>第2季度</h4>
+        </div>
+        <div style="height: 120px;">
+            <span>120</span>
+            <h4>第3季度</h4>
+        </div>
+        <div style="height: 210px;">
+            <span>210</span>
+            <h4>第4季度</h4>
+        </div>
+
+    </div> -->
+    <script>
+        // 利用循环弹出四次输入框， 会得到4个数据，放到数组里面
+        let arr = []
+        for (let i = 1; i <= 4; i++) {
+            // prompt(`请输入第 ${i} 季度的数据`)  ===  123
+            arr.push(prompt(`请输入第${i}季度的数据`))
+        }
+        // console.log(arr)
+        // 注意我们渲染循环的是柱子 
+        document.write(`<div class="box">`)
+        // 循环4个柱子
+        for (let i = 0; i < arr.length; i++) {
+            document.write(`
+                <div style="height: ${arr[i]}px;">
+                    <span>${arr[i]}</span>
+                    <h4>第${i + 1}季度</h4>
+                </div>
+            `)
+        }
+
+        // 循环4个柱子后加尾，因为中间要写for循环，for循环不能写在``里面
+        document.write(`</div>`)
+
+    </script>
+</body>
+
+</html>
