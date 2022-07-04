@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getArrMaxValue(arr) {
+            let max = arr[0]
+            for (let i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+            }
+            return max
+        }
+
+        // max和函数的max作用域不一样所有没事
+        let max = getArrMaxValue([1, 6, 2, 9, 3])
+        document.write(`数组最大值是：${max}`)
+    </script>
+</body>
+</html>

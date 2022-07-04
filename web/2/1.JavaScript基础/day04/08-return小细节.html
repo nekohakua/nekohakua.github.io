@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function fn() {
+        //     // 退出函数的作用  return 后面的代码不在执行
+        //     return
+
+        //     alert(11)
+        // 不要换行写，这样只会返回x
+        //     return x
+        //      + y
+        // }
+        // fn()
+        function fn() {
+            // 没有return时返回undefined
+        }
+
+        let re = fn()
+        console.log(re)
+
+        function fn1() {
+            // 有return但是没写东西时返回undefined
+            return
+        }
+
+        let re1 = fn1()
+        console.log(re1)
+    </script>
+</body>
+
+</html>

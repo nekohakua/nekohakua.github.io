@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求两个数的最大值
+        let num1 = +prompt('请输入第一个数')
+        let num2 = +prompt('请输入第二个数')
+        // 比较函数 最大值
+        // return 可以写多个，但是条件是只能执行1个
+        function getMax(x, y) {
+            // if (x > y) {
+            //     return x
+            // } else {
+            //     return y
+            // }
+            return x > y ? x : y
+        }
+        // 实参也可以放变量  
+        let max = getMax(num1, num2)
+        document.write(max)
+    </script>
+</body>
+
+</html>

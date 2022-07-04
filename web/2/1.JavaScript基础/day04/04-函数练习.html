@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 求2个数的和
+        // function getSum() {
+        //     let num1 = 10
+        //     let num2 = 20
+        //     document.write(num1 + num2)
+        // }
+        // getSum()
+        // 2. 求 1~100的累加和 封装函数
+        // function getSum100() {
+        //     let sum = 0
+        //     for (let i = 1; i <= 100; i++) {
+        //         sum += i
+        //     }
+        //     document.write(sum)
+        // }
+        // getSum100()
+
+        // 带有参数的函数
+        // function getSum(参数1, 参数2...) {
+
+        // }
+        // getSum(参数1,参数2...)
+        // 声明
+        // 形参
+        function getSum(num1, num2) {
+            document.write(num1 + num2)
+        }
+        // 调用
+        // 实参
+        getSum(1, 2)
+        document.write('<br>')
+        getSum(168493, 123123)
+
+        document.write('<br>')
+        document.write('<br>')
+        function getSum100(start, end) {
+            let sum = 0
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            document.write(sum)
+        }
+        getSum100(2, 10)
+        document.write('<br>')
+        getSum100(20, 100)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(x, y) {
+            let jia = x + y
+            let jian = x - y
+            // return jia, jian 结果值返回了 jian 因为return只能返回一个值
+            return [jia, jian]
+        }
+        let re = fn(1, 2)   //  [3, -1]
+        document.write(`相加之后的结果是：${re[0]},相减之后的结果是: ${re[1]} `)
+    </script>
+</body>
+
+</html>
