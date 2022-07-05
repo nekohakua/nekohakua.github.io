@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 立即执行函数无需调用,立即执行,作用避免全局变量污染;
+
+        // let fn = function() {}
+        // fn()
+
+        // 写法1
+        // (function() {})()
+
+        // 写法2
+        // (function() {}())
+        // rem适配法用了这这种方法
+        // (function fn() {
+        //     console.log(111)
+        // }())
+
+        // 第一个小括号放形参 第二个小括号放实参
+        // (function(x, y) {
+        //     console.log(x + y)
+        // })(1, 2)
+        
+        // 多个立即执行函数中间要写分号
+        (function () {
+            console.log(111)
+        })();
+
+        // 在这里加;是为了防止别人没写;,可以多写;
+        ; (function () {
+            console.log(222)
+        })()
+
+
+    </script>
+</body>
+</html>

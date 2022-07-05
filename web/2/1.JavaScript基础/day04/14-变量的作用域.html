@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 全局变量
+        let num = 10
+        console.log(num)
+        function fn() {
+            console.log(num)
+        }
+        fn()
+        if (true) {
+            console.log(num)
+        }
+
+        // 局部变量
+        // 函数内变量只能函数内使用，函数外不能使用
+        function fn1() {
+            let num1 = 11
+            console.log(num1)
+            
+            // 能用
+            function fn11() {
+                console.log(num1)
+                let num11 = 111
+            }
+            fn11()
+            // console.log(num111) 报错
+        }
+        fn1()
+        // console.log(num1) 报错
+
+        // 块级变量
+        if (true) {
+            let num2 = 12
+        }
+        // console.log(num2) 报错
+        for (let i = 0; i < 5; i++) {
+            console.log(i)
+        }
+        // console.log(i) 报错
+
+        // 特殊情况
+        function fun() {
+            // 全局变量
+            // 不要这样做
+            number = 20000
+        }
+        fun()
+        console.log(number)
+        if (true) {
+            console.log(number)
+        }
+
+        // 特殊情况
+        // x,y当作局部变量
+        function fuxy(x, y) {
+            document.write(x + y)
+        }
+        fuxy()
+        // console.log(x) 报错
+    </script>
+</body>
+</html>
