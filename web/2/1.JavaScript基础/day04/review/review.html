@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 02 */
+        div {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+            margin: 5px;
+            background-color: pink;
+            padding: 0 10px;
+            border: 1px solid hotpink;
+            color: deeppink;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 02 -->
+    <!-- <script>
+        function fn() {
+            for (let i = 0; i <= 9; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(`
+                        <div>${j} x ${i} = ${j * i} </div>
+                    `)
+                }
+                document.write('<br>')
+            }
+        }
+
+        fn()
+        fn()
+        fn()
+    </script> -->
+
+    <!-- 04 -->
+    <!-- <script>
+        // function getSum() {
+        //     let num1 = 10
+        //     let num2 = 20b
+        //     document.write(num1 + num2)
+        // }
+        // getSum()
+
+        // function getSum100() {
+        //     let sum = 0
+        //     for (let i =1; i <= 100; i++) {
+        //         sum += i
+        //     }
+        //     document.write(sum)
+        // }
+        // getSum100()
+
+        // function getSum(num1, num2) {
+        //     document.write(num1 + num2)
+        // }
+        // getSum(200, 100)
+
+        function getSum100(start, end) {
+            let sum = 0
+            for (let i = start; i <= end; i++) {
+                sum += i
+            }
+            document.write(sum)
+        }
+        getSum100(1, 100)
+    </script> -->
+
+    <!-- 06 -->
+    <!-- <script>
+        function getScore(arr) {
+            let sum = 0
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]
+            }
+            document.write(sum)
+        }
+        getScore([99, 10, 100])
+    </script> -->
+
+    <!-- 07 -->
+    <!-- <script>
+        function getSum(x, y) {
+            x = x || 0
+            y = y || 0
+            return x + y
+        }
+        let sum = getSum(1, 2)
+        document.write(sum)
+    </script> -->
+
+    <!-- 09 -->
+    <!-- <script>
+        function getArrMaxValue(arr) {
+            let max = arr[0]
+            for (let i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+            }
+            return max
+        }
+
+        let max = getArrMaxValue([1, 6, 2, 9, 3])
+        document.write(max)
+    </script> -->
+
+    <!-- 10 -->
+    <!-- <script>
+        function fn(x, y) {
+            let jia = x + y
+            let jian = x -y
+            return [jia, jian]
+        }
+        let re = fn(1, 2)
+        document.write(`加：${re[0]}-减：${re[1]}`)
+    </script> -->
+
+    <!-- 11 -->
+    <!-- <script>
+        function getMaxAndMin(arr) {
+            let max = min = arr[0]
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i]
+                }
+                if (min > arr[i]) {
+                    min = arr[i]
+                }
+            }
+            return [max, min]
+        }
+        let value = getMaxAndMin([1, 5, 8, 2, 0])
+        document.write(`数组的最大值是：${value[0]},数组的最小值是：${value[1]}`)
+    </script> -->
+
+    <!-- 12 -->
+    <!-- <script>
+        let num1 = +prompt('请输入第一个数')
+        let num2 = +prompt('请输入第二个数')
+        function getMax(x, y) {
+            return x > y ? x : y
+        }
+        let max = getMax(num1, num2)
+        document.write(max)
+    </script> -->
+
+    <!-- 14 -->
+    <!-- <script>
+        // let num = 10
+        // console.log(num)
+        // function fn() {
+        //     console.log(num)
+        // }
+        // fn()
+        // if (true) {
+        //     console.log(num)
+        // }
+
+        // function fn() {
+        //     let num = 11
+        //     console.log(num)
+
+        //     function fn1() {
+        //         console.log(num)
+        //     }
+        //     fn1()
+        // }
+        // fn()
+
+        // if (true) {
+        //     let num = 12
+        // }
+        // for (let i = 0; i < 5; i++) {
+        //     console.log(i)
+        // }
+
+        // function fn() {
+        //     num = 1000
+        // }
+        // fn()
+        // console.log(num)
+        // if (true) {
+        //     console.log(num)
+        // }
+
+        function fn(x, y) {
+            document.write(x + y)
+
+        }
+        fn(1, 2)
+    </script> -->
+
+    <!-- 15 -->
+    <!-- <script>
+        let num = 10
+        function fn() {
+            let num = 20
+            console.log(num)
+        }
+        fn()
+    </script> -->
+
+    <!-- 16 -->
+    <!-- <button>点击</button>
+    <script>
+        // let fn = function() {
+        //     console.log(111)
+        // }
+        // fn()
+
+        // let fn = function(x, y) {
+        //     console.log(x + y)
+        // }
+        // fn(1, 2)
+
+        let btn = document.querySelector('button')
+        // btn.onclick = function() {
+        //     alert('111')
+        // }
+        btn.addEventListener('click', function() {
+            alert('222')
+        })
+    </script> -->
+
+    <!-- 17 -->
+    <!-- <script>
+        // (function fn() {
+        //     console.log(111)
+        // } ())
+
+        (function(x, y) {
+            console.log((x + y))
+        })(1, 2);
+
+        ; (function () {
+            console.log(222)
+        }())
+    </script> -->
+
+    <!-- 18 -->
+    <script>
+        let seconds = prompt('请输入要转换多少秒：')
+        function fn(seconds) {
+            let h = parseInt(seconds / 60 / 60 % 24)
+            let m = parseInt(seconds / 60 % 60)
+            let s = parseInt(seconds % 60)
+            h = h < 10 ? '0' + h : h
+            m = m < 10 ? '0' + m : m 
+            s = s < 10 ? '0' + s : s
+            return [h, m, s]
+        }
+        let str = fn(seconds)
+        document.write(`${str[0]}小时${str[1]}分${str[2]}秒`)
+
+    </script>
+</body>
+
+</html>

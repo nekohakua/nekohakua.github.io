@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 -->
+    <!-- <script>
+        let name = prompt('请输入您的名字：')
+        function printfInput(name) {
+            document.write(name)
+        }
+        printfInput(name)
+    </script> -->
+
+    <!-- 2 -->
+    <!-- <script>
+        function sum(x, y) {
+            return x + y
+        }
+        let te = sum(1, 2)
+        console.log(te)
+    </script> -->
+
+    <!-- 3 -->
+    <!-- <script>
+        function changeNum(a, b) {
+            console.log(`a=${a},b=${b}`)
+            let temp = a
+            a = b
+            b = temp
+            console.log(`交换后：a=${a},b=${b}`)
+        }
+        changeNum(1, 0)
+        changeNum('a', 'b')
+    </script> -->
+
+    <!-- 4 -->
+    <script>
+        let balance = prompt('请输入银行卡余额：')
+        let borad = prompt('请输入当月食宿消费金额：')
+        let living = prompt('输入当月生活消费金额：')
+        function fn(balance, borad, living) {
+            return balance - borad - living
+        }
+        let money = fn(balance, borad, living)
+        document.write(`我的银行卡余额还有${money}元`)
+    </script>
+</body>
+</html>
