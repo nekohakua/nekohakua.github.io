@@ -9,13 +9,12 @@
 <body>
     <script>
         let num = 10
-        function fu() {
+        function fn() {
             let num = 20
             // 就近原则，因为作用域链是从当前作用域往上找，都没有就是undefined
             console.log(num) //20
         }
-        fu()
-
+        fn()
     </script>
 </body>
 </html>
