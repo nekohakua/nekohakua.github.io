@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象是有属性和方法组成的，那么属性和方法都要写在对象里面
+        let ldh = {
+            // 属性
+            uname: '刘德华',
+            // 方法   方法名: function(){}
+            sing: function () {
+                console.log('唱歌')
+            },
+            dance: function (s) {
+                console.log(s)
+            }
+        }
+
+        // 外部使用   对象.方法名()
+        ldh.sing()
+        ldh.dance('恭喜发财')
+        
+    </script>
+</body>
+
+</html>

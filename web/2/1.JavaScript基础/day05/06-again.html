@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            uname: '小明',
+            age: 18,
+            sex: '男',
+
+        }
+        // 请输出对象的名字 小明
+        console.log(obj.uname)
+        console.log(obj['uname'])
+        // 遍历对象
+        for (let k in obj) {
+            // 得到的是带字符串的属性名
+            // k === 'uname'  === 'age'  === 'sex'
+            console.log(k)
+            // console.log(obj.k)  不可行
+            // console.log(obj['uname'])
+            // console.log(obj['age'])
+            // console.log(obj['sex'])
+            console.log(obj[k])
+        }
+    </script>
+</body>
+
+</html>

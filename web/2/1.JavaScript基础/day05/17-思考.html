@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 简单数据类型存储的是值 存储在栈里面
+        let num1 = 10
+        let num2 = num1
+        num2 = 20
+        console.log(num1)
+
+        // 对象是引用数据类型 存储的是地址 存储在栈里 栈的这个地址会找到堆 堆是真正存储的数据
+        let obj1 = {
+            age: 18
+        }
+        // obj2 在栈存储的地址等于 obj1在栈存储的地址,它们现在指向同一个堆的空间了
+        let obj2 = obj1
+        console.log(obj1, obj2)
+
+        // 
+        obj2.age = 20
+        console.log(obj1)
+        console.log(obj2)
+
+    </script>
+</body>
+</html>
