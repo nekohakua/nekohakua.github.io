@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 04 -->
+    <!-- <script>
+        let i = 1
+        console.log(++i + 2)
+        console.log(i)
+
+        let j = 1
+        console.log(j++ + 2)
+        console.log(j)
+    </script> -->
+
+    <!-- 05 -->
+    <!-- <script>
+        let i = 1
+        console.log(i++ + ++i + i)
+
+        let k1 = 10;
+        // 10 12 12
+        console.log(k1++ + ++k1 + k1++) //34
+        // 14 14 15 15
+        console.log(++k1 + k1++ + k1 + k1++) //58
+
+        var k2 = 10;
+        //11 11 13
+        console.log(++k2 + k2++ + ++k2) //35
+        // 13 15 15
+        console.log(k2++ + ++k2 + k2++) //43
+    </script> -->
+
+    <!-- 06 -->
+    <!-- <script>
+        console.log(3 > '2')
+    </script> -->
+
+    <!-- 08 -->
+    <!-- <script>
+        let num = prompt('输入：')
+        console.log(num)
+        num = num || 0
+        console.log(num)
+        console.log(num % 4 === 0 && num % 100 !== 0)
+    </script> -->
+
+    <!-- 21 -->
+    <script>
+        let money = 100
+        while (true) {
+            let str = prompt(`
+                请选择操作：
+                1.存钱
+                2.取钱
+                3.查看余额
+                4.退出
+            `)
+
+            if (str === '4') {
+                break
+            }
+
+            switch (str) {
+                case '1':
+                    let cun = +prompt(`存`)
+                    money += cun
+                    break;
+                case '2':
+                    let qu = +prompt(`取`)
+                    money -= qu
+                    break;
+                case '3':
+                    alert(`${money}元`)
+                    break;
+            
+                default:
+                    break;
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 22 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            margin: 0 auto;
+            text-align: center;
+            /* !!!! */
+            border-collapse: collapse;
+        }
+
+        table th,
+        td {
+            border: 1px solid #000;
+            padding: 15px;
+        }
+
+        table caption {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 12 -->
+    <!-- <script>
+        console.log('1\'2\'')
+
+        console.log(1 + '2')
+    </script> -->
+
+    <!-- 16 -->
+    <!-- <script>
+        let obj = null
+        console.log(obj)
+    </script> -->
+
+    <!-- 17 -->
+    <!-- <script>
+        console.log(typeof undefined)
+        console.log(typeof null)
+
+            // typeof会先算123,后'123',相当于：console.log('number' + '123')
+            console.log(typeof 123 + '123')
+            console.log(typeof (123 + '123'))
+            console.log(typeof (123 + + '123'))
+    </script> -->
+
+    <!-- 18 -->
+    <!-- <script>
+        console.log(10 + '10')
+        console.log(10 - '10')
+
+        console.log(+'10')
+        console.log(-'10')
+
+        console.log(10 + +'10')
+    </script> -->
+
+    <!-- 19 -->
+    <!-- <script>
+        console.log(Number('10'))
+        console.log(Number('111abc'));
+        console.log(parseInt(10.111))
+        console.log(parseFloat(10.111))
+        console.log(parseInt('100px'))
+        console.log(parseInt('px100px'))
+    </script> -->
+
+    <!-- 20 -->
+    <!-- <script>
+        console.log(String(10))
+        let age = 18
+        console.log(age.toString())
+        console.log(age.toString(2))
+    </script> -->
+
+    <!-- 22 -->
+    <script>
+        let price = +prompt('请输入商品价格:')
+        let num = +prompt('请输入购买的数量:')
+        let address = prompt('请输入收货的地址:')
+        let total = price * num
+        document.write(`
+            <table>
+                <caption>
+                    <h2>订单确认</h2>
+                </caption>
+                <tr>
+                    <th>商品名称</th>
+                    <th>商品价格</th>
+                    <th>商品数量</th>
+                    <th>总价</th>
+                    <th>收货地址</th>
+                </tr>
+                <tr>
+                    <td>小米手机青春PLUS</td>
+                    <td>${price}元</td>
+                    <td>${num}</td>
+                    <td>${total}元</td>
+                    <td>${address}</td>
+                </tr>
+            </table>
+        `)
+    </script>
+</body>
+</html>
