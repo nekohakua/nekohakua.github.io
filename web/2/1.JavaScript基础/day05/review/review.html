@@ -5,14 +5,281 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 09 -->
+    <!-- <style>
+        table {
+            width: 600px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+
+        table tr:not(:first-child):hover {
+            background-color: #eee;
+        }
+    </style> -->
+
+    <!-- 15 -->
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+    </style>
 </head>
 <body>
-    <script>
+    <!-- 01 -->
+    <!-- <script>
         function fn(x = 0, y = 0) {
             console.log(x + y)
         }
         fn()
         fn(1, 2)
+    </script> -->
+
+    <!-- 02 -->
+    <!-- <script>
+        let goods = {
+            name: 'JavaScipt高级编程',
+            price: 88,
+            page: 300,
+        }
+
+        let person = {
+            uname: '兆崩',
+            age: 17,
+            sex: '男',
+
+            sayHi: function () {
+                console.log('hi')
+            },
+            mtv: function (s) {
+                console.log(s)
+            }
+        }
+
+        console.log(person.uname)
+        console.log(person.age)
+        console.log(person['sex'])
+
+        person.sayHi()
+        person.mtv('参数')
+    </script> -->
+
+    <!-- 04 -->
+    <!-- <script>
+        let obj = {
+            uname: '小明',
+            age: 18
+        }
+        console.log(obj.age)
+
+        obj.age = 81
+        console.log(obj)
+
+        obj.sex = '男'
+        console.log(obj)
+
+        obj.sing = function () {
+            console.log('hi')
+        }
+        console.dir(obj)
+
+        delete obj.uname
+        console.log(obj)
+    </script> -->
+
+    <!-- 05 -->
+    <!-- <script>
+        let obj = {
+            uname: '小明',
+            age: 18,
+            sex: '男'
+        }
+        for (let key in obj) {
+            console.log(key)
+            console.log(obj[key])
+        }
+    </script> -->
+
+    <!-- 08 -->
+    <!-- <script>
+        let students = [
+            { name: '小明', age: 18, gender: '男', hometown: '河北省' },
+            { name: '小红', age: 19, gender: '女', hometown: '河南省' },
+            { name: '小刚', age: 17, gender: '男', hometown: '山西省' },
+            { name: '小丽', age: 18, gender: '女', hometown: '山东省' }
+        ]
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i].name)
+            console.log(students[i].gender);
+        }
+    </script> -->
+
+    <!-- 09 -->
+    <!-- <h2>学生信息</h2>
+    <p>渲染中</p>
+    <script>
+        let students = [
+            { name: '小明', age: 18, gender: '男', hometown: '河北省' },
+            { name: '小红', age: 19, gender: '女', hometown: '河南省' },
+            { name: '小刚', age: 17, gender: '男', hometown: '山西省' },
+            { name: '小丽', age: 18, gender: '女', hometown: '山东省' },
+            { name: '晓强', age: 18, gender: '女', hometown: '山东省' }
+        ]
+
+        document.write(`
+        <table>
+            <caption>学生列表</caption>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>家乡</th>
+            </tr>
+        `)
+
+        for (let i = 0; i < students.length; i++) {
+            document.write(`
+                <tr>
+                    <td>${i + 1}</td>
+                    <td>${students[i].name}</td>
+                    <td>${students[i].age}</td>
+                    <td>${students[i].gender}</td>
+                    <td>${students[i].hometown}</td>
+                </tr>
+
+            `)
+        }
+
+        document.write(`
+            </table>
+        `)
+    </script> -->
+
+    <!-- 10 -->
+    <!-- <script>
+        console.log(Math)
+
+        console.log(Math.PI)
+
+        console.log(Math.random())
+
+        console.log(Math.ceil(1.1))
+        console.log(Math.ceil(1.5))
+        console.log(Math.ceil(1.9))
+
+        console.log(Math.floor(1.1))
+        console.log(Math.floor(1.5))
+        console.log(Math.floor(1.9))
+
+        console.log(Math.round(1.1))
+        console.log(Math.round(1.5))
+        console.log(Math.round(1.9))
+        console.log(Math.round(-1.1))
+        console.log(Math.round(-1.5))
+        console.log(Math.round(-1.9))
+
+        console.log(Math.max(1, 2, 3))
+        console.log(Math.min(1, 2, 3))
+
+        console.log(Math.abs(-2131231))
+    </script> -->
+
+    <!-- 11 -->
+    <!-- <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let random = getRandom(1, 10)
+        console.log(random)
+    </script> -->
+
+    <!-- 12 -->
+    <!-- <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+        let random = getRandom(0, arr.length - 1)
+        document.write(random)
+        document.write(arr[random])
+    </script> -->
+
+    <!-- 13 -->
+    <!-- <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+        let random = getRandom(0, arr.length - 1)
+        document.write(random)
+        document.write(arr[random])
+
+        arr.splice(random, 1)
+        console.log(arr)
+    </script> -->
+
+    <!-- 14 -->
+    <!-- <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+
+        let random = getRandom(1, 10)
+        while(true) {
+            let num = +prompt('请输入数：')
+            if (num > random) {
+                alert('大了')
+            } else if (num < random) {
+                alert('小了')
+            } else {
+                alert('正确')
+                break
+            }
+        }
+    </script> -->
+
+    <!-- 15 -->
+    <!-- <div class="box">
+        <script>
+            document.write('111')
+        </script>
+    </div> -->
+
+    <!-- 17 -->
+    <script>
+        let obj1 = {
+            age: 18
+        }
+        let obj2 = obj1
+        console.log(obj1, obj2)
+        obj2.age = 100
+        console.log(obj1, obj2)
+
     </script>
 </body>
 </html>

@@ -9,18 +9,18 @@
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
 <link href="static/css/login.css" rel="stylesheet" type="text/css">
 <!-- live2d -->
-<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<!-- <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 <script type="text/javascript" src="static/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script src="static/js/verificationNumbers.js" tppabs="static/js/verificationNumbers.js"></script>
+<script src="static/js/verificationNumbers.js" tppabs="static/js/verificationNumbers.js"></script> -->
 <style>
 .J_codeimg{z-index:-1;position:absolute;}
 </style>
-<script>
+<!-- <script>
 $(document).ready(function() {
   //验证码
   createCode();
 });
-</script>
+</script> -->
 </head>
 <body>
 <div class="login-box" id="demo">
@@ -60,6 +60,18 @@ $(document).ready(function() {
   <div class="canvaszz"> </div>
   <canvas id="canvas"></canvas> 
 </div>
+
+<!-- live2d -->
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script type="text/javascript" src="static/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script src="static/js/verificationNumbers.js" tppabs="static/js/verificationNumbers.js"></script>
+<script>
+  $(document).ready(function() {
+    //验证码
+    createCode();
+  });
+</script>
+
 <script>
 //宇宙特效
 "use strict";
