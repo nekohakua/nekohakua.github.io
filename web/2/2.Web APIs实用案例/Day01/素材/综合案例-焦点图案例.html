@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ音乐10屏轮播图</title>
+    <style>
+        .img-box {
+            width: 700px;
+            height: 320px;
+            margin: 50px auto 0;
+            background: #000;
+            position: relative;
+        }
+
+        .img-box .tip {
+            width: 700px;
+            height: 53px;
+            line-height: 53px;
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+
+        .img-box .tip h3 {
+            width: 82%;
+            margin: 0;
+            margin-right: 20px;
+            padding-left: 20px;
+            color: #98E404;
+            font-size: 28px;
+            float: left;
+            font-weight: 500;
+            font-family: "Microsoft Yahei", Tahoma, Geneva;
+        }
+
+        .img-box .tip a {
+            width: 30px;
+            height: 29px;
+            display: block;
+            float: left;
+            margin-top: 12px;
+            margin-right: 3px;
+        }
+
+        .img-box ul {
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            list-style: none;
+            z-index: 99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-box">
+        <img class="pic" src="images/b01.jpg" alt="第1张图的描述信息">
+        <div class="tip">
+            <h3 class="text">挑战云歌单，欢迎你来</h3>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

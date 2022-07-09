@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>我是第一个盒子</div>
+    <div>我是第二个盒子</div>
+    <div class="three">我是第三个盒子</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <span>就一个元素</span>
+
+    <script>
+        // querySelector是一个HTMLElement对象返回CSS选择器匹配的第一个元素，如果没有匹配返回null
+        let div = document.querySelector('div')
+        console.log(div)
+
+        let div1 = document.querySelector('.three')
+        console.log(div1)
+
+        let li = document.querySelector('ul li:last-child')
+        console.log(li)
+
+        // 返回CSS选择器匹配到的NodeList对象集合（伪数组，没有pop() push()等方法）
+        let lis = document.querySelectorAll('ul li')
+        console.log(lis)
+
+        // 通过遍历的方式获得里面的每一个dom对象
+        for (let i = 0; i < lis.length; i++) {
+            console.log((lis[i]))
+        }
+
+        // 即使一个元素，用这个方式还是伪数组
+        let span = document.querySelectorAll('span')
+        console.log(span)
+
+    </script>
+</body>
+</html>
