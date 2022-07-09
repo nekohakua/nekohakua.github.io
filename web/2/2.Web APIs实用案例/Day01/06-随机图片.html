@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./素材/images/1.webp" alt="">
+
+    <script>
+        // 1.获取图片元素
+        let pic = document.querySelector('img')
+        // 2.随机得到图片序号
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        // 通过浏览器调试工具输入num可以看见随机数是否生效
+        let num = getRandom(1, 6)
+        // 3.完成src属性赋值
+        pic.src = `./素材/images/${num}.webp`
+    </script>
+</body>
+</html>

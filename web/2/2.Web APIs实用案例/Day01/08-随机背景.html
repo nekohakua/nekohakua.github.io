@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(./素材/images/desktop_1.jpg);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+
+        let num = getRandom(1, 10)
+        // backgroundImag属于CSS所以记得加上style
+        document.body.style.backgroundImage = `url(./素材/images/desktop_${num}.jpg)`
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        // 1.获取元素
+        let box = document.querySelector('div')
+
+        // 改变背景颜色 样式 style
+        // 修改样式通过style属性引出
+        // 如果属性有-连接符，需要转换为小驼峰命名法
+        // 通过style的写法是写到标签的行内的
+        // box.style.background = 'hotpink' 或者下面的写法
+        box.style.backgroundColor = 'hotpink'
+        box.style.width = '400px'
+        box.style.marginTop = '100px'
+    </script>
+</body>
+</html>

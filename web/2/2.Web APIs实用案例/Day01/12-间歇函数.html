@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数，毫秒
+        // 返回值 intervalID 是一个非零数值，用来标识通过 setInterval() 创建的定时器，这个值可以用来作为 clearInterval() 的参数来清除对应的定时器。
+        // setInterval(function() {
+        //     console.log('打印');
+        // }, 1000)
+
+        function show() {
+            console.log(111)
+        }
+        // 因为show()是函数立马调用，这里要等1000毫秒
+        let timer = setInterval(show, 1000)
+        console.log(timer) //1 数值型
+
+        let timer2 = setInterval(show, 1000)
+        console.log(timer2) //2
+
+        // 清除定时器 这里还没开始就清除了timer
+        clearInterval(timer)
+    </script>
+</body>
+</html>
