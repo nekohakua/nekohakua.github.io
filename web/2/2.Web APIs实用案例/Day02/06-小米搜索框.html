@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+
+            list-style: none;
+        }
+
+        .mi {
+            position: relative;
+            width: 223px;
+            margin: 100px auto;
+        }
+
+        .mi input {
+            width: 223px;
+            height: 48px;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 48px;
+            border: 1px solid #e0e0e0;
+            outline: none;
+
+            transition: all .5s;
+        }
+
+        .mi .search {
+            border: 1px solid #ff6700;
+        }
+
+        .result-list {
+            display: none;
+
+            position: absolute;
+            left: 0;
+            top: 48px;
+            width: 223px;
+            border: 1px solid #ff6700;
+            border-top: 0;
+            background: #fff;
+        }
+
+        .result-list a {
+            display: block;
+            padding: 6px 15px;
+            font-size: 12px;
+            color: #424242;
+            text-decoration: none;
+        }
+
+        .result-list a:hover {
+            background-color: #eee;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mi">
+        <!-- search：h5搜索框,优点：语义更好，移动端用这个做更好 -->
+        <input type="search" placeholder="小米笔记本">
+        <ul class="result-list">
+            <li><a href="#">全部商品</a></li>
+            <li><a href="#">小米11</a></li>
+            <li><a href="#">小米10S</a></li>
+            <li><a href="#">小米笔记本</a></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">黑鲨4</a></li>
+            <li><a href="#">空调</a></li>
+        </ul>
+    </div>
+    <script>
+        // let search = document.querySelector('input')可以下面这种写
+        // 选择type=search的input
+        let search = document.querySelector('input[type=search]')
+        let list = document.querySelector('.result-list')
+
+        // click 鼠标点击
+        // mouseenter 鼠标经过
+        // mouseleave 鼠标离开
+        // focus 获得焦点
+        // blur 失去焦点
+        // Keydown 键盘按下触发
+        // Keyup 键盘抬起触发
+        // input 用户输入事件
+
+        // search.addEventListener('mouseenter', function() {
+        // 事件监听 获得光标事件 focus
+        search.addEventListener('focus', function() {
+            // alert(11) //证明focus没写错 写错不会报错会没有效果
+
+            // 显示下拉菜单
+            list.style.display = 'block'
+
+            // 添加文本框变色的类
+            search.classList.add('search')
+        })
+
+        // 事件监听 失去光标事件 blur
+        search.addEventListener('blur', function() {
+            // 隐藏下拉菜单
+            list.style.display = 'none'
+
+            // 移除文本框变色的类
+            search.classList.remove('search')
+        })
+    </script>
+</body>
+
+</html>

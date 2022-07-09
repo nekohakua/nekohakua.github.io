@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 80px;
+    }
+
+    input[type=text] {
+      width: 50px;
+      height: 44px;
+      outline: none;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-right: 0;
+    }
+
+    input[type=button] {
+      height: 24px;
+      width: 22px;
+      cursor: pointer;
+    }
+
+    input {
+      float: left;
+      border: 1px solid #ccc;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="total" value="1" readonly>
+    <input type="button" value="+" id="add">
+    <input type="button" value="-" id="reduce" disabled>
+
+    <script>
+      let total = document.querySelector('#total')
+      let add = document.querySelector('#add')
+      let reduce = document.querySelector('#reduce')
+      add.addEventListener('click', function() {
+        // i++隐式转换 total.value本来是字符串型转换成了数字型
+        total.value++
+        reduce.disabled = false
+      })
+
+      reduce.addEventListener('click', function() {
+        // i--隐式转换 total.value本来是字符串型转换成了数字型
+        total.value--
+        // <=隐式转换成数字型
+        if (total.value <= 1) {
+          reduce.disabled = true
+        }
+      })
+    </script>
+  </div>
+</body>
+
+</html>

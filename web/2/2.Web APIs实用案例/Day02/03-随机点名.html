@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 40px;
+            border: 1px solid pink;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>点名</button>
+    <script>
+        let box = document.querySelector('div')
+        let btn = document.querySelector('button')
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        // 声明一个数组
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+        btn.addEventListener('click', function() {
+            let random = getRandom(0, arr.length - 1)
+            box.innerHTML = arr[random]
+            arr.splice(random, 1)
+            if (arr.length === 0) {
+                btn.disabled = true
+                btn.innerHTML = '已经抽完'
+            }
+        })
+    </script>
+</body>
+</html>

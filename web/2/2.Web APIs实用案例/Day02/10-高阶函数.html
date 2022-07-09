@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 高阶函数：把函数当作值来用 -->
+    <script>
+        let num = 10
+
+        // 函数表达式 把函数赋值给变量
+        let fn = function() {}
+        btn.onclick = function() {}
+        // 高阶函数 把函数当作值来用
+
+        // 回调函数
+        // 如果将函数 A 做为参数传递给函数 B 时，我们称函数 A 为回调函数
+        // 简单理解： 当一个函数当做参数来传递给另外一个函数的时候，这个函数就是回调函数
+        // setInterval(function() {}, 1000)
+
+        // fn就是回调函数 回头去调用的函数 setInterval不会立即执行fn，等1000毫秒后再回头调用这个函数
+        function fn() {}
+        setInterval(fn, 1000)
+
+        // box.addEventListener('click', function() {})
+        // 不会立即调用fn函数，当点击了才回头调用fn
+        box.addEventListener('click', fn)
+
+    </script>
+</body>
+</html>
