@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="pink">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <script>
+        // window.fn()
+        // 回头调用函数
+        // setInterval(fn, 1000)
+        // function fn() {
+        //     this
+        // }
+        // btn.addEventListener('click', function () {
+        //     // this 指向btn 
+        //     window.setInterval(function () {
+        //         // this 指向的window
+        //     }, 1000)
+        // })
+        // 排他思想， 干掉所有人 ，复活我自己
+        // 1. 获取元素
+        let btns = document.querySelectorAll('button')
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function () {
+                // // 干掉所有人
+                // for (let j = 0; j < btns.length; j++) {
+                //     btns[j].classList.remove('pink')
+                // }
+                // // 复活我自己
+                // this.classList.add('pink')
+                // 选出唯一的那个类pink， 移除掉
+                document.querySelector('.pink').classList.remove('pink')
+                this.classList.add('pink')
+            })
+        }
+    </script>
+</body>
+
+</html>

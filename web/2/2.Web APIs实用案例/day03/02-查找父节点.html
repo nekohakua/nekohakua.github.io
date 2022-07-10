@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="father">
+        <div class="son">儿子</div>
+    </div>
+    <script>
+        // 父节点查找：
+        // parentNode 属性
+        // 返回最近一级的父节点 找不到返回为null
+
+        let son = document.querySelector('.son')
+        console.log(son.parentNode)
+        // 找最近的一个父节点， 爷爷：son.parentNode.parentNode
+        son.parentNode.style.display = 'none'
+
+        // 把昨天的关闭二维码重构优化
+    </script>
+</body>
+</html>

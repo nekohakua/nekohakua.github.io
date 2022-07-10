@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>我是内容1</li>
+    </ul>
+    <script>
+        let ul = document.querySelector('ul')
+        // 克隆节点：
+        // cloneNode会克隆出一个跟原标签一样的元素，括号内传入布尔值
+        //  若为true，则代表克隆时会包含后代节点一起克隆
+        //  若为false，则代表克隆时不包含后代节点
+        //  默认为false
+        let newUl = ul.cloneNode(true)
+        document.body.appendChild(newUl)
+
+    </script>
+</body>
+</html>

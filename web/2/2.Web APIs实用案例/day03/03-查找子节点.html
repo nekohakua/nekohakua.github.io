@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <ul>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <script>
+            let btn = document.querySelector('button')
+            let ul = document.querySelector('ul')
+            btn.addEventListener('click', function() {
+                // 子节点查找：
+                //  childNodes 获得所有子节点、包括文本节点（空格、换行）、注释节点等
+
+                // children （重点）:
+                // 仅获得所有元素节点
+                // 返回的还是一个伪数组
+
+                console.log(ul.children)
+                for(let i = 0; i < ul.children.length; i++) {
+                    ul.children[i].style.color = 'red'
+                }
+            })
+
+            // 连空文本也拿了，所以不好用
+            // ul换行的空文本 + （li +li换行的空文本） * 6 + script
+            console.log(ul.childNodes.length) //14 
+            console.log(ul.childNodes)
+        </script>
+    </ul>
+</body>
+</html>

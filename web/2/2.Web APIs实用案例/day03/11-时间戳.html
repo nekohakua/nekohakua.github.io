@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 什么是时间戳
+        //  是指1970年01月01日00时00分00秒起至现在的毫秒数，它是一种特殊的计量时间的方式
+        // 时间戳是总的毫秒数 是独一无二的 作用：方便计算两点之间的时间 用来计算倒计时
+        // 用将来的时间戳 - 现在的时间戳 = 剩余的时间毫秒数 然后把毫秒转换成格式时间
+
+        // 获取时间戳的方式
+        // 1.getTime()
+        // let date = new Date()
+        // console.log(date.getTime())
+
+        // 2.简写+new Date() 像+'1'一样有隐式转换 （推荐）
+        // 当前的时间戳
+        console.log(+new Date()) 
+        // 指定的时间戳
+        console.log(+new Date('2022-10-01 12:00:00'))
+
+        // 3.不需要实例化的方法：Date.now() （了解）
+        // 这种只能得到当前的时间戳， 而前面两种可以返回指定时间的时间戳
+        // console.log(Date.now())
+    </script>
+</body>
+</html>

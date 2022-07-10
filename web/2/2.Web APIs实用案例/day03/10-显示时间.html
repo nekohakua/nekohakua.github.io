@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 350px;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 写在外面就是一开始就是打开页面的时间，不会变了
+        // let date = new Date()
+        let div = document.querySelector('div')
+        let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+
+        // 为了一打开浏览器就显示出来，避免1000毫秒的空白，所以先调用一次
+        getTime() 
+
+        setInterval(getTime, 1000)
+        function getTime() {
+            // 要想动态变化就一定写在里面
+            let date = new Date()
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let date1 = date.getDate()
+            let hour = date.getHours()
+            let min = date.getMinutes()
+            let sec = date.getSeconds()
+            let day = date.getDay()
+            div.innerHTML = `今天是：${year}年${month}月${date1}日 ${hour}:${min}:${sec} ${arr[day]}`
+        }
+
+    </script>
+</body>
+</html>
