@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img src="./素材/images/tianshi.gif" alt="">
+    <script>
+        let img = document.querySelector('img')
+        document.addEventListener('mousemove', function(e) {
+            // 不断得到当前的鼠标坐标
+            // console.log(e.pageX)
+            // console.log(e.pageY)
+            // e.pageX返回的是数字型，+''隐式转换成字符串型
+            // 左移动和上移动图片的宽高的一半来让鼠标在图片的中心
+            img.style.left = e.pageX  - 30 + 'px'
+            img.style.top = e.pageY - 40 + 'px'
+        })
+    </script>
+</body>
+</html>

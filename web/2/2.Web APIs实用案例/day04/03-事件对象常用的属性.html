@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 给文档添加了事件监听 在任何地方mousemove都可以触发function() {}
+        // mousemove鼠标移动事件
+        // document.addEventListener('mousemove', function(e) {
+        document.addEventListener('click', function(e) {
+            // console.log(1)
+
+            // 部分常用属性
+            //  type
+            //  获取当前的事件类型，比如click
+
+            //  clientX/clientY
+            //  获取光标相对于浏览器可见窗口左上角的位置
+
+            //  offsetX/offsetY
+            //  获取光标相对于当前DOM元素左上角的位置
+
+            //  key
+            //  用户按下的键盘键的值
+            //  现在不提倡使用keyCode
+            
+            console.log('clientX:' + e.clientX, 'clientY:' + e.clientY)
+
+            // pageX和pageY 跟文档坐标有关系
+            // 整个页面的有效
+            // 可以在当前可见窗口下面触发
+            // 用的多
+            console.log('pageX:' + e.pageX, 'pageY:' + e.pageY)
+
+            // 少用
+            // 元素内部的
+            console.log('offsetX:' + e.offsetX, 'offsetY:' + e.offsetY)
+
+        })
+    </script>
+</body>
+</html>

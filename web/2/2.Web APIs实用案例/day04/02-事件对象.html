@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <script>
+        let btn = document.querySelector('button')
+        //  在事件绑定的回调函数的第一个参数就是事件对象
+        // 事件对象也是个对象，这个对象里有事件触发时的相关信息
+        // 一般命名为event、ev、e
+        btn.addEventListener('click', function(event) {
+            console.log(event)
+        })
+    </script>
+</body>
+</html>

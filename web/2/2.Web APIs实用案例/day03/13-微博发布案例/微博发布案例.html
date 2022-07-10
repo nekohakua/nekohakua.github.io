@@ -263,6 +263,19 @@
 
     })
 
+    // 按下回车可以生成留言信息
+    // keydown键盘按下时 keyup键盘松开手弹起时 两个几乎同时发生 这里要用keyup 用keydown的话会有个回车不能清空
+    textarea.addEventListener('keyup', function(e) {
+      // console.log(89891)
+      // 可以看见key：的值，这是知道按了哪个键
+      // console.log(e)
+      // console.log(e.key)
+      if (e.key === 'Enter') {
+        // 自动触发点击发布按钮
+        send.click()
+      }
+    })
+
   </script>
 </body>
 
