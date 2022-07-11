@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+        // 不要每一个li注册事件 而是把事件委托给父级 
+        // 事件委托是给父级添加事件而不是给子级添加事件
+        // 不用for循环来一个个获取ul的子级li了，提高性能
+        let ul = document.querySelector('ul')
+        // 当点击任意一个li时会冒泡看看父级有没有点击事件，有就会触发父级的点击事件
+        ul.addEventListener('click', function(e) {
+            // alert('点击了')
+            // 得到当前的元素,这里指得到ul的子级li
+            // console.log(e)
+            // console.log(e.target)
+            e.target.style.color = 'pink'
+
+        })
+    </script>
+</body>
+</html>
