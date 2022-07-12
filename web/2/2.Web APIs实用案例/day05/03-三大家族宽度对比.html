@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            overflow: auto;
+            padding: 10px;
+            border: 10px solid #000;
+            margin: 100px 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+        我里面可以放很多文字
+    </div>
+
+    <script>
+        // scroll家族
+        //  获取宽高：
+        //  获取元素的内容总宽高（不包含滚动条）返回值不带单位
+        //  scrollWidth和scrollHeight
+        //  获取位置: 
+        //  获取元素内容往左、往上滚出去看不到的距离
+        //  scrollLeft和scrollTop
+        //  这两个属性是可以修改的
+
+        // offset家族
+        //  获取宽高：
+        //  获取元素的自身宽高、包含元素自身设置的宽高、padding、border
+        //  offsetWidth和offsetHeight
+        //  获取位置：
+        //  获取元素距离自己定位父级元素的左、上距离 会一层层往上找有定位的父级，都没有定位那就是以文档左上角为准
+        //  offsetLeft和offsetTop 注意是只读属性
+
+        // scroll家族1. scrollwidth scrollHeight(了解)
+        let div = document.querySelector('div')
+        console.log(div.scrollWidth) // 153 内容的高度 不带单位
+        console.log(div.scrollHeight) // 524 内容的高度 不带单位
+        console.log('------------------------------------')
+        // 盒子元素的大小 = 盒子本身的宽度和高度 + padding + border
+        console.log(div.offsetWidth) // 190
+        console.log(div.offsetHeight) // 190
+        console.log(div.offsetTop) // 100
+        console.log(div.offsetLeft) // 100
+
+
+        // scroll家族2.被卷去的头部和左侧
+        // div.addEventListener('scroll', function() {
+        //     // 也就是说内容(div)滚动的像素
+        //     console.log(this.scrollTop)
+        // })
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>手风琴</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 1200px;
+      height: 400px;
+      margin: 50px auto;
+      border: 1px solid red;
+      overflow: hidden;
+    }
+
+    div li {
+      width: 240px;
+      height: 400px;
+      float: left;
+      /* 只要改变了属性，过度会让它慢慢变化，所以看起来有动画效果 */
+      transition: all 500ms;
+    }
+
+    div ul {
+      width: 1200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="./images/1.jpg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/2.jpg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/3.jpg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/4.jpg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./images/5.jpg" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+<script>
+  // css做的特效比js的高，所以一般用js调用css
+
+  // 不用事件委托了，因为大家都在变，用传统
+
+  // 1. li默认有个宽度是240像素
+  // 2.当我们的鼠标经过，当前的li 宽度变大800px 其余的li变为100px
+  // 3.鼠标离开事件，所有的li都要复原宽度为240px
+
+  let lis = document.querySelectorAll('li')
+  for(let i = 0; i < lis.length; i++) {
+    // 鼠标经过
+    lis[i].addEventListener('mouseenter', function() {
+      // 排他思想
+      for(let j = 0; j < lis.length; j++) {
+        lis[j].style.width = '100px'
+      }
+      this.style.width = '800px'
+    })
+    // 鼠标离开
+    lis[i].addEventListener('mouseleave', function() {
+      for(let j = 0; j < lis.length; j++) {
+        lis[j].style.width = '240px'
+      }
+    })
+  }
+
+</script>
+
+</html>
