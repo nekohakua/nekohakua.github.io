@@ -63,25 +63,35 @@
         //  获取元素距离自己定位父级元素的左、上距离 会一层层往上找有定位的父级，都没有定位那就是以文档左上角为准
         //  offsetLeft和offsetTop 注意是只读属性
 
+        // 3 client家族
+        //  获取宽高：
+        //  获取元素的可见部分宽高（不包含边框，滚动条等，包含padding）
+        //  clientWidth和clientHeight
+        //  获取位置：
+        //  获取左边框和上边框宽度(当前可视区域)
+        //  clientLeft和clientTop 注意是只读属性
+        // 会在窗口尺寸改变的时候触发事件：resize
+
         // scroll家族1. scrollwidth scrollHeight(了解)
         let div = document.querySelector('div')
-        console.log(div.scrollWidth) // 153 内容的高度 不带单位
-        console.log(div.scrollHeight) // 524 内容的高度 不带单位
+        console.log(div.scrollWidth) // 153 内容的宽度 不带单位
+        console.log(div.scrollHeight) // 524 内容的高度 不带单位 因为下面还有很多字所以524
         console.log('------------------------------------')
-        // 盒子元素的大小 = 盒子本身的宽度和高度 + padding + border
-        console.log(div.offsetWidth) // 190
-        console.log(div.offsetHeight) // 190
+        // 盒子元素的大小 = 盒子本身的宽度和高度 + padding + border 【用得多】
+        console.log(div.offsetWidth) // 190 加上边框的
+        console.log(div.offsetHeight) // 190 加上边框的
         console.log(div.offsetTop) // 100
         console.log(div.offsetLeft) // 100
-
+        console.log('------------------------------------')
+        // client 当前可视区域 不包含滚动条 边框 【有时用】
+        console.log(div.clientWidth) // 153 粉色背景
+        console.log(div.clientHeight) // 170
 
         // scroll家族2.被卷去的头部和左侧
         // div.addEventListener('scroll', function() {
         //     // 也就是说内容(div)滚动的像素
         //     console.log(this.scrollTop)
         // })
-
-
 
     </script>
     
