@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 利用递归函数 模拟实现setinterval
+        // setinterval性能比这个好，所以这里时了解一下使用
+        let div = document.querySelector('div')
+        function fn() {
+            // 返回日期
+            div.innerHTML = new Date().toLocaleString()
+            setTimeout(fn, 1000)
+        }
+        fn()
+    </script>
+</body>
+</html>

@@ -256,7 +256,7 @@
         // 需求④：解决一个BUG
         // 点击右侧按钮可以实现播放下一张，但是鼠标经过前面的，播放就会乱序
         // 解决方案： 让变化量（索引号） 重新赋值为 当前鼠标经过的索引号
-        // 因为这时回调函数，还没执行，所以let index = 0可以放next.addEventListener('click', function() {的上面
+        // 因为这时回调函数，还没执行，所以let index = 0可以放next.addEventListener('click', function() {的上面， 因为异步
         index = i
 
       })

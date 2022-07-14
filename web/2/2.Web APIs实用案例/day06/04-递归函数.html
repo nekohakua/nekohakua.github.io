@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = 0
+        // 递归函数 自己调用自己
+        // 递归函数容易造成死递归，一定要加退出条件
+        function fn() {
+            num++
+            console.log(num)
+            // 在函数里面调用自己
+            if (num >= 100) {
+                return
+            }
+            fn()
+        }
+        fn()
+    </script>
+</body>
+</html>
