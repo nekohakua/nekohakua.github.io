@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 当窗口大小变化的时候触发的事件
+        window.addEventListener('resize', function() {
+            // console.log(111)
+            // 检测当前屏幕发生变化
+            // console.log(document.documentElement.clientWidth)
+            let w = document.documentElement.clientWidth
+            // 以前没有媒体查询时用js做的，用js做的也有好处，flexible.js也就是这样做
+            if (w > 1920) {
+                document.body.style.backgroundColor = 'pink'
+            } else if (w > 756) {
+                document.body.style.backgroundColor = 'hotpink'
+            } else {
+                document.body.style.backgroundColor = 'deeppink'
+            }
+        })
+
+    </script>
+    <!-- 可以看见当前窗口大小发生变化时，字体大小也发生变化，看结构可知 看吗，明白代码 -->
+    <script src="../素材/flexible.js"></script>
+</body>
+</html>

@@ -50,23 +50,26 @@
         //  获取宽高：
         //  获取元素的内容总宽高（不包含滚动条）返回值不带单位
         //  scrollWidth和scrollHeight
+
         //  获取位置: 
         //  获取元素内容往左、往上滚出去看不到的距离
-        //  scrollLeft和scrollTop
+        //  scrollLeft和scrollTop[重要]
         //  这两个属性是可以修改的
 
         // offset家族
         //  获取宽高：
         //  获取元素的自身宽高、包含元素自身设置的宽高、padding、border
         //  offsetWidth和offsetHeight
+
         //  获取位置：
         //  获取元素距离自己定位父级元素的左、上距离 会一层层往上找有定位的父级，都没有定位那就是以文档左上角为准
-        //  offsetLeft和offsetTop 注意是只读属性
+        //  offsetLeft和offsetTop 注意是只读属性[重要]
 
         // 3 client家族
         //  获取宽高：
         //  获取元素的可见部分宽高（不包含边框，滚动条等，包含padding）
         //  clientWidth和clientHeight
+
         //  获取位置：
         //  获取左边框和上边框宽度(当前可视区域)
         //  clientLeft和clientTop 注意是只读属性
@@ -86,6 +89,8 @@
         // client 当前可视区域 不包含滚动条 边框 【有时用】
         console.log(div.clientWidth) // 153 粉色背景
         console.log(div.clientHeight) // 170
+        console.log(div.clientTop) // 边框的宽度（了解）
+        console.log(div.clientLeft) // 边框的宽度（了解）
 
         // scroll家族2.被卷去的头部和左侧
         // div.addEventListener('scroll', function() {
