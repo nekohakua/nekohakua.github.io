@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- localStorage
+    1、生命周期永久生效，除非手动删除 否则关闭页面也会存在
+    2、可以多窗口（页面）共享（同一浏览器可以共享）
+    3. 以键值对的形式存储使用 -->
+
+    <!-- 存储数据：localStorage.setItem(key, value)
+    获取数据：localStorage.getItem(key)
+    删除数据：localStorage.removeItem(key) -->
+
+    <script>
+        // 存储数据
+        // localStorage.setItem('uname', 'pink老师')
+        // localStorage.setItem('age', '18')
+
+        // 获取数据
+        // console.log(localStorage.getItem('uname')) //pink老师
+
+        // 删除数据
+        // localStorage.removeItem('uname')
+        
+
+
+        // localStorage
+        // 存储复杂数据类型存储
+        // 本地只能存储字符串,无法存储复杂数据类型.需要将复杂数据类型转换成JSON字符串,在存储到本地
+        // JSON.stringify(复杂数据类型)
+        //  将复杂数据转换成JSON字符串 存储 本地存储中
+        // JSON.parse(JSON字符串)
+        //  将JSON字符串转换成对象 取出 时候使用
+
+        // JSON 属性和值都是双引号进行包含
+        let json = {
+            "uname": "刘德华",
+            "age": "17",
+            "address": "黑马程序员"
+        }
+
+        // 存储引用数据类型
+        let object = {
+            uname: '刘德华',
+            age: 17,
+            address: '黑马程序员'
+        }
+        // 这种写法，在浏览器调试工具的应用程序栏的本地存储中不好看出是存了什么数据
+        // localStorage.setItem('key', object)
+
+        // 看控制台打印17没有双引号，因为17是数字型的，不加也没问题
+        console.log(JSON.stringify(object))
+        // 复杂数据类型要转换成json字符串再进行存储
+        localStorage.setItem('key', JSON.stringify(object))
+
+        // 取数据
+        console.log(typeof localStorage.getItem('key')) //string类型
+        console.log(JSON.parse(localStorage.getItem('key')))
+        
+
+        // sessionStorage（了解）
+        // 1、生命周期为关闭浏览器窗口
+        // 2、在同一个窗口(页面)下数据可以共享
+        // 3. 以键值对的形式存储使用
+        // 4. 用法跟localStorage 基本相同
+
+
+    </script>
+
+</body>
+</html>

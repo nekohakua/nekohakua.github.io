@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" data-index="0" data-name="andy"></div>
+    <script>
+        // 固有属性: 
+        // 标签天生自带的属性 比如class id title等, 可以直接使用点语法操作
+        // 自定义属性: 
+        // 由程序员自己添加的属性,在DOM对象中找不到, 无法使用点语法操作,必须使用专门的API
+        // getAttribute('属性名') // 获取自定义属性
+        // setAttribute('属性名', '属性值') // 设置自定义属性
+        // removeAttribute('属性名') // 删除自定义属性
+
+        // 传统方法了解一下
+        let box = document.querySelector('.box')
+        // box.setAttribute('myid', '10')
+        // box.setAttribute('myid', 10)
+        // console.log(box.getAttribute('myid'))
+
+        // 传统的自定义属性没有专门的定义规则,开发者随意定值,不够规范,所以在html5中推出来了专门的data-自定义属性 在
+        // 标签上一律以data-开头
+        // 在DOM对象上一律以dataset对象方式获取
+        console.log(box.dataset)
+        console.log(box.dataset.index)
+
+    </script>
+</body>
+</html>

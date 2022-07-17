@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <style>
+        .box {
+            width: 600px;
+            height: 350px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        /* 修改图片大小 */
+        .swiper-slide img {
+            width: 100%;
+            height: 350px;
+        }
+
+        /* 修改小圆点 */
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* 修改选中小圆点时的颜色 */
+        .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- swiper
+    2.1 插件
+     插件: 就是别人写好的一些代码,我们只需要复制对应的代码,就可以直接实现对应的效果
+     学习插件的基本过程
+     熟悉官网,了解这个插件可以完成什么需求 https://www.swiper.com.cn/ 
+     看在线演示,找到符合自己需求的demo https://www.swiper.com.cn/demo/index.html
+     查看基本使用流程 https://www.swiper.com.cn/usage/index.html
+     查看APi文档,去配置自己的插件 https://www.swiper.com.cn/api/index.html
+     注意: 多个swiper同时使用的时候, 类名需要注意区分 -->
+
+    <!-- 这种轮播图可以兼容移动端,还支持流行的三大框架，以后建议用swiper做轮播图 -->
+    <div class="box">
+        <!-- Swiper -->
+        <div class="swiper-container one">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_02.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_03.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_04.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_05.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_06.jpg" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+    </div>
+
+    <div class="box">
+        <!-- Swiper -->
+        <div class="swiper-container two">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_02.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_03.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_04.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_05.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="./images/b_06.jpg" alt="">
+                    </a>
+                </div>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+    </div>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- 放到插件的下面 -->
+    <!-- Initialize Swiper -->
+    <script>
+        // 原来的样子
+        // var swiper = new Swiper('.swiper-container', {
+        // 因为一个页面可能有多个轮播图，所以给它改名，让每个轮播图独立
+        var swiper = new Swiper('.one', {
+            slidesPerView: 1,
+            // 自动播放
+            // autoplay:true, //等同于以下设置
+            /*autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },*/
+            autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            // 换图时的背景宽度
+            // spaceBetween: 30,
+            spaceBetween: 0,
+            // 循环
+            loop: true,
+            // 小圆点
+            pagination: {
+                el: '.swiper-pagination',
+                // 小圆点是否能点
+                clickable: true,
+            },
+            // 左右按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // 键盘左右按键可以触发播放
+            keyboard: true,
+        });
+
+        var swiper = new Swiper('.two', {
+            slidesPerView: 1,
+            // 自动播放
+            // autoplay:true, //等同于以下设置
+            /*autoplay: {
+                delay: 3000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },*/
+            autoplay: {
+                delay: 1000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            // 换图时的背景宽度
+            // spaceBetween: 30,
+            spaceBetween: 0,
+            // 循环
+            loop: true,
+            // 小圆点
+            pagination: {
+                el: '.swiper-pagination',
+                // 小圆点是否能点
+                clickable: true,
+            },
+            // 左右按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // 键盘左右按键可以触发播放
+            keyboard: true,
+        });
+    </script>
+</body>
+
+</html>

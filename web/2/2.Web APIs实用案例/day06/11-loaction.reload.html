@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>刷新</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function() {
+            // location.reload() // 刷新
+            location.reload(true) // 强制刷新 ctrl + F5 不从本地缓存取数据，去服务器拿最新的数据
+        })
+    </script>
+</body>
+</html>

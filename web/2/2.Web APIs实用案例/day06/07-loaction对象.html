@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // location 的数据类型是对象，它拆分并保存了 URL 地址的各个组成部分
+        //  常用属性和方法：
+        //  href 属性获取完整的 URL 地址，对其赋值时用于地址的跳转
+        //  search 属性获取地址中携带的参数，符号 ？后面部分
+        //  hash 属性获取地址中的啥希值，符号 # 后面部分
+        //  reload 方法用来刷新当前页面，传入参数 true 时表示强制刷新
+
+        // 获取url地址 可读写
+        console.log(location.href)
+        // 给的地址时字符串 可以利用js跳转页面
+        location.href = 'https://www.baidu.com'
+    </script>
+</body>
+</html>

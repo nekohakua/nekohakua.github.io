@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="forward">前进</button>
+    <button class="back">后退</button>
+    <script>
+        // histroy对象(了解)
+        //  history 的数据类型是对象，该对象与浏览器地址栏的操作相对应，如前进、后退、历史记录等
+        //  常用属性和方法：
+        // history 对象一般在实际开发中比较少用，但是会在一些 OA 办公系统中见到。
+
+        let forward = document.querySelector('.forward')
+        let back = document.querySelector('back')
+        forward.addEventListener('click', function() {
+            history.forward()
+            // history.go(1) //1表示前进一个页面 -1表示后退一个页面
+        })
+        back.addEventListener('click', function() {
+            history.back()
+            // history.go(-1)
+        })
+    </script>
+</body>
+</html>
