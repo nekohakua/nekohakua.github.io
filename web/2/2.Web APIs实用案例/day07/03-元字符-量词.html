@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(/a/.test('a')) //true
+
+        // // 量词：修饰前面的字符
+        // // * 量词 n >= 0 重复0/更多次
+        // console.log(/a*/.test('')) //true
+        // console.log(/a*/.test('a')) //true
+        // console.log(/a*/.test('aa')) //true
+        // console.log(/a*/.test('aaaaaaaa')) //true
+        // console.log(/a*/.test('b')) //true
+        // console.log('----------------')
+
+        // // + 量词 n >= 1
+        // console.log(/a+/.test('')) //false
+        // console.log(/a+/.test('a')) //true
+        // console.log(/a+/.test('aa')) //true
+        // console.log(/a+/.test('aaaaaaaa')) //true
+        // console.log(/a+/.test('b')) //false
+        // console.log('----------------')
+
+        // // ? 出现 0 || 1
+        // console.log(/^a?$/.test('')) //true
+        // console.log(/^a?$/.test('a')) //true
+        // console.log(/^a?$/.test('aa')) //true
+
+        // {n} 只能出现n次
+        console.log(/^a{3}$/.test('aa')) //false
+        console.log(/^a{3}$/.test('aaa')) //true
+        console.log(/^a{3}$/.test('aaaa')) //false
+        console.log('----------------')
+
+        // {n,} >= n
+        console.log(/^a{3,}$/.test('aa')) //false
+        console.log(/^a{3,}$/.test('aaa')) //true
+        console.log(/^a{3,}$/.test('aaaa')) //true
+        console.log('----------------')
+
+        // n <= {n,m} >= m (重点)
+        console.log(/^a{3,6}$/.test('aa')) //false
+        console.log(/^a{3,6}$/.test('aaa')) //true
+        console.log(/^a{3,6}$/.test('aaaa')) //true
+        console.log(/^a{3,6}$/.test('aaaaa')) //true
+        console.log(/^a{3,6}$/.test('aaaaaaaa')) //false
+
+    </script>
+</body>
+</html>

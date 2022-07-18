@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(/abc/.test('abc')) //true
+        // console.log(/abc/.test('ab')) //false
+
+        // [ ] 匹配字符集合：后面的字符串只要包含 abc 中任意一个字符，都返回 true 。
+        // console.log(/[abc]/.test('')) //false
+        // console.log(/[abc]/.test('abc')) //true
+        // console.log(/[abc]/.test('andy')) //true
+
+        // [ ] 里面加上 - 连字符：使用连字符 - 表示一个范围
+        // 注意：只能取一个，并且还限制了开头和结尾
+        console.log(/^[abc]$/.test('abc')) //false
+        // 只有这三种为真
+        console.log(/^[abc]$/.test('a')) //true
+        console.log(/^[abc]$/.test('b')) //true
+        console.log(/^[abc]$/.test('c')) //true
+
+        // 26个英文字母选其一个,并且不区分大小写
+        console.log(/^[a-zA-Z]$/.test('d')) //1
+        console.log(/^[a-zA-Z]$/.test('D')) //1
+        console.log(/^[a-zA-Z]$/.test('DD')) //0
+
+        // 26个英文字母选其一个,并且不区分大小写,可以出现数字
+        console.log(/^[a-zA-Z0-9]$/.test('6')) //1
+
+        // 26个英文字母选其一个,并且不区分大小写,可以出现数字，可以出现-和_
+        console.log(/^[a-zA-Z0-9-_]$/.test('6')) //1
+
+        // 修饰只跟前面一个位置
+        console.log(/^abc+$/.test('abcc')) //true
+
+    </script>
+</body>
+</html>

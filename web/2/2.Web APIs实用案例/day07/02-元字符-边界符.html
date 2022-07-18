@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 正则表达式中的边界符（位置符）用来提示字符所处的位置，主要有两个字符
+        // ^ 表示匹配行首的文本(以谁开始)
+        // $ 表示匹配行尾的文本(以谁结束)
+        // 如果 ^ 和 $ 在一起，表示必须是精确匹配。
+
+        console.log(/哈/.test('哈哈')) // true
+        console.log(/哈/.test('二哈')) // true
+
+        console.log(/^哈/.test('二哈')) // false
+
+        console.log(/哈$/.test('我开心的哈哈大笑')) // false
+
+        console.log(/^哈$/.test('我开心的哈哈大笑')) // false
+        console.log(/^哈$/.test('哈哈')) // false
+        // 精确匹配
+        console.log(/^哈$/.test('哈')) // true
+
+    </script>
+</body>
+</html>

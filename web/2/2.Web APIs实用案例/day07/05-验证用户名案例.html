@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 250px;
+            height: 30px;
+            /* background-color: pink; */
+            vertical-align: middle;
+            line-height: 30px;
+            padding-left: 15px;
+
+        }
+
+        .error {
+            color: red;
+            background: url(./error1.png) no-repeat left center;
+        }
+
+        .right {
+            color: green;
+            background: url(./right.png) no-repeat left center;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <span></span>
+    <script>
+        // 需求：用户名要求用户英文字母,数字,下划线或者短横线组成，并且用户名长度为 6~16位
+
+        // 输入2-8个汉字的正则表达式 u4e00：一 u9fa5：最后一个汉字
+        // ^[\u4e00-\u9fa5]{2,8}$
+
+        // ^读作：歼
+
+        let input = document.querySelector('input')
+        // input.nextElementSibling：input的下个兄弟元素
+        let span = input.nextElementSibling
+        input.addEventListener('blur', function() {
+            // alert(1)
+            if (/^[a-zA-Z0-9-_]{6,16}$/.test(input.value)) {
+                span.className = 'right'
+                span.innerHTML = '输入正确'
+            } else {
+                span.className = 'error'
+                span.innerHTML = '只能输入英文字母,数字,下划线或者短横线组成，并且用户名长度为 6~16位'
+            }
+        })
+
+        // 额外
+        // [ ] 里面加上 ^ 表示取反符号    [^a-z]表示匹配除了小写字母以外的字符
+        // . 匹配除换行符之外的任何单个字符
+
+        // 预定义：指的是某些常见模式的简写方式。
+        // /d：相当于[0-9]
+        // /D：相当于[^0-9]
+        // /w：相当于[a-zA-Z0-9_]
+        // /W：相当于[^a-zA-Z0-9_]
+        // /s：匹配空格（包括换行符，制表符，空格符）,相当于：[\t\r\n\v\f]
+        // /S：匹配非空格（包括换行符，制表符，空格符）,相当于：[^\t\r\n\v\f]
+
+        // 日期格式：^\d{4}-\d{1,2}-\d{1,2}
+
+
+
+    </script>
+</body>
+</html>
