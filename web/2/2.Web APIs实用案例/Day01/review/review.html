@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 03 -->
+    <!-- <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style> -->
+
+    <!-- 04 -->
+    <!-- <style>
+        div {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            border: 1px solid pink;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style> -->
+
+    <!-- 06 -->
+    <!-- <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style> -->
+
+    <!-- 07 -->
+    <!-- <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style> -->
+
+    <!-- 08 -->
+    <!-- <style>
+        body {
+            background-image: url(../素材/images/desktop_1.jpg);
+        }
+    </style> -->
+
+    <!-- 09 10 -->
+    <!-- <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .active {
+            width: 300px;
+            height: 300px;
+            background-color: hotpink;
+            margin-left: 100px;
+        }
+    </style> -->
+
+
+
+
+
+</head>
+
+<body>
+    <!-- 01 -->
+    <!-- <button>点击</button>
+    <script>
+        let btn = document.querySelector('button')
+        console.log(typeof btn)
+        console.dir(btn)
+
+        btn.innerHTML = 'innerHTML'
+    </script> -->
+
+    <!-- 02 -->
+    <!-- <div>我是第一个盒子</div>
+    <div>我是第二个盒子</div>
+    <div class="three">我是第三个盒子</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <span>就一个元素</span>
+    <script>
+        let div = document.querySelector('div')
+        console.log(div)
+
+        let div1 = document.querySelector('.three')
+        console.log(div1)
+
+        let li = document.querySelector('ul li:last-child')
+        console.log(li)
+
+        let lis = document.querySelectorAll('ul li')
+        console.log(lis)
+
+        for (let i = 0; i < lis.length; i++) {
+            console.log(lis[i])
+        }
+
+        let span = document.querySelectorAll('span')
+        console.log(span)
+    </script> -->
+
+    <!-- 03 -->
+    <!-- <div>粉红色的回忆</div>
+    <script>
+        let box = document.querySelector('div')
+        box.innerHTML = '有点意思'
+        box.innerText = '<strong>有点意思innerText</strong>'
+        box.innerHTML = '<strong>有点意思</strong>'
+    </script> -->
+
+    <!-- 04 -->
+    <!-- 抽中的选手：<div></div>
+    <script>
+        let box = document.querySelector('div')
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+        let random = getRandom(0, arr.length - 1)
+        box.innerHTML = arr[random]
+        arr.splice(random, 1)
+        console.log(arr)
+    </script> -->
+
+    <!-- 05 -->
+    <!-- <img src="../素材/images/1.webp" alt="">
+    <script>
+        let pic = document.querySelector('img')
+        pic.src = '../素材/images/2.webp'
+        pic.title = '我是pink老师'
+    </script> -->
+
+    <!-- 06 -->
+    <!-- <img src="../素材/images/1.webp" alt="">
+    <script>
+        let img = document.querySelector('img')
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let num = getRandom(1, 6)
+        img.src =  `../素材/images/${num}.webp`
+    </script> -->
+
+    <!-- 07 -->
+    <!-- <div></div>
+    <script>
+        let box = document.querySelector('div')
+        box.style.backgroundColor = 'hotpink'
+        box.style.width = '400px'
+        box.style.marginTop = '100px'
+    </script> -->
+
+    <!-- 08 -->
+    <!-- <script>
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let num = getRandom(1, 10)
+        document.body.style.backgroundImage = `url(../素材/images/desktop_${num}.jpg)`
+    </script> -->
+
+    <!-- 09 -->
+    <!-- <div class="one"></div>
+    <script>
+        let box = document.querySelector('div')
+        box.className = 'active two'
+    </script> -->
+
+    <!-- 10 -->
+    <!-- <div class="one remove toggle"></div>
+    <script>
+        let box = document.querySelector('div')
+        box.classList.add('active')
+        box.classList.remove('active')
+        box.classList.toggle('active')
+        box.classList.toggle('active')
+    </script> -->
+
+    <!-- 11 -->
+    
+
+</body>
+
+</html>
