@@ -67,6 +67,56 @@
         }
     </style> -->
 
+    <!-- 14 -->
+    <style>
+        .img-box {
+            width: 700px;
+            height: 320px;
+            margin: 50px auto 0;
+            background-color: #000;
+            position: relative;
+        }
+
+        .img-box .tip {
+            width: 700px;
+            height: 53px;
+            line-height: 53px;
+            position: absolute;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+
+        .img-box .tip h3 {
+            width: 82%;
+            margin: 0;
+            margin-right: 20px;
+            padding-left: 20px;
+            color: #98E404;
+            font-size: 28px;
+            float: left;
+            font-weight: 500;
+            font-family: "Microsoft Yahei", Tahoma, Geneva;
+        }
+
+        .img-box .tip a {
+            width: 30px;
+            height: 29px;
+            display: block;
+            float: left;
+            margin-top: 12px;
+            margin-right: 3px;
+        }
+
+        .img-box ul {
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            list-style: none;
+            z-index: 99;
+        }
+    </style>
+
 
 
 
@@ -193,7 +243,126 @@
     </script> -->
 
     <!-- 11 -->
-    
+    <!-- <input type="text" value="请输入">
+    <button disabled>按钮</button>
+    <input type="checkbox" class="agree">
+    <select name="" id="">
+        <option value="">北京</option>
+        <option value="">上海</option>
+        <option value="">广州</option>
+        <option value="" class="this">深圳</option>
+    </select>
+    <script>
+        let input = document.querySelector('input')
+        console.log(input.value)
+        input.value = ''
+        input.value = '小米手机'
+        input.type = 'password'
+
+        let btn = document.querySelector('button')
+        btn.disabled = false
+
+        let checkbox = document.querySelector('.agree')
+        checkbox.checked = true
+
+        let option = document.querySelector('.this')
+        option.selected = true
+    </script> -->
+
+    <!-- 12 -->
+    <!-- <script>
+        function show() {
+            console.log(111)
+        }
+        let timer = setInterval(show, 1000)
+        console.log(timer)
+        
+        let timer2 = setInterval(show, 1000)
+        console.log(timer2)
+
+        clearInterval(timer)
+    </script> -->
+
+    <!-- 13 -->
+    <!-- <textarea name="" id="" cols="30" rows="10">
+        用户注册协议
+        欢迎注册成为京东用户！在您注册过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意（尤其是以粗体或下划线标识的条款，因为这些条款可能会明确您应履行的义务或对您的权利有所限制）。
+        【请您注意】如果您不同意以下协议全部或任何条款约定，请您停止注册。您停止注册后将仅可以浏览我们的商品信息但无法享受我们的产品或服务。如您按照注册流程提示填写信息，阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容，并表明您同意我们可以依据协议内容来处理您的个人信息，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方（详情查看
+    </textarea>
+    <br>
+    <button class="btn" disabled>我已经阅读用户协议(6)</button>
+    <script>
+        let btn = document.querySelector('.btn')
+        let i = 6
+        let timer = setInterval(function() {
+            i--
+            btn.innerHTML = `我已经阅读用户协议(${i})`
+            if (i === 0) {
+                clearInterval(timer)
+                btn.disabled = false
+                btn.innerHTML = '我同意该协议'
+            }
+        }, 1000)
+    </script> -->
+
+    <!-- 14 -->
+    <div class="img-box">
+        <img src="../素材/images/b01.jpg" alt="1.挑战云歌单，欢迎你来" class="pic">
+        <div class="tip">
+            <h3 class="text">1.挑战云歌单，欢迎你来</h3>
+        </div>
+    </div>
+    <script>
+        let data = [
+            {
+                imgSrc: '../素材/images/b01.jpg',
+                title: '1.挑战云歌单，欢迎你来'
+            },
+            {
+                imgSrc: '../素材/images/b02.jpg',
+                title: '2.田园日记，上演上京记'
+            },
+            {
+                imgSrc: '../素材/images/b03.jpg',
+                title: '3.甜蜜攻势再次回归'
+            },
+            {
+                imgSrc: '../素材/images/b04.jpg',
+                title: '4.我为歌狂，生为歌王'
+            },
+            {
+                imgSrc: '../素材/images/b05.jpg',
+                title: '5.年度校园主题活动'
+            },
+            {
+                imgSrc: '../素材/images/b06.jpg',
+                title: '6.pink老师新歌发布，5月10号正式推出'
+            },
+            {
+                imgSrc: '../素材/images/b07.jpg',
+                title: '7.动力火车来到西安'
+            },
+            {
+                imgSrc: '../素材/images/b08.jpg',
+                title: '8.钢铁侠3，英雄镇东风'
+            },
+            {
+                imgSrc: '../素材/images/b09.jpg',
+                title: '9.我用整颗心来等你'
+            },
+        ]
+        let pic = document.querySelector('.pic')
+        let text = document.querySelector('.text')
+        let i = 0
+        setInterval(function() {
+            i++
+            pic.src = data[i].imgSrc
+            text.innerHTML = data[i].title
+            if (i === data.length - 1) {
+                i = -1
+            }
+        }, 1000)
+    </script>
 
 </body>
 

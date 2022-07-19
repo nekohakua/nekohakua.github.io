@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        div {
+            width: 350px;
+            height: 50px;
+            background-color: pink;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style> -->
+
+    <!-- 12 -->
+    <style>
+        .countdown {
+            width: 240px;
+            height: 305px;
+            text-align: center;
+            /* 1倍字体大小的行高 */
+            line-height: 1;
+            color: #fff;
+            background-color: brown;
+            overflow: hidden;
+        }
+
+        .countdown .next {
+            font-size: 16px;
+            margin: 25px 0 14px;
+        }
+
+        .countdown .title {
+            font-size: 33px;
+        }
+
+        .countdown .tips {
+            margin-top: 80px;
+            font-size: 23px;
+        }
+
+        .countdown .clock {
+            width: 142px;
+            margin: 18px auto 0;
+            overflow: hidden;
+        }
+
+        .countdown .clock span,
+        .countdown .clock i {
+        display: block;
+        text-align: center;
+        line-height: 34px;
+        font-size: 23px;
+        float: left;
+        }
+
+        .countdown .clock span {
+        width: 34px;
+        height: 34px;
+        border-radius: 2px;
+        background-color: #303430;
+        }
+
+        .countdown .clock i {
+        width: 20px;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- 02 -->
+    <!-- <div class="father">
+        <div class="son">儿子</div>
+    </div>
+    <script>
+        let son = document.querySelector('.son')
+        console.log(son.parentNode)
+        son.parentNode.style.display = 'none'
+    </script> -->
+
+    <!-- 03 -->
+    <!-- <button>点击</button>
+    <ul>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <li>子节点</li>
+        <script>
+            let btn = document.querySelector('button')
+            let ul = document.querySelector('ul')
+            console.log(ul.children)
+            for(let i = 0; i < ul.children.length; i++) {
+                ul.children[i].style.color = 'pink'
+            }
+            console.log(ul.childNodes);
+        </script>
+    </ul> -->
+
+    <!-- 04 -->
+    <!-- <button>点击</button>
+    <ul>
+        <li>第1个</li>
+        <li class="two">第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+    </ul>
+    <script>
+        let btn = document.querySelector('button')
+        let two = document.querySelector('.two')
+        btn.addEventListener('click', function() {
+            two.nextElementSibling.style.color = 'red'
+            two.previousElementSibling.style.color = 'pink'
+        })
+    </script> -->
+
+    <!-- 05 -->
+    <!-- <ul>
+        <li>我是本来就在的小li-1</li>
+        <li>我是本来就在的小li-2</li>
+    </ul>
+    <script>
+        let ul = document.querySelector('ul')
+        let li = document.createElement('li')
+        li.innerHTML = '我是用appendChild追加的小li'
+
+        ul.appendChild(li)
+        ul.insertBefore(li, ul.children[1])
+    </script> -->
+
+    <!-- 06 -->
+    <!-- <ul>
+        <li>我是内容1</li>
+    </ul>
+    <script>
+        let ul = document.querySelector('ul')
+        let newUl = ul.cloneNode(true)
+        document.body.appendChild(newUl)
+    </script> -->
+
+    <!-- 07 -->
+    <!-- <button>点击</button>
+    <ul>
+        <li>我是内容1</li>
+    </ul>
+    <script>
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        btn.addEventListener('click', function() {
+            ul.removeChild(ul.children[0])
+        })
+    </script> -->
+
+    <!-- 08 -->
+    <!-- <script>
+        let arr = []
+        let arr0 = new Array()
+        let obj = {} 
+        let obj0 = new Object() 
+        let date = new Date()
+        console.log(date)
+        let last = new Date('2020-10-01 18:32:34')
+        console.log(last)
+    </script> -->
+
+    <!-- 09 -->
+    <!-- <script>
+        let date = new Date()
+        console.log(date.getFullYear())
+        console.log(date.getMonth() + 1)
+        console.log(date.getDate())
+        console.log(date.getDay())
+        console.log(date.getHours())
+        console.log(date.getMinutes())
+        console.log(date.getSeconds())
+    </script> -->
+
+    <!-- 10 -->
+    <!-- <div></div>
+    <script>
+        let div = document.querySelector('div')
+        let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        getTime()
+        setInterval(getTime, 1000)
+        
+        function getTime() {
+            let date = new Date()
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let date1 = date.getDate()
+            let hour = date.getHours()
+            let min = date.getMinutes()
+            let sec = date.getSeconds()
+            let day = date.getDay()
+            div.innerHTML = `今天是：${year}年${month}月${date1}日 ${hour}:${min}:${sec} ${arr[day]}`
+        }
+    </script> -->
+
+    <!-- 11 -->
+    <!-- <script>
+        let date = new Date()
+        let last = new Date('2022-10-01 12:00:00')
+        console.log(date.getTime())
+        console.log(last.getTime())
+        console.log(+new Date())
+        console.log(+new Date('2022-10-01 12:00:00'))
+        console.log(Date.now())
+    </script> -->
+
+    <!-- 12 -->
+    <div class="countdown">
+        <p class="next">今天是2021年8月28日</p>
+        <p class="title">下班倒计时</p>
+        <p class="clock">
+          <span id="hour">00</span>
+          <i>:</i>
+          <span id="minutes">25</span>
+          <i>:</i>
+          <span id="scond">20</span>
+        </p>
+        <p class="tips">
+          现在是18:30:00
+        </p>
+    </div>
+    <script>
+        let next = document.querySelector('.next')
+        let tips = document.querySelector('.tips')
+        let hour = document.querySelector('#hour')
+        let minutes = document.querySelector('#minutes')
+        let scond = document.querySelector('#scond')
+
+        time()
+        setInterval(time, 1000)
+
+        function time() {
+            let date = new Date()
+            let now = +new Date()
+            let last = +new Date(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 18:00:00`)
+            let count = (last - now) / 1000
+
+            let h = parseInt(count / 60 / 60 % 24)
+            h = h < 10 ? '0' + h : h
+            let m = parseInt(count / 60 % 60)
+            m = m < 10 ? '0' + m : m
+            let s = parseInt(count % 60)
+            s = s < 10 ? '0' + s : s
+
+            hour.innerHTML = h
+            minutes.innerHTML = m
+            scond.innerHTML = s
+            next.innerHTML = `今天是${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
+            tips.innerHTML = `现在是${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+        }
+    </script>
+</body>
+</html>

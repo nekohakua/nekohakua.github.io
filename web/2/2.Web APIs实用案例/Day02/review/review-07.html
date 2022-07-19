@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../07-发布微博案例/css/weibo.css">
+</head>
+<body>
+    <div class="w">
+        <div class="controls">
+          <img src="images/tip.png" alt=""><br>
+          <textarea placeholder="说点什么吧..." id="area" cols="30" rows="10" maxlength="200"></textarea>
+          <div>
+            <span class="useCount">0</span>
+            <span>/</span>
+            <span>200</span>
+            <button id="send">发布</button>
+          </div>
+    
+        </div>
+        <div class="contentList">
+          <ul>
+            <!-- 以后完善 -->
+          </ul>
+        </div>
+      </div>
+    <script>
+        let area = document.querySelector('#area')
+        let useCount = document.querySelector('.useCount')
+        area.addEventListener('input', function() {
+            console.log(area.value)
+            useCount.innerHTML = area.value.length
+        })
+    </script>
+</body>
+</html>

@@ -12,7 +12,11 @@
     }
 
     table {
+      /* border-collapse CSS 属性是用来决定表格的边框是分开的还是合并的。 */
+      /* collapse合并 */
+      /* separate分离 */
       border-collapse: collapse;
+      /* border-spacing 属性指定相邻单元格边框之间的距离（只适用于 边框分离模式 ）。 */
       border-spacing: 0;
       border: 1px solid #c0c0c0;
       width: 500px;
@@ -41,6 +45,8 @@
 
 <body>
   <table>
+    <!--   如果你写代码的时候，就写了table标签，然后接着写tr这些。那么默认就是table中包含tbody再包含tr这些。
+  你也可以自己定义tbody里面可以包含的内容。 -->
     <tr>
       <th class="allCheck">
         <input type="checkbox" name="" id="checkAll"> <span class="all">全选</span>

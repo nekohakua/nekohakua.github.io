@@ -16,6 +16,7 @@
       background-color: brown;
       /* background-size: 240px; */
       /* float: left; */
+      /* 溢出隐藏的意思!!!!!!!!!!! */
       overflow: hidden;
     }
 
@@ -83,6 +84,10 @@
   </div>
 
   <script>
+
+    let next = document.querySelector('.next')
+    let tips = document.querySelector('.tips')
+
     // id选择器是唯一的
     let hour = document.querySelector('#hour')
     let minutes = document.querySelector('#minutes')
@@ -94,8 +99,9 @@
     // setInterval("time()", 1000) 这种写法也可以，但很罕见
 
     function time() {
+      let date = new Date()
       let now = +new Date()
-      let last = +new Date('2022-7-10 18:30:00')
+      let last = +new Date(`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} 18:00:00`)
       // 转换成秒
       let count = (last - now) / 1000
       // console.log(count)
@@ -114,6 +120,9 @@
       hour.innerHTML = h
       minutes.innerHTML = m
       scond.innerHTML = s
+
+      next.innerHTML = `今天是${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
+      tips.innerHTML = `现在是${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     }
     // 其他东西自己补上去
 

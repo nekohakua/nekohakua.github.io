@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .QR-code {
+            width: 149px;
+            height: 152px;
+            border: 1px solid #000;
+            background: url(../03-关闭多个二维码/images/456.png) no-repeat;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: -52px;
+            top: -1px;
+            width: 50px;
+            height: 50px;
+            background: url(../03-关闭多个二维码/images/bgs.png) no-repeat -159px -102px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="QR-code">
+        <span class="close"></span>
+    </div>
+    <div class="QR-code">
+        <span class="close"></span>
+    </div>
+    <div class="QR-code">
+        <span class="close"></span>
+    </div>
+    <div class="QR-code">
+        <span class="close"></span>
+    </div>
+    <div class="QR-code">
+        <span class="close"></span>
+    </div>
+    <script>
+        let close_btn = document.querySelectorAll('.close')
+        for(let i = 0; i < close_btn.length; i++) {
+            close_btn[i].addEventListener('click', function() {
+                this.parentNode.style.visibility = 'hidden'
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 02 -->
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .erweima {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+        }
+
+        .erweima i {
+            position: absolute;
+            left: -13px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #ccc;
+            font-style: 12px;
+            line-height: 10px;
+            color: #ccc;
+            font-style: normal;
+            cursor: pointer;
+        }
+    </style> -->
+
+    <!-- 03 -->
+    <!-- <style>
+        div {
+            width: 200px;
+            height: 40px;
+            border: 1px solid pink;
+            text-align: center; 
+            line-height: 40px;
+        }
+    </style> -->
+
+    <!-- 04 -->
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+            width: 450px;
+            height: 40px;
+            color: red;
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style> -->
+
+    <!-- 06 -->
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .mi {
+            position: relative;
+            width: 223px;
+            margin: 100px auto;
+        }
+
+        .mi input {
+            width: 223px;
+            height: 48px;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 48px;
+            border: 1px solid #e0e0e0;
+            outline: none;
+            transition: all .5s;
+        }
+
+        .mi .search {
+            border: 1px solid #ff6700;
+        }
+
+        .result-list {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 48px;
+            width: 223px;
+            border: 1px solid #ff6700;
+            border-top: 0;
+            background: #fff;
+        }
+
+        .result-list a {
+            display: block;
+            padding: 6px 15px;
+            font-size: 12px;
+            color: #424242;
+            text-decoration: none;
+        }
+
+        .result-list a:hover {
+            background-color: #eee;
+        }
+    </style> -->
+
+    <!-- 07 -->
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 500px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+            height: 24px;
+        }
+
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        .allCheck {
+            width: 80px;
+        }
+    </style> -->
+
+    <!-- 09 -->
+    <!-- <style>
+        div {
+            width: 80px;
+        }
+
+        input[type=text] {
+            height: 44px;
+            width: 50px;
+            outline: none;
+            border: 1px solid #CCC;
+            text-align: center;
+            border-right: 0;
+        }
+
+        input[type=button] {
+            height: 24px;
+            width: 22px;
+            cursor: pointer;
+        }
+
+        input {
+            float: left;
+            border: 1px solid #ccc;
+        }
+    </style> -->
+
+    <!-- 12 -->
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 01 -->
+    <!-- <button>点击我</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function() {
+            alert('点击了')
+        })
+    </script> -->
+
+    <!-- 02 -->
+    <!-- <div class="erweima">
+        <img src="../素材/images/code.png" alt="">
+        <i class="close_btn">x</i>
+    </div>
+    <script>
+        let close_btn = document.querySelector('.close_btn')
+        let erweima = document.querySelector('.erweima')
+        close_btn.addEventListener('click', function() {
+            erweima.style.display = 'none'
+        })
+    </script> -->
+
+    <!-- 03 -->
+    <!-- <div></div>
+    <button>点名</button>
+    <script>
+        let box = document.querySelector('div')
+        let btn = document.querySelector('button')
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操', 'pink老师']
+        btn.addEventListener('click', function() {
+            let random = getRandom(0, arr.length - 1)
+            box.innerHTML = arr[random]
+            arr.splice(random, 1)
+            if (arr.length === 0) {
+                btn.innerHTML = '已经抽完'
+                btn.disabled = true
+            }
+        })
+    </script> -->
+
+    <!-- 04 -->
+    <!-- <h2>随机点名</h2>
+    <div class="box">
+        <span>名字是：</span>
+        <div class="qs">这里显示姓名</div>
+    </div>
+    <div class="btns">
+        <button class="start">开始</button>
+        <button class="end">结束</button>
+    </div>
+    <script>
+        let arr = ['马超', '黄忠', '赵云', '关羽', '张飞']
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let start = document.querySelector('.start')
+        let end = document.querySelector('.end')
+        let qs = document.querySelector('.qs')
+        let random = 0
+        let timer = 0
+
+        start.addEventListener('click', function() {
+            timer = setInterval(function() {
+                random = getRandom(0, arr.length - 1)
+                qs.innerHTML = arr[random]
+            }, 50)
+        })
+
+        end.addEventListener('click', function() {
+            clearInterval(timer)
+            arr.splice(random, 1)
+        })
+    </script> -->
+
+    <!-- 05 -->
+    <!-- <button>点击</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.onclick = function() {
+            alert(1)
+        }
+    </script> -->
+
+    <!-- 06 -->
+    <!-- <div class="mi">
+        <input type="search" placeholder="小米笔记本">
+        <ul class="result-list">
+            <li><a href="#">全部商品</a></li>
+            <li><a href="#">小米11</a></li>
+            <li><a href="#">小米10S</a></li>
+            <li><a href="#">小米笔记本</a></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">黑鲨4</a></li>
+            <li><a href="#">空调</a></li>
+        </ul>
+    </div>
+    <script>
+        let search = document.querySelector('input[type=search]')
+        let list = document.querySelector('.result-list')
+
+        search.addEventListener('focus', function() {
+            list.style.display = 'block'
+            search.classList.add('search')
+        })
+
+        search.addEventListener('blur', function() {
+            list.style.display = 'none'
+            search.classList.remove('search')
+        })
+    </script> -->
+
+    <!-- 07 -->
+    <!-- <table>
+        <tr>
+            <th class="allCheck">
+                <input type="checkbox" name="" id="checkAll"> <span class="all">全选</span>
+            </th>
+            <th>商品</th>
+            <th>商家</th>
+            <th>价格</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="check" class="ck">
+            </td>
+            <td>小米手机</td>
+            <td>小米</td>
+            <td>￥1999</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="check" class="ck">
+            </td>
+            <td>小米净水器</td>
+            <td>小米</td>
+            <td>￥4999</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="check" class="ck">
+            </td>
+            <td>小米电视</td>
+            <td>小米</td>
+            <td>￥5999</td>
+        </tr>
+    </table>
+    <script>
+        let all = document.querySelector('#checkAll')
+        let cks = document.querySelectorAll('.ck')
+        let span = document.querySelector('span')
+
+        all.addEventListener('click', function() {
+            // console.log(this.checked)
+            for (let i = 0; i < cks.length; i++) {
+                cks[i].checked = this.checked
+            }
+            if (this.checked) {
+                span.innerHTML = '全选'
+            } else {
+                span.innerHTML = '取消'
+            }
+        })
+
+        for(let i = 0; i < cks.length; i++) {
+            cks[i].addEventListener('click', function() {
+                // console.log(1)
+                for(let j = 0; j < cks.length; j++) {
+                    if (cks[j].checked === false) {
+                        all.checked = false
+                        return
+                    }
+                }
+                all.checked = true
+            })
+        }
+    </script> -->
+
+    <!-- 08 -->
+    <!-- <div>
+        <input type="text" id="total" value="1" readonly>
+        <input type="button" value="+" id="add">
+        <input type="button" value="-" id="reduce" disabled>
+        <script>
+            let total = document.querySelector('#total')
+            let add = document.querySelector('#add')
+            let reduce = document.querySelector('#reduce')
+            add.addEventListener('click', function() {
+                total.value++
+                reduce.disabled = false
+            })
+            reduce.addEventListener('click', function() {
+                total.value--
+                if (total.value <= 1) {
+                    reduce.disabled = true
+                }
+            })
+        </script>
+    </div> -->
+
+    <!-- 10 -->
+    <!-- <script>
+        let num = 10
+        let fn = function() {}
+        btn.onclick = function() {}
+        function fn() {}
+        setInterval(fn, 1000)
+        box.addEventListener('click', fn)
+    </script> -->
+
+    <!-- 11 -->
+    <button class="pink">第1个</button><button>第2个</button><button>第3个</button><button>第4个</button><button>第5个</button>
+    <script>
+        let btns = document.querySelectorAll('button')
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                document.querySelector('.pink').classList.remove('pink')
+                this.classList.add('pink')
+            })
+        }
+    </script>
+
+
+</body>
+</html>
