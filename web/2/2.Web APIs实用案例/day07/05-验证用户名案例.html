@@ -53,6 +53,12 @@
             }
         })
 
+        // 修饰符
+        // i 是单词 ignore 的缩写，正则匹配时字母不区分大小写
+        // g 是单词 global 的缩写，匹配所有满足正则表达式的结果
+        console.log(/a/i.test('a')) //true
+        console.log(/a/i.test('A')) //true
+
         // 额外
         // [ ] 里面加上 ^ 表示取反符号    [^a-z]表示匹配除了小写字母以外的字符
         // . 匹配除换行符之外的任何单个字符
@@ -67,7 +73,9 @@
 
         // 日期格式：^\d{4}-\d{1,2}-\d{1,2}
 
-
+        // 有些复杂的正则表达式可以看看这个网站：
+        // https://c.runoob.com/front-end/854/
+        // https://www.runoob.com/regexp/regexp-tutorial.html
 
     </script>
 </body>

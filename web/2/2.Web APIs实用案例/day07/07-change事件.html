@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选中所有type的属性 */
+        /* [type] {
+            background-color: pink;
+        } */
+
+        /* input[type] {
+            background-color: pink;
+        } */
+
+        input[type=password] {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <input type="password">
+
+    <script>
+        let input = document.querySelector('input')
+        // change当表单里面的值发生变化，光标失去时触发   
+        // blur是光标失去就触发，不管里面值有没有改变
+        // input只要表单输入值就会触发
+        input.addEventListener('change', function() {
+            console.log(1)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <div></div>
+    <script>
+        let btn = document.querySelector('button')
+        let textarea = document.querySelector('textarea')
+        let div = document.querySelector('div')
+        btn.addEventListener('click', function() {
+            // 过滤敏感词：傻逼和牛逼
+            // 字符串.replace(/正则表达式/,'要替换的文本') 只会找第一个替换
+            // g 是单词 global 的缩写，匹配所有满足正则表达式的结果
+            div.innerHTML = textarea.value.replace(/傻逼|牛逼/g, '**')
+        })
+    </script>
+</body>
+</html>
