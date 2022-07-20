@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .w {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        .controls {
+            overflow: hidden;
+        }
+
+        .controls textarea {
+            width: 878px;
+            height: 100px;
+            resize: none;
+            border-radius: 10px;
+            outline: none;
+            padding-left: 20px;
+            padding-top: 10px;
+            font-size: 18px;
+        }
+
+        .controls div {
+            float: right;
+        }
+
+        .controls div span {
+            color: #666;
+        }
+
+        .controls div .useCount {
+            color: red;
+        }
+
+        .controls div button {
+            width: 100px;
+            outline: none;
+            border: none;
+            background: rgb(0, 132, 255);
+            height: 30px;
+            cursor: pointer;
+            color: #fff;
+            font: bold 14px '宋体';
+            transition: all .5s;
+        }
+
+        .controls div button:hover {
+            background: rgb(0, 255, 255);
+        }
+
+        .controls div button:disabled {
+            background: rgba(0, 255, 255, 0.5);
+        }
+
+        .contentList {
+            margin-top: 50px;
+        }
+
+        .contentList li {
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+            position: relative;
+        }
+
+        .contentList li .info {
+            position: relative;
+        }
+
+        .contentList li .info span {
+            position: absolute;
+            top: 15px;
+            left: 100px;
+            font: bold 16px '宋体';
+        }
+
+        .contentList li .info p {
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .contentList img {
+            width: 80px;
+            border-radius: 50%;
+        }
+
+        .contentList li .content {
+            padding-left: 100px;
+            color: #666;
+            word-break: break-all;
+        }
+
+        .contentList li .the_del {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 28px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="w">
+        <div class="controls">
+            <img src="../13-微博发布案例/images/9.6/tip.png" alt=""><br/>
+            <textarea name="" id="area" cols="30" rows="10" placeholder="" maxlength="200"></textarea>
+            <div>
+                <span class="useCount" id="useCount">0</span>
+                <span>/</span>
+                <span>200</span>
+                <button id="send">发布</button>
+            </div>
+        </div>
+        <div class="contentList">
+            <ul id="list">
+
+            </ul>
+        </div>
+    </div>
+
+    <li hidden>
+        <div class="info">
+            <img src="../13-微博发布案例/images/9.6/03.jpg" alt="" class="userpic">
+            <span class="username">死数据</span>
+            <p class="send-time">死数据</p>
+        </div>
+        <div class="content">死数据</div>
+        <span class="the_del">x</span>
+    </li>
+
+    <script>
+        let dataArr = [
+            { uname: '司马懿', imgSrc: '../13-微博发布案例/images/9.5/01.jpg' },
+            { uname: '女娲', imgSrc: '../13-微博发布案例/images/9.5/02.jpg' },
+            { uname: '百里守约', imgSrc: '../13-微博发布案例/images/9.5/03.jpg' },
+            { uname: '亚瑟', imgSrc: '../13-微博发布案例/images/9.5/04.jpg' },
+            { uname: '虞姬', imgSrc: '../13-微博发布案例/images/9.5/05.jpg' },
+            { uname: '张良', imgSrc: '../13-微博发布案例/images/9.5/06.jpg' },
+            { uname: '安其拉', imgSrc: '../13-微博发布案例/images/9.5/07.jpg' },
+            { uname: '李白', imgSrc: '../13-微博发布案例/images/9.5/08.jpg' },
+            { uname: '阿珂', imgSrc: '../13-微博发布案例/images/9.5/09.jpg' },
+            { uname: '墨子', imgSrc: '../13-微博发布案例/images/9.5/10.jpg' },
+            { uname: '鲁班', imgSrc: '../13-微博发布案例/images/9.5/11.jpg' },
+            { uname: '嬴政', imgSrc: '../13-微博发布案例/images/9.5/12.jpg' },
+            { uname: '孙膑', imgSrc: '../13-微博发布案例/images/9.5/13.jpg' },
+            { uname: '周瑜', imgSrc: '../13-微博发布案例/images/9.5/14.jpg' },
+            { uname: '老夫子', imgSrc: '../13-微博发布案例/images/9.5/15.jpg' },
+            { uname: '狄仁杰', imgSrc: '../13-微博发布案例/images/9.5/16.jpg' },
+            { uname: '扁鹊', imgSrc: '../13-微博发布案例/images/9.5/17.jpg' },
+            { uname: '马可波罗', imgSrc: '../13-微博发布案例/images/9.5/18.jpg' },
+            { uname: '露娜', imgSrc: '../13-微博发布案例/images/9.5/19.jpg' },
+            { uname: '孙悟空', imgSrc: '../13-微博发布案例/images/9.5/20.jpg' },
+            { uname: '黄忠', imgSrc: '../13-微博发布案例/images/9.5/21.jpg' },
+            { uname: '百里玄策', imgSrc: '../13-微博发布案例/images/9.5/22.jpg' },
+        ]
+
+        let textarea = document.querySelector('textarea')
+        let useCount = document.querySelector('.useCount')
+        let send = document.querySelector('#send')
+        let ul = document.querySelector('#list')
+
+        textarea.addEventListener('input', function() {
+            useCount.innerHTML = this.value.length
+        })
+        
+        send.addEventListener('click', function() {
+            if (textarea.value.trim() === '') {
+                textarea.value = ''
+                useCount.innerHTML = 0
+                return alert('内容不能为空')
+            }
+
+            function getRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min
+            }
+            let random = getRandom(0, dataArr.length - 1)
+            let li = document.createElement('li')
+            li.innerHTML = `
+                <div class="info">
+                        <img src="${dataArr[random].imgSrc}" alt="" class="userpic">
+                        <span class="username">${dataArr[random].uname}</span>
+                        <p class="send-time">${new Date().toLocaleString()}</p>
+                </div>
+                <div class="content">${textarea.value}</div>
+                <span class="the_del">x</span>
+            `
+
+            let del = li.querySelector('.the_del')
+            del.addEventListener('click', function() {
+                ul.removeChild(li)
+            })
+
+            ul.insertBefore(li, ul.children[0])
+            textarea.value = ''
+            useCount.innerHTML = 0
+        })
+
+        textarea.addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                send.click()
+            }
+        })
+
+    </script>
+
+</body>
+</html>

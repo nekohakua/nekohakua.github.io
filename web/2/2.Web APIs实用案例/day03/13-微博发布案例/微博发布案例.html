@@ -24,6 +24,7 @@
     .controls textarea {
       width: 878px;
       height: 100px;
+      /* !!! 不调整大小 */
       resize: none;
       border-radius: 10px;
       outline: none;
@@ -50,7 +51,9 @@
 
     .controls div button {
       width: 100px;
+      /* ! */
       outline: none;
+      /* ! */
       border: none;
       background: rgb(0, 132, 255);
       height: 30px;
@@ -64,6 +67,7 @@
       background: rgb(0, 225, 255);
     }
 
+    /* !!!设置所有.controls div button的禁用元素 */
     .controls div button:disabled {
       background: rgba(0, 225, 255, 0.5);
     }
@@ -105,6 +109,11 @@
     .contentList li .content {
       padding-left: 100px;
       color: #666;
+      /* !!!!!!!word-break 指定了怎样在单词内断行 */
+      /* normal(默认值)
+      使用默认的断行规则。
+      break-all
+      对于 non-CJK (CJK 指中文/日文/韩文) 文本，可在任意字符间断行。 还有其他值*/
       word-break: break-all;
     }
 
