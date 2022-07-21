@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+			
+		// let n = 2;// 3
+		// function fn () {
+		// 	// 是否有申明这个变量
+		// 	// 如果当前作用域没有这个变量，就会去上级作用域查找
+		// 	n = 3;
+		// 	console.log(n);
+		// }
+
+		// fn();
+
+		// console.log(n);
+		
+
+		// 如果当前作用域不存在一个变量的话，就会去上去作用域查找
+		// 作用域链：由作用域串联起来的链状结构
+		// 作业：提供我们查找变量的机制
+		
+
+		let m = 6;
+		function fn () {
+			function fun () {
+				console.log(m);
+			}
+			fun();
+		}
+		fn();
+
+
+
+
+
+	</script>
+
+</body>
+</html>
