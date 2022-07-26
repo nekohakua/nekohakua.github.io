@@ -5,7 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <!-- 03 -->
+    <!-- <style>
+        body {
+            height: 3000px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px;
+        }
+    </style> -->
+
+    <!-- 04 -->
+    <!-- <style>
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style> -->
+
+    <!-- 05 06 07-->
+    <!-- <style>
+        .father {
+            margin: 100px auto;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+        }
+    </style> -->
+
+    <!-- 1.购物车案例 -->
+    <!-- <style>
         * {
             margin: 0;
             padding: 0;
@@ -29,9 +69,151 @@
         input {
             outline: none;
         }
-    </style>
+    </style> -->
 </head>
 <body>
+    <!-- 01.作用域问题 -->
+    <!-- <script>
+        let num = 10
+        {
+            let num = 20
+            console.log(num)
+        }
+        console.log(num)
+    </script> -->
+
+    <!-- 02 -->
+    <!-- <button>点击</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function(event) {
+            console.log(event)
+        })
+    </script> -->
+
+    <!-- 03 -->
+    <!-- <div></div>
+    <script>
+        document.addEventListener('click', function(e) {
+            console.log(`clientX:${e.clientX}, clientY:${e.clientY}`)
+            console.log(`pageX:${e.pageX}, pageY:${e.pageY}`)
+            console.log(`offsetX:${e.offsetX}, offsetY:${e.offsetY}
+            ===============`)
+        })
+    </script> -->
+
+    <!-- 04 -->
+    <!-- <img src="../素材/images/tianshi.gif" alt="">
+    <script>
+        let img = document.querySelector('img')
+        document.addEventListener('mousemove', function(e) {
+            img.style.left = e.pageX  - 26 + 'px'
+            img.style.top = e.pageY - 40 + 'px'
+
+        })
+    </script> -->
+
+    <!-- 05 06 07-->
+    <!-- <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        let father = document.querySelector('.father')
+        let son = document.querySelector('.son')
+        // document.addEventListener('dblclick', function() {
+        //     alert('dblclick')
+        // })
+        // document.addEventListener('click', function() {
+        //     alert('document')
+        // })
+
+        // father.addEventListener('click', function() {
+        //     alert('father')
+        // })
+        // son.addEventListener('click', function() {
+        //     alert('son')
+        // })
+        
+
+        // document.addEventListener('click', function() {
+        //     alert('document')
+        // }, true)
+
+        // father.addEventListener('click', function() {
+        //     alert('father')
+        // }, true)
+        // son.addEventListener('click', function() {
+        //     alert('son')
+        // }, true)
+
+        // document.addEventListener('click', function() {
+        //     alert('document')
+        // })
+
+        // father.addEventListener('click', function() {
+        //     alert('father')
+        // })
+        // son.addEventListener('click', function(e) {
+        //     alert('son')
+        //     e.stopPropagation()
+        // })
+
+        // father.addEventListener('mouseover', function() {
+        //     console.log(111)
+        // })
+        father.addEventListener('mouseenter', function() {
+            console.log(111)
+        })
+
+    </script> -->
+
+    <!-- 08 -->
+    <!-- <a href="https://www.baidu.com/">跳转到百度</a>
+    <script>
+        let a = document.querySelector('a')
+        a.addEventListener('click', function(e) {
+            e.preventDefault()
+        })
+    </script> -->
+
+    <!-- 09 -->
+    <!-- <button>点击</button>
+    <script>
+        let btn = document.querySelector('button')
+        // btn.onclick = function() {
+        //     alert(1)
+        // }
+        // btn.onclick = function() {
+        //     alert(2)
+        // }
+        // btn.onclick = null
+
+        let re = btn.addEventListener('click', add)
+        btn.addEventListener('click', function() {
+            alert('222')
+        })
+        btn.removeEventListener('click', add)
+        function add() {
+            alert(111)
+        }
+    </script> -->
+
+    <!-- 10 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        let ul = document.querySelector('ul')
+        ul.addEventListener('click', function(e) {
+            // console.log(e)
+            // console.log(e.target)
+            e.target.style.color = 'pink'
+        })
+    </script>
     
 </body>
 </html>
