@@ -130,12 +130,16 @@
 
     .indicator li .border {
       display: none;
-      width: 54px;
+      /* width: 54px; */
+      /* 我调整 */
+      width: 60px;
       position: absolute;
       bottom: 0;
       left: 0;
       z-index: 20;
-      border: 3px solid #98E404;
+      /* border: 3px solid #98E404; */
+      /* 我调整 */
+      border: 2px solid #98E404;
     }
 
     /* li里面的mask 和 border 刚开始都是显示的 */
@@ -329,7 +333,7 @@
       timer = setInterval(function() {
         // 自动调用右侧按钮的点击事件
         next.click()
-      }, 2000)
+      }, 1000)
     })
 
   </script>

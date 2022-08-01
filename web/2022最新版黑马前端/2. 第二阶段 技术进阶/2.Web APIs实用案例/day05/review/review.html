@@ -57,7 +57,7 @@
     </style> -->
 
     <!-- 05 -->
-    <style>
+    <!-- <style>
         * {
             margin: 0;
             padding: 0;
@@ -112,6 +112,13 @@
 
         .content4 {
             background-color: yellowgreen;
+        }
+    </style> -->
+
+    <!-- 06 -->
+    <style>
+        body {
+            background-color: pink;
         }
     </style>
 </head>
@@ -184,7 +191,7 @@
     </script> -->
 
     <!-- 05 -->
-    <div class="aside">
+    <!-- <div class="aside">
         <div class="item active">男装/女装</div>
         <div class="item">儿童服装/游乐园</div>
         <div class="item">电子产品</div>
@@ -208,6 +215,20 @@
                 document.documentElement.scrollTop = neirong[i].offsetTop
             })
         }
+    </script> -->
+
+    <!-- 06 -->
+    <script>
+        window.addEventListener('resize', function() {
+            let w = document.documentElement.clientWidth
+            if (w > 1700) {
+                document.body.style.backgroundColor = 'pink'
+            } else if (w > 756) {
+                document.body.style.backgroundColor = 'hotpink'
+            } else {
+                document.body.style.backgroundColor = 'deeppink'
+            }
+        })
     </script>
 
 </body>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,35 +22,45 @@
         .backtop {
             display: none;
             width: 50px;
-            left: 50%;
             margin: 0 0 0 505px;
             position: fixed;
             bottom: 60px;
+            left: 50%;
             z-index: 100;
         }
 
         .backtop a {
             height: 50px;
             width: 50px;
-            background: url(./images/bg2.png) 0 -600px no-repeat;
+            background: url(../05-仿新浪返回顶部/images/bg2.png) 0 -600px no-repeat;
             opacity: 0.35;
             overflow: hidden;
             display: block;
-            text-indent: -999em;
+            /* text-indent: -999em; */
             cursor: pointer;
         }
     </style>
 </head>
-
 <body>
     <div class="content"></div>
     <div class="backtop">
-        <img src="./images/close2.png" alt="">
+        <img src="../05-仿新浪返回顶部/images/close2.png" alt="">
         <a href="javascript:;"></a>
     </div>
     <script>
+        let backtop = document.querySelector('.backtop')
+        window.addEventListener('scroll', function() {
+            let num = document.documentElement.scrollTop
+            if (num >= 500) {
+                backtop.style.display = 'block'
+            } else {
+                backtop.style.display = 'none'
+            }
+        })
 
+        backtop.children[1].addEventListener('click', function() {
+            document.documentElement.scrollTop = 0
+        })
     </script>
 </body>
-
 </html>
