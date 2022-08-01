@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 规则二：隐式绑定
+        // ◼ 另外一种比较常见的调用方式是通过某个对象进行调用的：
+        // 也就是它的调用位置中，是通过某个对象发起的函数调用。
+
+        // 推荐书籍：你不知道的javaScript(上中下)
+        function foo() {
+            console.log("foo函数", this)
+        }
+
+        var obj = {
+            bar: foo
+        }
+
+        // obj发起的，所以this指向obj
+        obj.bar()
+
+        // ppt还有几个案例看看
+    </script>
+</body>
+</html>

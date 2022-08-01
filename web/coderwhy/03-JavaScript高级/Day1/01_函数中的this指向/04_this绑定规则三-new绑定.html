@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // new绑定
+        // JavaScript中的函数可以当做一个类的构造函数来使用，也就是使用new关键字。
+
+        /*
+            new会
+            1.创建新的对象
+            2.将this指向这个空对象
+            3.执行函数体中的代码
+            4.没有显示返回非空对象时，默认返回这个对象
+        */
+
+        function foo() {
+            // 打印可以看见name = "why"是因为浏览器帮我们做了操作来看见
+            console.log("foo函数:", this)
+            this.name = "why"
+        }
+
+        new foo()
+    </script>
+</body>
+</html>

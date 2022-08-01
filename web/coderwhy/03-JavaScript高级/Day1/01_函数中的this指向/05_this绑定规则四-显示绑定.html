@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 隐式绑定有一个前提条件：
+        //  必须在调用的对象内部有一个对函数的引用（比如一个属性）；
+        //  如果没有这样的引用，在进行调用时，会报找不到该函数的错误；
+        //  正是通过这个引用，间接的将this绑定到了这个对象上；
+        // ◼ 如果我们不希望在 对象内部 包含这个函数的引用，同时又希望在这个对象上进行强制调用，该怎么做呢？用call和apply方法显示绑定
+
+        var obj = {
+            name: "why"
+        }
+
+        function foo() {
+            console.log("foo函数", this)
+        }
+
+        //执行函数，并且函数中的this指向obj对象 
+        // obj.foo = foo
+        // obj.foo()
+
+        // 执行函数，并且强制this就是obj对象
+        foo.call(obj)
+
+        // 自己显式规定this指向()里面的
+        foo.call(123) //包装类对象
+        foo.call("abc") //包装类对象
+        foo.call(undefined) //undefined没有包装类对象，所以this指向window
+
+
+    </script>
+</body>
+</html>

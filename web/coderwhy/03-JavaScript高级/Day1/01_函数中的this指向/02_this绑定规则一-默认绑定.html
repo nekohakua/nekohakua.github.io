@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- "use strict"是严格模式 -->
+    <!-- 打包的时候会启用严格模式，可以规避很多错误，后面详细讲解 -->
+    <script>
+        // "use strict"
+
+        // 规则一：默认绑定
+        // 什么情况下使用默认绑定呢？独立函数调用。
+        //  独立的函数调用我们可以理解成函数没有被绑定到某个对象上进行调用；
+
+        // 1.普通函数被独立的调用
+        function foo() {
+            console.log("foo函数", this)
+            // 当开启严格模式，又想用window对象时，可以下面
+            console.log("foo函数【window】", window)
+
+        }
+        // 指向window
+        foo()
+
+        // 2.函数的定义在对象中，但是独立调用
+        var obj = {
+            name: "why",
+            bar: function() {
+                console.log("bar:", this)
+            }
+        }
+
+        var baz = obj.bar
+        baz()
+
+        // 3.高阶函数 独立调用
+        function test(fn) {
+            // 调用fn,还是指向window
+            fn()
+        }
+        test(obj.bar)
+
+        // 4.严格模式下，独立调用的函数中的this指向的是undefined
+
+    </script>
+</body>
+</html>
