@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <video src="mov.mp4" muted></video>
+    <script>
+        // 因为原生js 比 jQuery 更大，原生的一些属性和方法 jQuery没有给我们封装. 要想使用这些属性和方法需要把jQuery对象转换为DOM对象才能使用。
+
+
+        // 1. DOM对象转换为 jQuery对象
+        // (1) 直接获取视频，得到就是jQuery对象
+        $('video')
+        // (2) 已经使用原生js 获取过来的 DOM对象
+        var myvideo = document.querySelector('video')
+        $(myvideo)
+
+        // $(myvideo).play() //jQuery没有原生的.play()方法来播放视频，所以报错
+
+        // 2.  jQuery对象转换为DOM对象
+        // myvideo.play() //原生播放视频的方法
+        // 2.1方法一
+        $('video')[0].play() //因为只有一个视频，所以是index是0
+        // 2.2方法二
+        // $('video').get(o).play()
+
+    </script>
+</body>
+
+</html>
