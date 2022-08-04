@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+    <script>
+        // show([speed,[easing],[fn]])
+        // （1）参数都可以省略， 无动画直接显示。
+        // （2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。
+        // （3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。
+        // （4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。
+
+        $(function() {
+            $("button").eq(0).click(function() {
+                $("div").show(1000, function() {
+                    alert(1);
+                });
+            })
+            $("button").eq(1).click(function() {
+                // $("div").hide("fast", function() {
+                //     alert(1);
+                // });
+                $("div").hide(1000, function() {
+                    alert(1);
+                });
+            })
+            $("button").eq(2).click(function() {
+                    $("div").toggle(1000);
+                })
+                // 一般情况下，我们都不加参数直接显示隐藏就可以了,因为这个动画不够炫酷
+        });
+    </script>
+</body>
+
+</html>

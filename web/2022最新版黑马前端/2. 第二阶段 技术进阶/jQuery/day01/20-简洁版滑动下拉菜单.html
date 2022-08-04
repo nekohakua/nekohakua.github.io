@@ -126,19 +126,31 @@
         </li>
     </ul>
     <script>
-
         $(function() {
-            // 鼠标经过
-            // 隐式迭代会给每个选中的li绑定事件，所以不用像以前那样用for循环遍历了
-            $(".nav>li").mouseenter(function() {
-                // $(this) jQuery:当前元素  this不要加引号
-                // show() 显示元素  hide() 隐藏元素
-                $(this).children("ul").show()
-            })
+            // // 鼠标经过
+            // $(".nav>li").mouseover(function() {
+            //     // $(this) jQuery 当前元素  this不要加引号
+            //     // show() 显示元素  hide() 隐藏元素
+            //     $(this).children("ul").slideDown(200);
+            // });
+            // // // 鼠标离开
+            // $(".nav>li").mouseout(function() {
+            //     $(this).children("ul").slideUp(200);
+            // });
 
-            // 鼠标离开
-            $(".nav>li").mouseout(function() {
-                $(this).children("ul").hide()
+            // 上面的简化
+            // 1. 事件切换 hover 就是鼠标经过和离开的复合写法
+            // 第一个fn是鼠标经过的函数，第二个是离开
+            // $(".nav>li").hover(function() {
+            //     $(this).children("ul").slideDown(200)
+            // }, function() {
+            //     $(this).children("ul").slideUp(200)
+            // })
+
+            // 上面的更加简化
+            // 2. 事件切换 hover  如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数
+            $(".nav>li").hover(function() {
+                $(this).children("ul").slideToggle(200)
             })
         })
     </script>

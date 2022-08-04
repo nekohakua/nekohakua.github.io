@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+
+        // 操作样式之css方法
+        // 1. 参数只写属性名，则是返回属性值
+        // 2.  参数是属性名，属性值，逗号分隔，是设置一组样式，属性必须加引号，值如果是数字可以不用跟单位和引号
+        // 3.参数可以是对象形式，方便设置多组样式。属性名和属性值用冒号隔开， 属性可以不用加引号，
+        $(function() {
+            // console.log($("div").css("width")) //200px
+
+            // $("div").css("width", "300px")
+            // $("div").css("width", "300px")
+            $("div").css("width", 300)
+
+            $("div").css({
+                width: 400,
+                height: "400",
+                backgroundColor: "red"
+                // 如果是复合属性则必须采取驼峰命名法，如果值不是数字，则需要加引号
+            })
+            
+        })
+    </script>
+</body>
+
+</html>

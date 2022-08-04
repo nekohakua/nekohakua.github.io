@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+            display: none;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <button>淡入效果</button>
+    <button>淡出效果</button>
+    <button>淡入淡出切换</button>
+    <button>修改透明度</button>
+    <div></div>
+    <script>
+        $(function() {
+            $("button").eq(0).click(function() {
+                // 淡入 fadeIn()
+                $("div").fadeIn(1000)
+            })
+            $("button").eq(1).click(function() {
+                // 淡出 fadeOut()
+                $("div").fadeOut(1000)
+
+            })
+            $("button").eq(2).click(function() {
+                // 淡入淡出切换 fadeToggle()
+                $("div").fadeToggle(1000)
+
+            })
+            // 渐进方式调整到指定的不透明度 
+            // fadeTo([[speed],opacity,[easing],[fn]])
+            // （1）opacity 透明度必须写，取值 0~1 之间。
+            // （2）speed：三种预定速度之一的字符串(“slow”,“normal”, or “fast”)或表示动画时长的毫秒数值(如：1000)。必须写
+            // （3）easing：(Optional) 用来指定切换效果，默认是“swing”，可用参数“linear”。
+            // （4）fn:  回调函数，在动画完成时执行的函数，每个元素执行一次。
+            $("button").eq(3).click(function() {
+                //  修改透明度 fadeTo() 这个速度和透明度要必须写
+                $("div").fadeTo(1000, 0.5)
+
+            })
+        })
+    </script>
+</body>
+
+</html>
