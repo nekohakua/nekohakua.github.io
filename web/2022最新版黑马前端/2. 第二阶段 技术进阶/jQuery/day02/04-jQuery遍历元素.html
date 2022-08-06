@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+
+        $(function() {
+            // jQuery 隐式迭代是对同一类元素做了同样的操作。 如果想要给同一类元素做不同操作，就需要用到遍历。
+            // $("div").each(function (index, domEle) { xxx; }）       
+            // 1. each() 方法遍历匹配的每一个元素。主要用DOM处理。 each 每一个
+            // 2. 里面的回调函数有2个参数：  index 是每个元素的索引号;  demEle 是每个DOM元素对象，不是jquery对象
+            // 3. 所以要想使用jquery方法，需要给这个dom元素转换为jquery对象  $(domEle)
+
+            // 隐式迭代是对同一类元素做了同样的操作
+            // $("div").css("color", "red")
+
+            // 如果针对于同一类元素做不同操作，需要用到遍历元素（类似for，但是比for强大）
+            var sum = 0
+            // 1. each() 方法遍历元素
+            var arr = ["red", "green", "blue"]
+            $("div").each(function(index, domEle) {
+                // 回调函数第一个参数一定是索引号  可以自己指定索引号号名称
+                // console.log(index)
+                // 回调函数第二个参数一定是 dom元素对象 也是自己命名
+                // console.log(domEle)
+                $(domEle).css("color", arr[index])
+                // $(domEle).text()是字符串类型
+                sum += parseInt($(domEle).text())
+            })
+            // console.log(sum) //6
+
+            // 2. $.each() 方法遍历元素 主要用于遍历数据，处理数据
+            // $.each(object，function (index, element) { xxx; }）       
+            // 1. $.each()方法可用于遍历任何对象。主要用于数据处理，比如数组，对象
+            // 2. 里面的函数有2个参数：  index 是每个元素的索引号;  element  遍历内容
+            $.each($("div"), function(i, ele) {
+                // console.log(i)
+                // console.log(ele)
+            })
+            // 用来遍历数组
+            $.each(arr, function(i, ele) {
+                console.log(i)
+                console.log(ele)
+            })
+            // 用来遍历对象 有点像for in
+            $.each({
+                name: "andy",
+                age: 18
+            }, function(i, ele) {
+                console.log(i) //输出属性名 name age
+                console.log(ele) //输出属性值 andy 18
+            })
+
+        })
+    </script>
+</body>
+
+</html>

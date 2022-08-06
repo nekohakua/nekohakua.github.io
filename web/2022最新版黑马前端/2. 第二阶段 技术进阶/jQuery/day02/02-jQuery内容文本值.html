@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <span>我是内容</span>
+    </div>
+    <input type="text" value="请输入内容">
+    <script>
+        // 1. 获取设置元素内容,包括标签 html() 普通元素内容 html()(相当于原生inner HTML)
+        console.log($("div").html())
+        // 修改内容
+        // $("div").html("123")
+        
+        // $("div").html("123");
+        // 2. 获取设置元素文本内容 text() 普通元素文本内容 text()(相当与原生 innerText)
+        console.log($("div").text())
+        // 修改内容
+        // $("div").text("123")
+
+        // 3. 获取设置表单值 val() 表单的值 val()（ 相当于原生value)
+        console.log($("input").val())
+        // 修改内容
+        // $("input").val("123")
+        
+    </script>
+</body>
+
+</html>

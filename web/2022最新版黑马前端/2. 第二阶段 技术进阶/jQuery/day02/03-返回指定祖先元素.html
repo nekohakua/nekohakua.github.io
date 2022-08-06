@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="three">
+                <div class="four">我不容易</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 找到one类元素
+        console.log($(".four").parent().parent().parent())
+        // 找到所有父亲
+        console.log($(".four").parents())
+        // 找到one类元素
+        console.log($(".four").parents(".one"))
+    </script>
+</body>
+
+</html>
