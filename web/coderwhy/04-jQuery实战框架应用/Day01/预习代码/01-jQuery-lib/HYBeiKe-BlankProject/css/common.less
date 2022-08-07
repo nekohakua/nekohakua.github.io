@@ -1,0 +1,49 @@
+@import url('./variable.less');
+body {
+  font-size: 14px;
+  background-color: #f5f5f5;
+  color: #101d37;
+  // font-family: Hiragino Sans GB,Microsoft Yahei UI,Microsoft Yahei,\\5FAE\8F6F\96C5\9ED1,Segoe UI,Tahoma,"\5B8B\4F53 b8b\4F53",SimSun,sans-serif;
+}
+
+// 内容
+.wrapper {
+  width: 1150px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+// 精灵图
+.icon{
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+}
+
+// 标题
+.house-title{
+  margin-bottom: 26px;
+  .name{
+    font-size: 36px;
+    line-height: 50px;
+    color: #101d37;
+    font-weight: 600;
+  }
+
+  .sub-name{
+    color: @fontContentColor;
+    width: 1150px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    a{
+      float: right;
+      color: @themeColor;
+      font-weight: 500;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+

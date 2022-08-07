@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    span{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    box
+    <span>span</span>
+  </div>
+
+  <a href="https://www.jd.com">京东商城</a>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      
+      // 1.使用on监听
+      $('span').on('click',{ age: 12 } ,function($event) {
+        console.log('span', this)
+        console.log($event)  // jQuery 事件对象
+        console.log($event.originalEvent)  // span的 事件对象
+      })
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.navbar{
+  margin: 16px 0;
+}
+
+.navbar .container-fluid{
+  max-width: var(--content-width);
+}
+
+/* logo */
+.logo{
+  height: 26px;
+  padding-right: 25px;
+}
+
+/* link */
+.link-text{
+  padding: 8px 25px;
+  font-size: var(--font-size);
+  cursor: pointer;
+}
+
+.navbar-nav{
+  margin-right: auto;
+}
+
+.hot-line{
+  cursor: inherit;
+}
+
+.link-text.active span,
+.link-text:hover:not(.hot-line){
+  color: var(--theme-color);
+}
+.link-text.active span{
+  border-bottom: 2px solid var(--theme-color);
+}
+
+
+/* <=768px */
+@media (max-width:992px) {
+  /* 按钮 */
+  .navbar-toggler{
+    padding: 0;
+    margin: 0;
+  }
+  .navbar-toggler:active{
+    opacity: .6;
+  }
+  .expand-icon{
+    height: 20px;
+  }
+  
+  /* 下拉面板 */
+  #navbarNav{
+    background-color: var(--bg-nav-color);
+    color: #fff;
+    margin: 0 -16px;
+
+    position: absolute;
+    top: calc(100% + 16px); /*相对于 navbar*/
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+

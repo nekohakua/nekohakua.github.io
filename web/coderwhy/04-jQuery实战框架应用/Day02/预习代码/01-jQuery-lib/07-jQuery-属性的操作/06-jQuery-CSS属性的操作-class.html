@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5
+      <span class="text">我是span</span>
+    </li>
+  </ul>
+
+  <button>切换类toggleClass</button>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.给匹配到的元素添加class
+      // $('ul').addClass('list') // 添加一个
+      // $('ul').addClass('list list2') // 添加两个(底层会转成数组)
+      // $('ul').addClass( ['list', 'list2'] ) // 添加两个（推荐）
+      // $('ul li').addClass(function(index) { // 可以接收一个函数
+      //   return 'hy-' + index
+      // })
+
+      // 2.判断匹配元素集合中任意一个元素是否存在某个class (不包括子元素)
+      // console.log( $('ul').hasClass('list list2')  )  // true
+      // console.log( $('ul li').hasClass('text')  ) // true
+
+
+      // 3.给匹配元素集合中的元素删除class
+      // $('ul li').removeClass() // 删除所有
+      // $('ul').removeClass('list') // 删除指定一个
+      // $('ul').removeClass('list list2') // 删除多个
+      // $('ul').removeClass(['list', 'list2']) // 删除多个
+
+      // 4.删除类还支持接收一个回调函数
+      // $('ul li').removeClass(function(index, oldClassName) {
+      //   if(index<3){ // 删除index小于3的类
+      //     return oldClassName  // 返回要删除的类的名称
+      //   }
+      // })
+
+      // 5.切换类
+      $('button').on('click', function() {
+        // $('ul').toggleClass()  // 添加和删除 切换已存在的类
+        // $('ul').toggleClass('list2')  // 添加和删除切换 指定某个类
+        // $('ul').toggleClass('active', true) // 只添加
+        // $('ul').toggleClass('active', false) // 只删除
+      })
+      
+
+
+
+    })
+  </script>
+</body>
+</html>

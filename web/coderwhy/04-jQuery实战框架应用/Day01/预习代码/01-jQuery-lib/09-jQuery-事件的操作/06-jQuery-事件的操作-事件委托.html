@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5
+      <p>我是p元素</p>
+    </li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+
+      // 1.事件委托
+      // $('ul').on('click', function(event) {
+      //   console.log(event.target) // 现在找个 target 有可能为：li 、p、ul
+      // })
+
+      // 2.事件委托 ( 参数二：selector，过滤触发事件的后代元素)
+      $('ul').on('click', 'li p', {}, function(event) {
+        console.log(event.target) // 现在找个 target 有可能为：li 、p、ul
+      })
+
+    })
+
+  </script>
+</body>
+</html>

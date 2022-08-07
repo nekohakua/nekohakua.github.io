@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.使用jQuery().each遍历li元素
+      $('ul li').each(function(index, element) {
+        console.log(index, element)
+        if(index > 2){
+          return false
+        }
+      })
+        
+
+      // 2.使用使用for of 
+      // for(var element of $('ul li')){
+      //   console.log(element)
+      // }
+
+      // 3.使用使用for in (会遍历包含原型上的属性，不推荐)
+      // for(var element in $('ul li')){
+      //   console.log(element)
+      // }
+
+      // 4.使用使用for(可以的)
+      // for(var i = 0;  i < $('ul li').length; i++){
+      //   console.log($('ul li')[i])
+      // }
+
+    })
+  </script>
+</body>
+</html>

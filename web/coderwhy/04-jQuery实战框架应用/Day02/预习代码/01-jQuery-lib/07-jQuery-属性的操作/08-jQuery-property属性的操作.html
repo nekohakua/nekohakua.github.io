@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul id="container" age="18">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <input type="checkbox" >
+  <input  class="user" type="text">
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.查看元素的所有的property属性
+      // console.log('%O', document.querySelector('ul'))
+      console.log('%O', $('ul').get(0) )
+      
+
+      // 2.获取元素中的property属性
+      // console.log( $('ul').prop('id') ) // 获取标准的attrbute属性（会自动添加到元素对象上）
+      // console.log( $('ul').prop('age') ) // 获取不到，非标准的属性不会直接添加到元素对象上
+      // console.log( $('ul').prop('nodeType') ) // 获取元素的property属性
+      // console.log( $('ul').prop('nodeName') )
+
+      // 3.给元素设置prop属性
+      // $('input').prop('checked',true)
+      // $('input').prop({
+      //   checked: true,
+      //   disabled: true,
+      //   customProps: '我是自定添加的属性'
+      // })
+      // console.log('%O', $('input').get(0) )
+
+      // $('.user').prop({
+      //   placeholder: '请输入用户名',
+      //   disabled: false,
+      //   type: 'password',
+      // })
+
+      // 4.删除某个自定义的属性属性，不能删除元素本身的属性
+      // $('input').removeProp('customProps')
+      // console.log('%O', $('input').prop('customProps') )
+
+
+
+      
+    })
+  </script>
+</body>
+</html>

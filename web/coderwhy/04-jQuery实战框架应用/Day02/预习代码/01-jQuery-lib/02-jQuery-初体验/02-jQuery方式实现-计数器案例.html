@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="sub">-</button>  
+  <span class="counter">0</span>
+  <button class="add">+</button>  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    // var $jQObj = jQuery('.sub') // 返回一个 jQuery 对象
+    // $jQObj.click(function() { })
+
+    var counter = 0
+    var $counter = $('.counter')
+    // 1.监听点击事件
+    $('.sub').click(function(){
+      // 2.更新页面的数据 
+      $counter.text(--counter)
+    })
+    $('.add').click(function(){
+      $counter.text(++counter)
+    })
+
+  </script>
+</body>
+</html>

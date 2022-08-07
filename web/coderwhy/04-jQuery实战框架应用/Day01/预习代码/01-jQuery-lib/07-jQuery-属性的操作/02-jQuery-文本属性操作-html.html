@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5
+      <span>我是span</span>
+    </li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      //1.获取匹配到元素集合中第一个的html字符串
+      console.log( $('ul li').html() )  // innerHTML
+
+      // 2.给匹配到的每个元素设置html内容
+      // $('ul li').html('<a href="#">我是a连接</a>')
+
+      $('ul li').html('<a href="#"> 我是a连接</a> <span>我是span</span> ')
+
+    })
+  </script>
+</body>
+</html>

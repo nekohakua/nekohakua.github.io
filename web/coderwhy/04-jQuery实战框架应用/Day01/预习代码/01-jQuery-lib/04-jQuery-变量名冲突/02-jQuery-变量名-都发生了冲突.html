@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./js-libs/hy-utils2.js"></script>
+  <script src="../libs/jquery-3.6.0.js"></script>
+  
+  <script>
+    var newJQuery = jQuery.noConflict(true) // 将先前备份其它库的_$, 恢复为$
+    console.log($) // 这次的 $ 就是其它库的了
+    console.log(jQuery) // 这次的 jQuery 就是其它库的了
+    
+    console.log(newJQuery)  // 这个才是jQuery对象
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .row{
+      display: flex;
+
+    }
+
+    .col{
+      height: 40px;
+      border: 1px solid red;
+    }
+    .col:nth-child(1){
+      /* 1.如果都有值(包括0)的情况下，flex-basis的优先级高 */
+      /* width: 200px;
+      flex-basis: 50%; */
+
+      /* 2.如果都有值(包括0)的情况下，flex-basis的优先级高 */
+      /* width: 200px;
+      flex-basis: 0; */
+      
+      /* 3. flex-basis:auto 时，width优先高*/
+      /* width: 200px;
+      flex-basis: auto;  */
+
+      /* 4.flex-grow的优先级最高 */
+      flex-grow: 1;
+      width: 200px;
+      flex-basis: 0%;
+
+      /* 5.flex-grow的优先级最高 */
+      /* flex-grow: 1;
+      width: 200px; */
+
+      /*
+        flex-grow -> flex-basis -> width 
+      */
+      
+
+
+
+
+
+      
+      
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="row">
+    <div class="col">1</div>
+    <div class="col">2</div>
+    <div class="col">3</div>
+    <div class="col">4</div>
+  </div>
+</body>
+</html>

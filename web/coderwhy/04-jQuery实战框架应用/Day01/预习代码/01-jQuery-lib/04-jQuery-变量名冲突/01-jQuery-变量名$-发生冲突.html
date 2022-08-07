@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 给window添加了$函数，即 window.$  -->
+  <script src="./js-libs/hy-utils.js"></script>
+   <!--也给window添加了$函数，即window.$。
+       这时出现了变量名的冲突，jQuery的$将前面的$覆盖了。
+       那如何避免这种情况呢？可以调用noConflict
+  -->
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    var newJQuery = jQuery.noConflict() // 将先前备份其它库的_$, 恢复为$
+    console.log($) // 这次的 $ 就是其它库的了
+    
+    console.log(newJQuery === jQuery)
+
+  </script>
+</body>
+</html>

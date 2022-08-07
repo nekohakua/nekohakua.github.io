@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+  <title>弘源智慧生活</title>
+  <link rel="stylesheet" href="./libs/bootstrap-4.6.1/css/bootstrap.css">
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/target-customer.css">
+  <link rel="stylesheet" href="./css/connect-life.css">
+  <link rel="stylesheet" href="./css/partners.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="./img/logo.png" alt="">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <img class="expand-icon" src="./img/show-icon.png">
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- 自定义布局和样式 -->
+          <p class="link-text active"><span>首页</span></p>
+          <p class="link-text"><span>API</span></p>
+          <p class="link-text"><span>解决方案</span></p>
+          <p class="link-text"><span>案例</span></p>
+          <p class="link-text"><span>新闻</span></p>
+          <p class="link-text"><span>关于我们</span></p>
+        </ul>
+        <p class="link-text hot-line">咨询热线：4009910008</p>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- 轮播图 -->
+  <!-- 
+
+    data-ride="carousel"属性用于将轮播标记为在页面加载时开始动画。如果你不使用data-ride="carousel"初始化你的轮播，你必须自己初始化它。它不能与同一轮播的（冗余和不必要的）显式 JavaScript 初始化结合使用。
+
+    $('.carousel').carousel('cycle')
+
+    data-touch="false" 在触摸屏设备警用触摸滚动
+   -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-touch="false">
+    <!-- 指示器 -->
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播图 -->
+    <div class="carousel-inner">
+      <!-- 
+        data-interval="3000"  自动循环到下一个页的延迟时间
+       -->
+
+      <!-- <div class="carousel-item active">
+        <img src="./img/banner0.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/banner1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/banner2.png" class="d-block w-100" alt="...">
+      </div> -->
+
+    </div>
+    <!-- 上一页和下一页 -->
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- 目标客户 -->
+  <div class="target-customer text-center">
+    <h1 class="title d-none d-sm-block">目标客户</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-3 item">
+          <img class="d-none d-sm-block" src="./img/target-1.png" alt="">
+          <div class="sub-title">电子银行</div>
+          <div class="desc text-center">
+              <p>助力五大行、商业银行、城商行、农商行、农信社等</p>
+              <p>手机银行与直销银行APP消费场景升级</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 item">
+          <img class="d-none d-sm-block" src="./img/target-2.png" alt="">
+          <div class="sub-title">金服平台</div>
+          <div class="desc">
+            <p>助力钱包、小贷、基金、保险、信托、证券等</p>
+            <p>金融服务平台APP 消费场景升级</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 item">
+          <img class="d-none d-sm-block" src="./img/target-3.png" alt="">
+          <div class="sub-title">企业福利</div>
+          <div class="desc">
+            <p>助力国有、私营、外资、人力资源公司等</p>
+            <p>企业报销与福利系统消费场景升级</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3 item">
+          <img class="d-none d-sm-block" src="./img/target-4.png" alt="">
+          <div class="sub-title">智能终端</div>
+          <div class="desc">
+            <p>助力机器人、汽车中控、电子屏、商用电视等</p>
+            <p>人工智能语音消费场景升级</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 联系生活 -->
+  <div class="connect-life">
+    <div class="wrapper">
+      <h1 class="c-title text-center d-none d-md-block">连接生活的无限想象</h1>
+      <div class="container-fluid">
+         <div class="row">
+           <div class="col-12 col-md-6">
+            <p class="c-sub-title">生活服务消费场景 一站式接入</p>
+            <p class="c-content text-left">聚合15类生活服务场景，优选100+家互联网平台级供应商，打造“充值缴费”（三充值两缴费）、“商旅出行”（滴滴专车、携程酒店、同程火车票、去哪儿机票等）、“到家服务”（饿了么外卖、泰笛洗涤、邻趣跑腿、家电清洗、易果生鲜等）、“文化演出”（猫眼电影、永乐票务、大麦网等）四大类接口一站式服务。全API接口打通用户登陆、平台支付、订单同步，增强供应链整合输出能力，标准化接入，开发成本节约90%！</p>
+
+            <div class="d-none d-md-block">
+              <div class="row nest">
+                <div class="col">
+                  <p>90</p>
+                  <span>站式管理平台</span>
+                </div>
+                <div class="col">
+                  <p>180</p>
+                  <span>活动形式</span>
+                </div>
+                <div class="col">
+                  <p>150+</p>
+                  <span>成功案例</span>
+                </div>
+              </div>
+            </div>
+           </div>
+           <div class="col-12 col-md-6 text-center">
+             <img class="c-img" src="./img/slogan-1.png" alt="">
+           </div>
+         </div>
+      </div>
+
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 text-center d-none d-md-block">
+            <img class="c-img" src="./img/slogan-2.png" alt="">
+          </div>
+
+          <div class="col-12 col-md-6">
+            <p class="c-sub-title">生活服务消费场景 一站式接入</p>
+            <p class="c-content">聚合15类生活服务场景，优选100+家互联网平台级供应商，打造“充值缴费”（三充值两缴费）、“商旅出行”（滴滴专车、携程酒店、同程火车票、去哪儿机票等）、“到家服务”（饿了么外卖、泰笛洗涤、邻趣跑腿、家电清洗、易果生鲜等）、“文化演出”（猫眼电影、永乐票务、大麦网等）四大类接口一站式服务。全API接口打通用户登陆、平台支付、订单同步，增强供应链整合输出能力，标准化接入，开发成本节约90%！</p>
+
+           <div class="d-none d-md-block">
+             <div class="row nest">
+               <div class="col">
+                <p>4</p>
+                <span>大类接口</span>
+               </div>
+               <div class="col">
+                <p>15</p>
+                <span>类生活消费场景</span>
+               </div>
+               <div class="col">
+                <p>100+</p>
+                <span>平台级供应商</span>
+               </div>
+             </div>
+           </div>
+          </div>
+
+          <div class="col-12 col-md-6 text-center d-block d-md-none">
+            <img class="c-img" src="./img/slogan-2.png" alt="">
+          </div>
+        </div>
+     </div>
+
+     <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p class="c-sub-title">品牌商城 一站式运营</p>
+          <p class="c-content">联手200+知名大品牌，提供优质商品数量10000+ ，覆盖食品、电器、家居、汽车服务等20大类商品种类。商城形式种类丰富，可以为您定制严选商城、年货商城、特产商城、海淘商城、天天特惠、积分商城、权益商城、消费卡券、游戏商城。为银行客户营销、客户权益提供支持。为银行提供优质商品平台，一次入驻，多方销售。最终做到万店互联，助力银行链接商户资源，打造银行APP商城版块的专属生态。</p>
+
+         <div class="d-none d-md-block">
+           <div class="row nest">
+             <div class="col">
+              <p>200</p>
+              <span>商城版块</span>
+             </div>
+             <div class="col">
+              <p>500</p>
+              <span>品牌供应商</span>
+             </div>
+             <div class="col">
+              <p>10000+</p>
+              <span>优质商品</span>
+             </div>
+           </div>
+         </div>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+          <img class="c-img" src="./img/slogan-3.png" alt="">
+        </div>
+      </div>
+   </div>
+    </div>
+  </div>
+
+  <!-- 合作伙伴 -->
+  <div class="partners">
+    <h1 class="p-title">合作伙伴</h1>
+    <p class="p-sub-title">已聚合100+国内知名生活服务平台API接口</p>
+
+    <div class="p-content">
+      <div class="long-img">
+        <img src="./img/partner.png" alt="我们的客户遍布全国各地">
+        <img src="./img/partner.png" alt="我们的客户遍布全国各地">
+      </div>
+    </div>
+  </div>
+
+  <!-- 尾部 -->
+  <div class="footer">
+      <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 col-md-3">
+               <ul>
+                 <li>产品</li>
+                 <li><a href="javascript:;">获客粘客</a></li>
+                 <li><a href="javascript:;">金融+场景</a></li>
+                 <li><a href="javascript:;">API</a></li>
+                 <li><a href="javascript:;">理财</a></li>
+                 <li><a href="javascript:;">贷款</a></li>
+               </ul>
+              </div>
+              <div class="col-6 col-md-3">
+               <ul>
+                 <li>公司</li>
+                 <li><a href="javascript:;">公司介绍</a></li>
+                 <li><a href="javascript:;">企业文化</a></li>
+                 <li><a href="javascript:;">品牌新闻</a></li>
+                 <li><a href="javascript:;">加入我们</a></li>
+                 <li><a href="javascript:;">联系我们</a></li>
+               </ul>
+              </div>
+              <div class="col-6 col-md-3">
+               <ul>
+                 <li>业务咨询</li>
+                 <li>
+                   <img src="./img/advisory-1.png">
+                   <a href="javascript:;">400-991-0008</a>
+                 </li>
+                 <li>
+                   <img src="./img/advisory-2.png">
+                   <a href="javascript:;">09:00 - 22:00</a>
+                 </li>
+                 <li>
+                   <img src="./img/advisory-3.png">
+                   <a href="javascript:;">www.hykj.com</a>
+                 </li>
+               </ul>
+              </div>
+              <div class="col-6 col-md-3">
+               <ul>
+                 <li>关注我们</li>
+                 <li><img src="" alt="coderwhy" class="code"></li>
+                 <li>coderwhy公众号</li>
+               </ul>
+              </div>
+            </div>
+        </div> 
+        <p class="copy-right text-center">Copyright © 2022-2032 · 广州弘源科教软件有限公司</p>
+      </div>
+  </div>
+
+
+  <script src="./libs/jquery/jquery.3.6.0-slim.js"></script>
+  <script src="./libs/bootstrap-4.6.1/js/bootstrap.bundle.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/navbar.js"></script>
+  <script src="./js/banner.js"></script>
+</body>
+</html>

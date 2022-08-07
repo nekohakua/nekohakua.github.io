@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,shrink-to-fix=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../libs/bootstrap-4.6.1/css/bootstrap.css">
+  <style>
+    .container{
+      background-color: pink;
+    }
+    .item{
+      border: 1px solid green;
+      height: 40px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <!-- 类的顺序：sm -> md -> lg -> xl -->
+       <div class="item col-xl-2">1</div>
+       <div class="item col-xl-2">2</div>
+       <div class="item">3</div>
+       <div class="item">4</div>
+       <div class="item">5</div>
+       <div class="item">6</div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <!-- 类的顺序：sm -> md -> lg -> xl -->
+       <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item">1</div>
+       <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item">2</div>
+       <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item">3</div>
+       <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item">4</div>
+       <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item">5</div>
+       <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 item">6</div>
+    </div>
+  </div>
+
+
+
+
+  <script src="../libs/jquery/jquery.3.6.0-slim.js"></script>
+  <script src="../libs/bootstrap-4.6.1/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text">
+  <input type="text">
+  <button class="get">getValue</button>
+  <button class="set">setValue</button>
+  <div class="show"></div>
+
+  <!-- <select name="user" id="select-user">
+    <option value="evan">evan</option>
+    <option value="mark">mark</option>
+    <option value="david">david</option>
+  </select> -->
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+
+      $('.get').click(function() {
+        //1.获取匹配到表单元素的 value  （ input  select  textarea ）
+        // console.log( $('input').val() )  // inputEl.va
+        lue
+        var value = $('input').val()
+        // var value = $('#select-user').val()
+        console.log(value)
+        $('.show').text(value)
+      })
+
+      $('.set').click(function() {
+        // 2.给匹配到元素设置 value
+        $('input').val('liujun')
+      })
+    })
+  </script>
+</body>
+</html>

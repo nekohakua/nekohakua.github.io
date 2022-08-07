@@ -1,0 +1,40 @@
+.footer{
+  /* 关键 */
+  min-height: 325px;
+  background: var(--bg-color);
+}
+
+
+
+.footer ul{
+  padding-top: 40px;
+  padding-left: 80px;
+}
+
+.footer ul li:first-child{
+  font-size: 24px;
+  color: var(--text-color);
+  line-height: 33px;
+}
+
+.footer ul li {
+  margin-bottom: 20px;
+}
+.copy-right,
+.footer ul li a{
+  font-size: 14px;
+  color: var(--sub-title-color);
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.footer ul li img{
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.footer .code{
+  width: 140px;
+  height: 140px;
+}

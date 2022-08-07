@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .container-fliud,
+    .container-sm,
+    .container{
+      height: 80px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 5px auto;
+      border: 1px solid red;
+    }
+
+    /* >=576px  手机横屏 */
+    @media (min-width:576px){
+      .container,
+      .container-sm{
+        max-width: 540px;
+      }
+    }
+    /* >=768px  ipad */
+    @media (min-width:768px){
+      .container,
+      .container-md{
+        max-width: 720px;
+      }
+    }
+    /* >=992px  小pc */
+    @media (min-width:992px){
+      .container,
+      .container-lg{
+        max-width: 960px;
+      }
+    }
+    /* >=1200px  pc */
+    @media (min-width:1200px){
+      .container,
+      .container-xl{
+        max-width: 1140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- 5个断点 -->
+  <!-- <div class="container container-sm container-md container-lg container-xl"></div> -->
+  
+  <!-- 2个断点 -->
+  <!-- <div class="container container-sm"></div> -->
+  <div class="container-sm"></div>
+
+  <!-- 
+    container 就是一个响应类, width会根据不同尺寸屏幕会自动变化
+    container-fliud: 就是一个固定width为 100% 的类
+  -->
+  <!-- <div class="container"></div>
+  <div class="container-fliud"></div> -->
+</body>
+</html>

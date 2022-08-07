@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="content" id="list" name="liujun">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5" hidden>li-5</li>
+    <li class="li-6"></li>
+  </ul>
+
+  <ul class="con">
+    <li class="li-7"></li>
+  </ul>
+
+  <!-- <script src="../libs/jquery-3.6.0.js"></script> -->
+  <script src="../libs/jquery-3.6.0-test.js"></script>
+  <Script>
+    // $(function() {
+      // 1.通用选择器
+      // console.log($('*'))
+
+      // 2.基本的选择器：id, class , element
+      // console.log( $('#list') ) 
+      // console.log( $('.content') ) 
+      // console.log( $('ul') ) 
+      // console.log( $('li') ) 
+      
+      // 3.属性选择器（ [attr] , [atrr=”value ”] ）
+      // console.log( $('[name="liujun"]') )
+
+      // 4.后代选择器（div > span,  div  span）
+      // console.log( $('ul > li.li-3') )
+      // console.log( $('ul li') )  // jQuery -> JSelect -> Selector In JavaScript -> Behavior
+
+      // 5.兄弟选择器（div + span , div ~ span）
+      // console.log( $('ul .li-3 + li') ) // + 下面同级的第一个兄弟
+      // console.log( $('ul .li-3 ~ li') ) // ~ 下面同级的所有的兄弟
+
+      // 6.交集选择器（div.container） 
+      // console.log( $('ul li.li-2') )
+
+      // 7.伪类选择器（:nth-child，:nth-of-type，:not， 但不支持状态伪类 :hover, :focus...）
+      // console.log( $('ul li:nth-child(1)') )
+      // console.log( $('ul li:not(.li-5)') )
+      // console.log( $('ul li:hover') ) // 状态伪类不支持
+
+      // 8.内容选择器（:empty，:has）
+      // console.log( $('ul li:empty') )
+      // console.log(document.querySelector('ul li:empty'))
+      // console.log( $('ul:has(.li-7)') ) // 一下是jQuery扩展的
+
+      // 9.可见选择器（:visible,  :hidden）
+      // console.log( $('ul li:hidden') )
+      // console.log( $('ul.content li:visible') )
+
+      // 10.jQuery扩展选择器：（:eq,  :odd,  :even, :first, :last ）
+      // console.log( $('ul.content li:eq(0)') )
+      // $('ul.content li:eq(-1)').css('color', 'red') 
+      // $('ul.content li:last').css('color', 'red')
+
+    // })
+  </Script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.方式一：提交请求参数-查询字符串的方式提交
+      // 语法：？key=value&key=value
+      // 如果是中文会调用encodeURIComponent函数来加密
+      // console.log(encodeURIComponent('小蛮腰'))  // %E5%B0%8F%E8%9B%AE%E8%85%B0
+      // $.ajax({
+      //   url: 'https://httpbin.org/post?cityId=10100&keyword=小蛮腰',
+      //   type: 'POST', // method 的别名
+      //   success: function(res) {
+      //     console.log(res)
+      //   },
+      //   error: function(err) {
+      //     console.log(err)
+      //   }
+      // })
+
+      // 2.方式二：在data中提交(查询字符串)
+      // $.ajax({
+      //   url: 'https://httpbin.org/post',
+      //   type: 'POST', // method 的别名
+      //   data: {  // 支持：PlainObject 、String、Array，底层会先序列化，在拼接到url中
+      //     cityId: 10100,
+      //     keyword: '小蛮腰'
+      //   },
+      //   beforeSend: function(jqXHR, settings) {
+      //     console.log(settings)
+      //     return true
+      //   },
+      //   contentType: 'application/x-www-form-urlencoded;charset=UTF-8',  // 默认值，请求体的数据以查询字符串形式提交
+      //   success: function(res) {
+      //     // console.log(res)
+      //   },
+      //   error: function(err) {
+      //     // console.log(err)
+      //   }
+      // })
+
+      // 3.方式三：在data中提交（JSON String）
+      // $.ajax({
+      //   url: 'https://httpbin.org/post',
+      //   type: 'POST', // method 的别名
+      //   data: JSON.stringify({
+      //     cityId: 10100,
+      //     keyword: '小蛮腰'
+      //   }),
+      //   beforeSend: function(jqXHR, settings) {
+      //     console.log(settings)
+      //     return true
+      //   },
+      //   contentType: 'application/json;charset=UTF-8',  // 默认值，请求体的数据以查询字符串形式提交
+      //   success: function(res) {
+      //     // console.log(res)
+      //   },
+      //   error: function(err) {
+      //     // console.log(err)
+      //   }
+      // })
+
+      // 4.get请求-添加请求头
+      // $.ajax({
+      //   url: 'https://httpbin.org/post',
+      //   type: 'post', // method 的别名
+      //   data: {  // 支持：PlainObject 、String、Array，底层会先序列化，在拼接到url中
+      //     cityId: 10100,
+      //     keyword: '小蛮腰'
+      //   },
+      //   headers: {
+      //     token: 'anowesdlfosxkda' // 提交一个自定义的header的字符给后端服务器
+      //   },
+      //   success: function(res) {
+      //     console.log(res)
+      //   },
+      //   error: function(err) {
+      //     console.log(err)
+      //   }
+      // })
+
+     // 5.post请求的-简写
+    //  $.post('https://httpbin.org/post', {
+    //    key: 10100,
+    //    word: '白云山'
+    //  }).then((res)=>{
+    //    console.log(res)
+    //  }).catch((err) => {
+    //    console.log(err)
+    //  })
+    
+
+    })
+  </script>
+</body>
+</html>

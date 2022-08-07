@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    span{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    box
+    <span>span</span>
+  </div>
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.使用click监听
+      // $('body').click(function() {
+      //   console.log('body', this)
+      // })
+
+      // $('div').click(function() {
+      //   console.log('div', this)
+      // })
+
+      // $('span').click(function() {
+      //   console.log('span', this)
+      // })
+
+      // 2.使用on监听
+      $('body').on('click', function() {
+        console.log('body', this)
+      })
+
+      $('div').on('click', function() {
+        console.log('div', this)
+      })
+
+      $('span').on('click', function() {
+        console.log('span', this)
+      })
+
+    })
+  </script>
+</body>
+</html>

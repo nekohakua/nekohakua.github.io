@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+   <li class="li-6">li-6</li>
+   <li class="li-7">li-7</li>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.给ul添加一个 li元素
+      // 方式一：选择器
+      // $('<li>') // 创建一个空的li元素
+      //   .addClass('li-8')
+      //   .text('我是li元素') // 给li元素添加 文本内容
+      //   .appendTo('ul') // 添加到ul上
+
+      // 方式二：element元素
+      // $('<li>')
+      //   .addClass('li-8').text('我是li元素') 
+      //   .prependTo(document.querySelector('ul'))
+
+      // 方式三：jQuery对象
+      // $('.li-7')
+      //   .appendTo( $('ul') )
+      $('<span>我是span<span>')
+        .prependTo( $('ul li') )
+
+    })
+  </script>
+</body>
+</html>

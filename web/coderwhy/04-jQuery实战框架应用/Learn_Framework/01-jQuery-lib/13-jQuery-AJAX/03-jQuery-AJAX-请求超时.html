@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="list" class="panel">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <button>取消这个请求</button>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    // 1.监听文档完全解析完成
+    $(function() {
+      // 1.timeout
+     var jqXHR =  $.ajax({
+        url: 'http://httpbin.org/delay/7',  // 后台需要在7秒后才会返回数据给我们
+        method: 'POST',
+        timeout: 5000,  // 配置超时时间
+        success: function(res) {
+          console.log(res)
+        },
+        error: function(error) {
+          console.log(error)
+        }
+      })
+
+      // 取消这个请求
+      $('button').click(function() {
+        // abort()
+        jqXHR.abort()  // 手动取消请求
+      })
+
+    })
+  </script>
+</body>
+</html>

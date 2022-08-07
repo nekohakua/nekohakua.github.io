@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="list" class="panel">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    // 1.监听文档完全解析完成
+    $(function() {
+
+      // console.log(encodeURIComponent('天河公园'))
+      // 1.url 添加查询字符串
+      // $.ajax({
+      //   url: 'http://httpbin.org/get?cityId=404100&keyWord=天河公园',
+      //   method: "GET",
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 2.支持在data中提交参数
+      // $.ajax({
+      //   url: 'http://httpbin.org/get',
+      //   method: "GET",
+      //   data: {
+      //     cityId: '504100',
+      //     keyWord: '小蛮腰'
+      //   },
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 3.给 get请求添加请求头
+      // $.ajax({
+      //   url: 'http://httpbin.org/get',
+      //   method: "GET",
+      //   data: {
+      //     cityId: '504100',
+      //     keyWord: '小蛮腰'
+      //   },
+      //   headers: {  // 比如你登录成功之后,后台会返回一个 token
+      //      accessToken: 'aaaaabbbbbcccccc' 
+      //   },
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+
+      // 4.get简写 
+      $.get('http://httpbin.org/get')
+        .then(function(res) {  // jQuery 1.8  ; done
+          console.log(res)
+        })
+        .catch(function() {  //  fail
+          console.log('catch')
+        })
+        .always(function() {  // finally  
+          console.log('always')
+        })
+        
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.ajax的初体验-get
+      // $.ajax({
+      //   url: 'https://httpbin.org/get', // 这是一个免费测试http请求和响应的服务（后台配了cors，不会出现跨域问题）
+      //   method: 'GET', // 不区分大小写： GET POST
+      //   success: function(res) {
+      //     console.log(res) // 处理http响应的结果: http状态码为 200
+      //   },
+      //   error: function(err) {
+      //     console.log(err) // 处理http的错误：http 状态码为404 403 500 .... 
+      //   } 
+      // })
+
+      // 2.ajax的初体验-post（创建数据）
+      // $.ajax({
+      //   url: 'https://httpbin.org/post', 
+      //   method: 'POSt', // 不区分大小写： GET POST
+      //   success: function(res) {
+      //     console.log(res) // 处理http响应的结果: http状态码为 200
+      //   },
+      //   error: function(err) {
+      //     console.log(err) // 处理http的错误：http 状态码为404 403 500 .... 
+      //   } 
+      // })
+
+      // // 3.ajax的初体验-delete（删除数据-了解）
+      // $.ajax({
+      //   url: 'https://httpbin.org/delete', 
+      //   method: 'delete', // 不区分大小写： GET POST
+      //   success: function(res) {
+      //     console.log(res) // 处理http响应的结果: http状态码为 200
+      //   },
+      //   error: function(err) {
+      //     console.log(err) // 处理http的错误：http 状态码为404 403 500 .... 
+      //   } 
+      // })
+
+      // 4.ajax的初体验-put (更新数据-了解，以便服务器知道在创建（或更新）记录时使用什么ID)
+      // $.ajax({
+      //   url: 'https://httpbin.org/put', 
+      //   method: 'put', // 不区分大小写： GET POST
+      //   success: function(res) {
+      //     console.log(res) // 处理http响应的结果: http状态码为 200
+      //   },
+      //   error: function(err) {
+      //     console.log(err) // 处理http的错误：http 状态码为404 403 500 .... 
+      //   } 
+      // })
+
+      // 5.错误的请求  
+      // $.ajax({
+      //   url: 'https://httpbin.org/post123', 
+      //   method: 'get', // 不区分大小写： GET POST
+      //   success: function(res) {
+      //     console.log(res) // 处理http响应的结果: http状态码为 200
+      //   },
+      //   error: function(err) {
+      //     console.log(err.status) // 处理http的错误：http 状态码为404 403 500 .... 
+      //   } 
+      // })
+
+      // 6.演示请求超时（ restful API请求的风格，参数直接放到 url 上 ）  
+      $.ajax({
+        url: 'https://httpbin.org/delay/2', // 延迟几秒返回数据
+        method: 'get', // 不区分大小写： GET POST
+        timeout: 5000, // 如果2秒服务器没有详情就回调 error 函数提示超时
+        success: function(res) {
+          console.log(res) // 处理http响应的结果: http状态码为 200
+        },
+        error: function(err) {
+          console.log(err.statusText) // 处理http的错误：http 状态码为404 403 500 .... 
+        } 
+      })
+
+
+
+    })
+  </script>
+</body>
+</html>

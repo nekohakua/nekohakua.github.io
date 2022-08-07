@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.方式一：提交请求参数-查询字符串的方式提交
+      // 语法：？key=value&key=value
+      // 如果是中文会调用encodeURIComponent函数来加密
+      // console.log(encodeURIComponent('小蛮腰'))  // %E5%B0%8F%E8%9B%AE%E8%85%B0
+      // $.ajax({
+      //   url: 'https://httpbin.org/get?cityId=10100&keyword=小蛮腰',
+      //   type: 'GET', // method 的别名
+      //   success: function(res) {
+      //     console.log(res)
+      //   },
+      //   error: function(err) {
+      //     console.log(err)
+      //   }
+      // })
+
+      // // 2.方式一：以data的方式提交
+      // $.ajax({
+      //   url: 'https://httpbin.org/get',
+      //   type: 'GET', // method 的别名
+      //   data: {  // 支持：PlainObject 、String、Array，底层会先序列化，在拼接到url中
+      //     cityId: 10100,
+      //     keyword: '小蛮腰'
+      //   },
+      //   success: function(res) {
+      //     console.log(res)
+      //   },
+      //   error: function(err) {
+      //     console.log(err)
+      //   }
+      // })
+
+      // 3.get请求-添加请求头
+      // $.ajax({
+      //   url: 'https://httpbin.org/get',
+      //   type: 'GET', // method 的别名
+      //   data: {  // 支持：PlainObject 、String、Array，底层会先序列化，在拼接到url中
+      //     cityId: 10100,
+      //     keyword: '小蛮腰'
+      //   },
+      //   headers: {
+      //     token: 'anowesdlfosxkda' // 提交一个自定义的header的字符给后端服务器
+      //   },
+      //   success: function(res) {
+      //     console.log(res)
+      //   },
+      //   error: function(err) {
+      //     console.log(err)
+      //   }
+      // })
+
+      // 4.get的简写
+      // $.get('https://httpbin.org/get', function(res) {
+      //   console.log(res)
+      // })
+
+      // 5.jquery 1.5以后实现了Promise/A+规范：done fail always 方法， 1.8支持 then catch
+      // $.get('https://httpbin.org/get')
+      //   .then((res)=>{
+      //     console.log(res)
+      //   })
+      //   .catch((err)=>{
+      //     console.log(err)
+      //   })
+      //   .always(() => {
+      //     console.log('always')
+      //   })
+
+      // $.get('https://httpbin.org/get12')
+      //   .done((res) => {
+      //     console.log(res)
+      //   })
+      //   .fail((err) => {
+      //     console.log(err)
+      //   })
+        
+
+
+    })
+  </script>
+</body>
+</html>

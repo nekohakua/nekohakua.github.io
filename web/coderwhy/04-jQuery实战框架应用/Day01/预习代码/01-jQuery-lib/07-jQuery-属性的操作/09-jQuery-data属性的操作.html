@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul data-age="17" data-height="1.78">
+    <li class="li-1" data-info="evan">li-1</li>
+    <li class="li-2" data-info="john">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.获取匹配元素集合中的data属性值
+      // console.log( $('ul').data() ) // 返回一个对象
+      // console.log( $('ul li').data() ) // 返回一个对象
+      // console.log( $('ul').data('age') ) // 返回一个字符
+
+      // 2.给匹配元素集合中的每个元素设置值
+      // $('ul li').data('name', 'mark otto') // 给每个元素添加data
+      $('ul').data({ 
+        name: 'evan you', // 修改的值并不会显示在元素上，只是暂时将他们缓存起来
+        sex: 'man',
+        age: 10
+      })
+
+      // 会移除调用data()函数设置的数据。
+      // 在标签上定义的data-xx属性是移除不了的, 但是在data()添加的属性是会移除的。
+      // $('ul').removeData()
+      $('ul').removeData('sex age')
+      // $('ul').removeData(['sex', 'age'])
+      console.log( $('ul').data() )
+
+    })
+  </script>
+</body>
+</html>

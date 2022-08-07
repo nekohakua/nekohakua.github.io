@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script >
+
+    function HYJQuery() {
+
+    }
+
+    HYJQuery.prototype.filter = function() {
+      console.log('filter')
+      return this
+    }
+    HYJQuery.prototype.eq = function() {
+      console.log('eq')
+      return this
+    }
+    HYJQuery.prototype.css = function() {
+      console.log('eq')
+      return this
+    }
+
+    // var hyJQuery = new HYJQuery()
+    // var result = hyJQuery.filter()
+    // console.log(result === hyJQuery)
+    
+    new HYJQuery()
+      .filter()
+      .eq()
+      .css()
+      
+    // new Promise()
+    //   .then() // new Primose
+    //   .then() // new Promise
+    //   .then() // new Promise
+
+  </script>
+
+</body>
+</html>

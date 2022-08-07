@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <button class="sub">-</button>  
+  <span class="counter">0</span>
+  <button class="add">+</button> 
+  <img src="https://api.jquery.com/jquery-wp-content/themes/jquery/content/donate.png" alt="">
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    // 1.监听整个页面加载完毕（包含：HMTL文档、图片、外部资源都加载完毕）
+    // 2.给window添加一个监听事件，添加监听事件使用on函数
+    
+    // 原生的实现
+    // window.addEventListener('load', function() {
+    //   console.log('load')
+    // })
+    
+    // jQuery的实现 - 正确的写法
+    $(window).on('load', function() {
+      console.log('load')
+    })
+
+    // 错误的写法
+    // 为什么不用  $(window).load(func) 因为在jQuery3.0这个API已经被删除了，推荐使用事件监听
+    // $(window).load(function() {
+    //   console.log("load")
+    // })
+
+
+  </script>
+</body>
+</html>

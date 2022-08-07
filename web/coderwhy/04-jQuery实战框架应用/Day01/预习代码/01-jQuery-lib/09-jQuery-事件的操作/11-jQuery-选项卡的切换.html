@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .nav{
+      background-color: #43240c;
+      color: white;
+    }
+
+    .nav-bar{
+      display: flex;
+      width: 1200px;
+      height: 46px;
+      line-height: 46px;
+      margin: 0 auto;
+    }
+
+    .item{
+      width: 160px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .item.active{
+      background-color: #fee44e;
+      color: #43200c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="nav-bar" >
+      <div class="item active">首页</div>
+      <div class="item">9块9包邮</div>
+      <div class="item">超值大额券</div>
+      <div class="item">降温急救穿搭</div>
+    </div>
+  </div>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      $('.item').click(function() {
+        // 这个this是原生对象，因为该函数最终会被 element 元素调用
+        $(this)
+          .addClass('active')
+          .siblings()
+          .removeClass('active')
+      })
+    })
+  </script>
+</body>
+</html>

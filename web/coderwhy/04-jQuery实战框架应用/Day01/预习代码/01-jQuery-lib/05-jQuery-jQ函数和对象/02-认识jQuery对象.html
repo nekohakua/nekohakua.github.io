@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <div class="box">
+    <ul>
+      <li class="box-li">li</li>
+    </ul>
+  </div>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <!-- <script src="../libs/jquery-3.6.0-test.js"></script> -->
+  <script>
+    $(function() {
+      // console.log('%O', jQuery)  // 工厂函数
+
+      // 1.获取空的jQuery对象
+      // console.log( $() )  // 拿到jQuery对象 (也是可迭代对象)
+
+      // 2.获取包含document元素的jQuery对象
+      // var $document = $(document)
+      // console.log($document)
+
+      // 2.获取包含lis元素的jQuery对象
+      var $lis = $('li')  // document.querySelector('li')
+      // var $lis = $('li', $('.box')) // 了解
+      // var $lis = $('li', '.box')
+      console.log($lis)
+
+    })
+  </script>
+</body>
+</html>

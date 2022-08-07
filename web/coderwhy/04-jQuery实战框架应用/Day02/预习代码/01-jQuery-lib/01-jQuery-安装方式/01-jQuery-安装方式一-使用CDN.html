@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- 
+    integrity： 作用防止资源被篡改，如果资源被篡改那么浏览器将不会下载该资源
+    crossorigin：加载 不同源 的资源时是否需要携带用户凭证信息（cookie 、 ssl证书..）
+         值为 anonymous、‘’ 或者不写代表是：不需要携带 。
+         值为 user-credentail : 代表获取该资源时需要携带用户凭证信息。
+   -->
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+
+  <!-- 
+    1.使用CDN的方式引入jQuery库
+    2.执行下面这行代码之后会在window的添加两个属性：
+       jQuery函数 -> window.jQuery
+       $函数（是jQuery函数的别名） -> window.$
+   -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    // 测试是否引入成功
+    // var jQObj = jQuery()
+
+    // 需求：给body添加一个hello world文本
+    jQuery('body').text('hello world')
+
+    // 底层的实现
+    // document.querySelector('body').innerText = 'hello world'
+    
+    // jQuery的架构设计
+    // ;(function(window, factory) {
+    //   factory(window)
+    // })(window, function(window) {
+    //   function jQuery() {
+    //     // init 是一个构造函数 todo
+    //     return new jQuery.fn.init()
+    //   }
+
+    //   jQuery.prototype.text = function() {}
+    //   jQuery.prototype.css = function() {}
+
+    //   jQuery.fn = jQuery.prototype
+    //   jQuery.fn.init = function() {}
+
+    //   jQuery.fn.init.prototype = jQuery.prototype
+
+    //   jQuery.each = function() {}
+    //   jQuery.ajax = function() {}
+    //   window.jQuery = jQuery
+    // })
+  </script>
+</body>
+</html>

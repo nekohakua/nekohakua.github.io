@@ -1,0 +1,70 @@
+.connect-life .container-fluid > .row{
+  margin-bottom: 70px;
+}
+
+.connect-life .c-title{
+  margin-top: 80px;
+  margin-bottom: 70px;
+
+  /* 可复用 */
+  font-size: 30px;
+  color: var(--title-color);
+  font-weight: normal;
+}
+
+.connect-life .c-sub-title{
+  margin-bottom: 20px;
+  line-height: 52px;
+
+  /* 可复用 */
+  font-size: 30px;
+  color: var(--title-color);
+  font-weight: normal;
+
+}
+
+.connect-life .c-content{
+  line-height: 26px;
+  margin-bottom: 45px;
+
+  font-size: 14px;
+  color: var(--sub-title-color);
+}
+
+.connect-life .nest .col p{
+  font-size: 40px;
+  line-height: 56px;
+}
+
+.connect-life .nest .col span{
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.connect-life .c-img{
+  width: 100%;
+}
+
+
+/* iphone */
+@media (max-width: 768px){
+  .connect-life .container-fluid > .row{
+    margin-bottom: 10px;
+  }
+  
+  .connect-life .c-sub-title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .connect-life .c-content{
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .connect-life .c-img{
+    /* 关键 */
+    max-width: 320px;
+    margin-top: 20px;
+  }
+}

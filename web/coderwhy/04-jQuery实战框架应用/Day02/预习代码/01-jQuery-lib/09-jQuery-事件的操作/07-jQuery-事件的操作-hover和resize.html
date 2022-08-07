@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.监听hover
+      // $('ul').hover(function() { // 底层是 mouseenter
+      //   console.log('ul hover')
+      // }, function() {
+      //   console.log('ul leave') // 底层是 mouseleave
+      // })
+
+      // 2.监听resize事件
+      // $(window).on('resize', function(event) {
+      //   console.log(event.currentTarget.innerWidth) // padding + width
+      // })
+
+      // 简写
+      $(window).resize(function(event) {
+        console.log(event.currentTarget.innerWidth) // padding + width
+      })
+
+      // 手动触发一次resize事件
+      .trigger('resize')
+
+      
+
+
+    })
+  </script>
+</body>
+</html>

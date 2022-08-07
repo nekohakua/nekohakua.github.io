@@ -1,0 +1,23 @@
+:root {
+  --theme-color: #5354ff;
+  --text-color: #333333;
+  
+  --title-color: #212224;
+  --sub-title-color: #666666;
+
+  --bg-color: #f0f0f0;
+  --bg-target-color: #f6f7f9;
+  --bg-nav-color: #090909;
+
+  --border-color: #e2e2e2;
+
+  --font-size: 14px;
+  --font-size-title: 30px;
+
+  --content-width: 1200px;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}

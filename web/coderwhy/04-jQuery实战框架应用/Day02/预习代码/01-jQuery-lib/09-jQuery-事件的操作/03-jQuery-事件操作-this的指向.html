@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.监听click
+      // $('ul').on('click', function() {
+      //   console.log(this)  // 是当前监听的 DOM 元素对象，为什么呢？this 是在哪里绑定的?
+      // })
+
+      // on函数可以一次给多个元素添加监听事件.
+      // 底层实现的原理是：
+      // 使用jQuery.each遍历匹配集合的每个元素，给每个元素添加事件，即 elem.addEventListener 事件。
+      // $('ul li').on('click', function() {
+      //   console.log(this)  // 拿到的是对应的 li 元素，为什么呢？
+      // })
+
+      // 底层实现原理
+      var liEls = document.querySelectorAll('ul li')
+      for(var elem of liEls){
+        elem.addEventListener('click', function() {
+          console.log(this)
+          // console.log( $(this) ) // 转成jQuery对象
+        })
+      }
+
+    })
+  </script>
+</body>
+</html>

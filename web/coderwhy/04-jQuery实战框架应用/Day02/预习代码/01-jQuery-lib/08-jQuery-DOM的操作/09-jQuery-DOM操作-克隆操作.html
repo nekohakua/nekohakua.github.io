@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <li class="li-6">
+    li-6
+    <p>我是p
+      <span>我是span</span>
+    </p>
+  </li>
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.给ul添加一个li
+      // $('ul').append( $('.li-6') )   // 移动
+
+      // 2.给ul添加一个li 克隆
+      // var $li = $('.li-6').clone()
+      // $('ul').append($li)  // 默认是深度克隆
+
+      // 3.测试是否会克隆事件和数据
+      var $li = $('.li-6')
+        .data('info', '我是data-info')
+        .click(function() {
+          console.log('点击事件')
+        })
+      console.log($li.data())
+      var $newLi = $li.clone(true)  // 点击事件和数据一起克隆了
+      console.log($newLi.data())
+      $('ul').append($newLi)
+
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <!-- <script src="../libs/jquery-3.6.0-test.js"></script> -->
+  <script>
+    $(function() {
+      // 1.获取包含ul元素的 jQuery 对象（ array like ）
+      var $ul = $('ul')
+      // console.log($ul)
+
+      // 2.获取 ul 元素
+      var ulEl = document.querySelector('ul')
+      // console.log("%O", ulEl) // %O是让控制台一对象的形式输出ul元素对象
+
+
+      
+
+      // 3.jQuery对象 转成 DOM元素（ 目的：想要使用原生的属性和方法 ）
+      // 方式一
+      // console.log( $ul[0] ) // 索引获取
+      // 方式二
+      // console.log( $ul.get(0) ) // 拿到单个元素，也可以拿到一个多个元素的数组
+      // console.log( $ul.get() ) // 拿到单个元素，也可以拿到一个多个元素的数组
+
+      // 4.DOM 元素转成jQuery对象( 目的：想要使用jQuery对象的方法 )
+      //  console.log( $(ulEl) )
+      //  console.log( $(ulEl).width() )
+    })
+  </script>
+</body>
+</html>

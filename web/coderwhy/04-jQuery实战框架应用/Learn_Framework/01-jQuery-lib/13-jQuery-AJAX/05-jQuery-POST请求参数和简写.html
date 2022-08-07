@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="list" class="panel">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    // 1.监听文档完全解析完成
+    $(function() {
+
+      // 1. 在url中提交查询字符串(比较少见)
+      // $.ajax({
+      //   url: 'http://httpbin.org/post?cityId=404100&keyWord=天河公园',
+      //   method: "POST",
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 2. 在data中提交查询字符串
+      // $.ajax({
+      //   url: 'http://httpbin.org/post',
+      //   method: "POST",
+      //   data: {
+      //     cityId: '504100',
+      //     keyWord: '小蛮腰'
+      //   },
+      //   // contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+      //   // dataType: 'json', // 自动推断, response content-type
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 3. 在data中 JSON 字符串
+      // $.ajax({
+      //   url: 'http://httpbin.org/post',
+      //   method: "POST",
+      //   data: JSON.stringify({
+      //     cityId: '504100',
+      //     keyWord: '小蛮腰'
+      //   }),
+      //   contentType: 'application/json; charset=UTF-8',
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 4. 在data中 FormData
+      // var formData = new FormData()  // <form> <input name="cityId" value="404100"/> <input name="keyWord" value="小蛮腰"/>   </form>
+      // formData.append('cityId', 404100)
+      // formData.append('keyWord', '小蛮腰')
+      // // formData.append('file', 文件)
+      // $.ajax({
+      //   url: 'http://httpbin.org/post',
+      //   method: "POST",
+      //   data: formData,
+      //   processData: false, // processData:true, 会将data为对象的转成查询字符串
+      //   contentType: false, // 使用 原生 XHR 默认的 contentType
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 5. 在添加请求头
+      // var formData = new FormData()
+      // formData.append('cityId', 404100)
+      // formData.append('keyWord', '小蛮腰')
+      // $.ajax({
+      //   url: 'http://httpbin.org/post',
+      //   method: "POST",
+      //   data: formData,
+      //   processData: false, // processData:true, 会将data为对象的转成查询字符串
+      //   contentType: false, // 使用 原生 XHR 默认的 contentType
+      //   headers: {
+      //     liujunToken: 'xxxxxxxsssssssssssd'
+      //   },
+      //   success: function(res) {
+      //     console.log(res)
+      //   }
+      // })
+
+      // 6. POST简写
+      $.post('http://httpbin.org/post', {
+        cityId: '504100',
+        keyWord: '小蛮腰'
+      })
+        .then(function(res) {
+          console.log(res)
+        })
+
+
+    })
+  </script>
+</body>
+</html>

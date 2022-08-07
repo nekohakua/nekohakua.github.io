@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul id="container" class="list"
+      age="18"
+  >
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1. 获取元素上的attribute属性
+      console.log( $('ul').attr('id') ) // 标准的属性
+      // console.log( $('ul').attr('id') ) // 标准的属性
+      // console.log( $('ul').attr('ID') )
+      // console.log( $('ul').attr('age') ) // 非标准的属性
+
+      // 2.给匹配的元素添加属性
+      // $('ul').attr('id', 'box') 
+      // $('ul').attr('name', 'panel')  // 不存在就添加，存在就覆盖
+      
+      // 设置多个
+      // $('ul').attr({
+      //   id: 'box',
+      //   age: 17
+      // })
+
+      // 3.删除某个属性
+      // $('ul').removeAttr('id')
+
+    })
+  </script>
+</body>
+</html>

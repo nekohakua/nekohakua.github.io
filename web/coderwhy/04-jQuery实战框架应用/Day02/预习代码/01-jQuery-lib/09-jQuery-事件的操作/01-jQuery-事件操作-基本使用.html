@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <button class="btn1">删除所有事件</button>
+  <button class="btn2">删除指定事件</button>
+  <button class="btn3">手动触发事件</button>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // ====== 监听事件 =======  
+      // 1..on监听
+      $('ul').on('click', function() {
+        console.log('监听ul元素的点击1') // 底层使用的 elem.addEventListener
+      })
+
+      // 2..click监听，是on监听的简写
+      $('ul').click(function() {
+        console.log('监听ul元素的点击2')  
+      })
+      // 3.添加鼠标进入事件
+      // $('ul').mouseenter(function() {
+      //   console.log('监听ul元素的mouseenter')  
+      // })
+
+      // ====== 删除监听事件 =======  
+      $('.btn1').click(function() {
+        $('ul').off()  // 删除ul元素上的所有事件
+      })
+      $('.btn2').click(function() {
+        $('ul').off('mouseenter')  // 删除ul元素上指定的事件
+      })
+
+      
+      // ====== 模拟触发点击 =======
+      $('.btn3').click(function() {
+        $('ul').trigger('click') // 使用代码来模拟用户点击了ul
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="list" class="panel">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    // 1.监听文档完全解析完成
+    $(function() {
+
+      // 500 (后台代码异常)
+      // $.ajax({
+      //   url: 'http://httpbin.org/status/500',
+      //   method: "POST",
+      //   success: function() {
+      //     console.log('success')
+      //   },
+      //   error: function(error) {
+      //     console.log("error=>", error)
+      //   }
+      // })
+
+      // 503 (服务器维护)
+      // $.ajax({
+      //   url: 'http://httpbin.org/status/503',
+      //   method: "POST",
+      //   success: function() {
+      //     console.log('success')
+      //   },
+      //   error: function(error) {
+      //     console.log("error=>", error)
+      //   }
+      // })
+
+      // 403(没有权限获取该资源)
+      // $.ajax({
+      //   url: 'http://httpbin.org/status/403',
+      //   method: "POST",
+      //   success: function() {
+      //     console.log('success')
+      //   },
+      //   error: function(error) {
+      //     console.log("error=>", error)
+      //   }
+      // })
+
+      // 404(资源路劲rul没有写对: 前端)
+      // $.ajax({
+      //   url: 'http://httpbin.org/status/404',
+      //   method: "POST",
+      //   success: function() {
+      //     console.log('success')
+      //   },
+      //   error: function(error) {
+      //     console.log("error=>", error)
+      //   }
+      // })
+
+      // $.ajax({
+      //   url: 'http://httpbin.org/sdfxsdfs/sdfsdfsdf/sdfsdf',
+      //   method: "POST",
+      //   success: function() {
+      //     console.log('success')
+      //   },
+      //   error: function(error) {
+      //     console.log("error=>", error)
+      //   }
+      // })
+
+      
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    ;(function(global, factory){
+      factory(global)
+    })(window, function(window) {
+
+      function HYjQuery() {
+        // new Person()
+        return new HYjQuery.fn.init()
+      }
+      
+      // 原型方法
+      HYjQuery.prototype = {
+        constructor: HYjQuery,
+        each: function() {},
+        text: function() {},
+        html: function() {},
+        init: function() {
+          return this
+        }
+      }
+
+      // 类方法
+      HYjQuery.each = function() {}
+      HYjQuery.noConflict = function() {}
+      HYjQuery.extend = function() {}
+
+      // 修改原型的指向
+      HYjQuery.fn = HYjQuery.prototype
+      HYjQuery.fn.init.prototype = HYjQuery.fn
+
+      // 通知导出
+      window.HYjQuery = window.$ = HYjQuery
+    })
+
+  </script>
+
+
+</body>
+</html>

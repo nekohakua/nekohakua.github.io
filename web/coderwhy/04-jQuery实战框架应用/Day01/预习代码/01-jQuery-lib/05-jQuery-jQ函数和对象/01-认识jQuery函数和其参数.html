@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <!-- <script src="../libs/jquery-3.6.0-test.js"></script> -->
+  <script>
+    $(function() {
+      // 1.空参数
+      // var obj = jQuery()
+      // console.log(obj) // 空的jQuery对象
+
+      // 2.假值参数 ''  false  null undefinded
+      // var obj =jQuery(undefined) // 空的jQuery对象
+
+      // 3.字符串选择器(大部分的css中的选择器，但是不支持状态伪类选择器:hover)
+      // var obj = jQuery('body')
+      // console.log(obj)
+
+      // 3.字符串选择器
+      // var obj = jQuery('body')
+      // var obj = jQuery('.li-3')
+      // console.log(obj)
+
+      // 4.支持Element元素
+      // var obj = jQuery(document.getElementsByClassName('li-1')[0])
+      // console.log(obj)
+
+      // 5.支持html字符串 (底层使用的是innerHtml来实现的)
+      // var obj = jQuery('<div>')  // 创建一个div元素，并将在元素放到jQuery对象
+      // var obj = jQuery(`
+      //   <div>
+      //      我是div
+      //      <span>我是span</span> 
+      //   </div>
+      //   <p>我是p元素</p>
+      // `)  // 创建多个div元素
+      // console.log(obj)  
+      // obj中匹配到的元素，添加到body中
+      // obj.appendTo('body')
+
+      // 6.支持传递一个函数
+      $(function() {
+
+      })
+
+    })
+  </script>
+</body>
+</html>

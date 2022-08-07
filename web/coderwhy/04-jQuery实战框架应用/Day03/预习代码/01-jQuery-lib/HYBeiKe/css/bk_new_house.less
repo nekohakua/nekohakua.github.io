@@ -1,0 +1,57 @@
+@import url('./variable.less');
+.new-house{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.new-house .house{
+  display: flex;
+  justify-content: space-between;
+
+  .item{
+    width: 364px;
+    cursor: pointer;
+    .bg{
+      border-radius: 4px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 272px;
+        transition: .7s ease-in-out;
+        &:hover{
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .info{
+      margin-top: 15px;
+      .desc{
+        display: flex;
+        justify-content: space-between;
+        .name{
+          height: 25px;
+          line-height: 25px;
+          font-size: 18px;
+          color: #101d37;
+        }
+
+        .price{
+          color: @priceColor;
+          font-size: 16px;
+          line-height: 25px;
+          font-weight: 600;
+        }
+      }
+
+      .time{
+        margin-top: 5px;
+        color: #9399a5;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+  }
+ 
+}

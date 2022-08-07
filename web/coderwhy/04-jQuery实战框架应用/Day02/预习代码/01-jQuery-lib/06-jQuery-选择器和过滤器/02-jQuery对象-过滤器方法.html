@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul class="list">
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.eq(index):  将匹配到元素的集合减少到指定索引处的元素。
+      // console.log( $('ul li').eq(0) )
+      // console.log( $('ul li').eq(-1) )
+      // console.log( $('ul li:eq(-1)') )
+
+      // 2.first() : 将匹配到元素的集合减少到集合中的第一个。
+      // console.log( $('ul li').first() )
+
+      // 3.last(): 将匹配到元素的集合减少到集合中的最后一个。
+      // console.log( $('ul li').last() )
+
+      // 4.not(selector):  从匹配到元素的集合中删除元素。
+      // console.log( $('ul li').not('.li-4, .li-5') )
+
+      // 5.filter(selector): 将匹配到元素的集合减少为匹配选择器的元素。
+      // console.log( $('ul li').filter('.li-4, .li-5') )
+
+      // 6.find(selector): 从匹配到元素集合中找到匹配后的元素。
+      // console.log( $('ul li').find('li.li-2') )  
+
+      // 7.is(selector): 根据选择器、元素或 jQuery对象检查当前匹配到元素的集合。集合中至少有一个与给定参数匹配，则返回true。
+      // console.log( $('ul li').is('.li-2') )
+      // console.log( $('ul').is('.li-2') )
+      // console.log( $('ul').is('.list') )
+
+
+      // 8.odd() :将匹配到元素的集合减少为集合中的奇数，从零开始编号。
+      // console.log( $('ul li').odd() )
+
+
+      // 9.even()：将匹配到元素的集合减少到集合中的偶数，从零开始编号。
+      // console.log( $('ul li').even() )
+
+      // 10.支持链式调用
+      // $('ul li')
+      //   .filter('.li-1, .li-2, .li-3') // 原型的方法，大部分会直接返回 this -> 创建的jQuery对象
+      //   .eq(2)
+      //   .css('color', 'red')
+
+
+    })
+  </script>
+</body>
+</html>

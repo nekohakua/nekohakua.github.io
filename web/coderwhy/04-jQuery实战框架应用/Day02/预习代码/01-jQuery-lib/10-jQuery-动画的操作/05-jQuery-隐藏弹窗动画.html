@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    img{
+      vertical-align: bottom;
+    }
+    .box{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    .close{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      /* border: 1px solid red; */
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <span class="close"></span>
+    <div class="top">
+      <!-- <span>xxx</span> -->
+       <img src="./images/top.png" alt="">
+    </div>
+    <div class="bottom">
+       <img src="./images/bottom.png" alt="">
+    </div>
+  </div>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+
+      $('.close').on('click', function() {
+          $('.bottom')
+            // 1.向下动画
+            .animate( { height: 0 }, 600, function() {
+              // 2.向右动画
+              $('.box').animate( { width: 0 } , 600, function() {
+                $(this).css('display', 'none')
+                // $(this).remove()
+              })
+            })
+
+      })
+
+    })
+  </script>
+</body>
+</html>

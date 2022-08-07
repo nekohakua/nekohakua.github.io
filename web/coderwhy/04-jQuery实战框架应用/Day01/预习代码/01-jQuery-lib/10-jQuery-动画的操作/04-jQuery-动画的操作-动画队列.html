@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      position: relative;
+      background-color: pink;
+      color: white;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn1">开始动画</button>
+  <button class="btn2">停止动画</button>
+  
+  <button class="btn3">查看动画队列</button>
+
+  <div class="box">
+    我是box
+  </div>
+  
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      var $box = $('.box')
+      $('.btn1').click(function() {
+        // 下面动画是放到一个fx动画队列中执行（ animate 和 delay API的动画都会放到动画队列中 ）
+        $box.animate({
+            top:100
+          }, 5000)
+
+        $box.animate({
+            left: 100
+        }, 5000)
+
+        $box.animate({
+            top: 0
+        }, 5000)
+
+        $box.animate({
+            left: 0
+        }, 5000)
+
+      })
+
+      $('.btn3').click(function() {
+        console.log( $box.queue() ) // 查看该元素的动画队列
+      })
+
+      $('.btn2').click(function() {
+        $box.stop()  // 停止匹配元素上当前正在运行的动画。
+        // $box.stop(false, false)  // 默认值
+
+        // $box.stop(true, false)  // 停止所有的动画
+        // $box.stop(true, true) // 停止所有动画，立即完成当前动画
+        // $box.stop(false, true) // 立即完成当前动画
+      })
+    })
+  </script>
+</body>
+</html>

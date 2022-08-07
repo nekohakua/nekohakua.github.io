@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="sub">-</button>  
+  <span class="counter">0</span>
+  <button class="add">+</button>  
+  <script>
+    // 1.找到对应的 DOM Element
+    var subEl = document.querySelector('.sub')
+    var counterEl = document.querySelector('.counter')
+    var addEl = document.querySelector('.add')
+
+    var counter = 0
+    // 2.监听点击事件
+    subEl.onclick = function(event) {
+      // 3.更新页面上的数字
+      counterEl.innerText = --counter
+    }
+    addEl.onclick = function(event) {
+      counterEl.innerText = ++counter
+    }
+
+  </script>
+</body>
+</html>

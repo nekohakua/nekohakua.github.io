@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      background-color: pink;
+      color: white;
+      width: 200px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="hide">hide</button>
+  <button class="show">show</button>
+
+  <button class="toggle">toggle</button>
+
+  <div class="box">
+    我是box
+  </div>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      
+      // 1.监听点击事件
+      $('.hide').on('click', function() {
+        // 方式一：接收一个参数
+        // $('.box').hide( 2000 ) // number 
+        // $('.box').hide( 'slow' ) // string ； slow（600）； fast(200 millisecond)
+
+        // 方式二:接收两个参数
+        // debugger
+        // $('.box').hide( 2000 , function() { // 支持回调函数
+        //   console.log('动画执行完成')
+        // }) 
+
+        // 方式三：接收一个对象
+        // $('.box').hide({
+        //   duration: 2000,
+        //   complete: function() {
+        //     console.log('动画执行完成')
+        //   }
+        // })
+
+      })
+
+      $('.show').on('click', function() {
+        // 方式一：接收一个参数
+        // $('.box').show( 2000 ）
+        $('.box').show( 'fast' ) // 直接定时修改 style （200）
+
+        // 方式二：接收两个参数
+        $('.box').show( 'fast', function() {
+          console.log("动画执行完成")
+        })
+
+        // 方式三：接收一个对象
+        $('.box').show({
+          duration: 'slow',
+          complete: function() {
+            console.log("动画执行完成")
+          }
+        })
+      })
+
+      $('.toggle').on('click', function() {
+        $('.box').toggle('show')  // 动画的显示和隐藏之间来回切换
+      })
+
+    })
+  </script>
+</body>
+</html>

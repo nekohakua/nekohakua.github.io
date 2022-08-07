@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.获取匹配元素集合中第一个元素的样式属性
+      // console.log( $('ul li').width()) // 获取width，返回number
+      // console.log($('ul li').css('width')) // 获取一个属性，返回一个字符串
+      // console.log($('ul li').css(['width', 'height'])) // 获取两个属性，返回一个对象
+
+      // 2.给匹配元素添加style样式
+      $('ul li')
+        .css('color', 'red') 
+        .filter('.li-3')
+        .css('color', 'green')  // 设置一个属性
+     
+      // 3.给匹配元素添加多个样式
+      // $('ul li')
+      //   .not('.li-1')
+      //   .css({
+      //     color:'green',
+      //     'font-size': 20, // number 类型；字符串，需要带单位 '20em'
+      //     backgroundColor: 'red'
+      //   })
+
+
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5
+      <span style="display: none;">我是span</span>
+    </li>
+  </ul>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      //1.获取所匹配到元素的文本内容
+      console.log( $('ul').text() )  // textContent
+      // console.log(document.querySelector('ul').innerText)
+
+      // 2.给所匹配到元素设置文本内容
+      // $('ul li').text('我是li的内容')
+
+    })
+  </script>
+</body>
+</html>

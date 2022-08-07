@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5
+      <p>我是p元素</p>
+    </li>
+  </ul>
+  <button class="btn">移除click事件</button>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+      // 1.监听click
+      $('ul').on('click.liujun', function() {
+        console.log('监听ul元素的点击1') 
+      })
+      $('ul').click(function() {
+        console.log('监听ul元素的点击2')
+      })
+
+      // 2.移除第一个click事件
+      $('.btn').click(function() {
+        $('ul').off('click.liujun')
+      })
+
+
+      /*
+        click 和 on的区别
+        1.on支持添加命名空间来区分事件名
+        2.on监听的事件还可以支持一个 selector 选择器参数
+      */
+      // $('ul').on('click.liujun', '这里支持一个选择器，后面讲事件委托的时候在讲' ,function() {
+      //   console.log('监听ul元素的点击1') 
+      // })
+
+
+
+    })
+  </script>
+</body>
+</html>

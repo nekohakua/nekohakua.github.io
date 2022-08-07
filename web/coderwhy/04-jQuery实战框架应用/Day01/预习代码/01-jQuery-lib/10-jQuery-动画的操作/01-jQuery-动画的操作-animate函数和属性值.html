@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 200px;
+    }
+    .box{
+      background-color: pink;
+      color: white;
+      width: 200px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="hide">隐藏</button>
+  <button class="show">显示</button>
+
+  <button class="toggle">隐藏和显示之间的切换</button>
+
+  <div class="box">
+    我是box
+  </div>
+  
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script>
+    $(function() {
+
+      $('.hide').click(function() {
+        $('.box').animate({
+          //方式一：number 和 string
+          // height: 0 // 0、'0' 、’0px‘、0%、、
+          // height: '80%'  // 100px -> 80% ; 默认会隐私将 100px 转成 50%，然后在进行动画
+          
+          // 方式二：100%
+          // height: '80%'  
+
+          // 方式三：关键字, show hide toggle
+          // height: 'hide' 
+          height: 'toggle'  // 0% <-> 100%
+
+          // 方式四：相对单位
+          // height: '-=10'  // 100px - 10px
+          // height: '-=100'  // 100px - 100px
+
+        }, 1000, function() {  // 缓动函数 linear swing
+          console.log('动画执行完毕')
+        })
+      })
+
+
+      // $('.hide').click(function() {
+      //   $('.box').animate({
+      //     height: '-=100',  // 100px - 100px
+      //     width: 0,
+      //     opacity: 0
+      //   }, 1000)
+      // })
+      // $('.show').click(function() {
+      //   $('.box').animate({
+      //     height: '100px',
+      //     width: '200px',
+      //     opacity: 1
+      //   }, 1000)
+      // })
+      // $('.toggle').click(function() {
+      //   $('.box').animate({
+      //     height: 'toggle',
+      //     width: 'toggle',
+      //     opacity: 'toggle'
+      //   }, 1000)
+      // })
+
+
+    })
+  </script>
+</body>
+</html>

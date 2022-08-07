@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,shrink-to-fix=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="../libs/bootstrap-4.6.1/css/bootstrap.css">
+  <style>
+    .container{
+      background-color: pink;
+    }
+    .item{
+      border: 1px solid green;
+      height: 40px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!-- 
+    方式一：实现一行3列的网格系统（自动列宽）
+   -->
+  <div class="container">
+    <div class="row">
+      <!-- 列宽使用flex-grow:1拉伸（内容放不下才会自动） -->
+      <div class="col item">col1</div>
+      <div class="col item">col2</div>
+      <div class="col item">col3</div>
+    </div>
+  </div>
+  
+  <br>
+
+  <!-- 
+    方式二：实现一行3列的网格系统（指定列宽，一行可以拆分成12列网格）
+   -->
+  <div class="container">
+    <div class="row">
+      <!-- 这个列宽使用百分比 flex:0 0 33.3333% （超过12列就会换行）-->
+      <div class="col-4 item">col1-col1</div>
+      <div class="col-4 item">col2-col2</div>
+      <div class="col-4 item">col3-col3</div>
+      <div class="col-4 item">col4-col4</div>
+    </div>
+  </div>
+  
+
+
+
+  <script src="../libs/jquery/jquery.3.6.0-slim.js"></script>
+  <script src="../libs/bootstrap-4.6.1/js/bootstrap.bundle.js"></script>
+</body>
+</html>

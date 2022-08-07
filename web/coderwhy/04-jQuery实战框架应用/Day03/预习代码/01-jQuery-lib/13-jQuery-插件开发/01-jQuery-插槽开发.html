@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li class="li-1">li-1</li>
+    <li class="li-2">li-2</li>
+    <li class="li-3">li-3</li>
+    <li class="li-4">li-4</li>
+    <li class="li-5">li-5</li>
+  </ul>
+  <a href="httts://www.jd.com">京东商城</a>
+  <a href="httts://www.taobao.com">淘宝商城</a>
+
+  <script src="../libs/jquery-3.6.0.js"></script>
+  <script src="./js/jquery.showlinklocation.js"></script>
+  <script>
+    $(function() {
+      /**
+       在a元素的后面显示对应的 link 信息
+      */
+      $('a').showlinklocation()
+    })
+  </script>
+</body>
+</html>
