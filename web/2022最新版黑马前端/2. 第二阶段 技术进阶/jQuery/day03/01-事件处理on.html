@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        .current {
+            background-color: purple;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        // 常见事件
+        // mouseover、mouseout、blur、focus、change、keydown、keyup、resize、scroll
+        $(function() {
+            // 1. 单个事件注册
+            // $("div").click(function() {
+            //     $(this).css("background", "purple")
+            // })
+            // $("div").mouseenter(function() {
+            //     $(this).css("background", "skyblue")
+            // })
+
+            // 2. 事件处理on
+            // (1) on可以绑定1个或者多个事件处理程序
+            // on() 方法在匹配元素上绑定一个或多个事件的事件处理函数
+            // element.on(events,[selector],fn)       
+            // 1. events:一个或多个用空格分隔的事件类型，如"click"或"keydown" 。
+            // 2. selector: 元素的子元素选择器 。
+            // 3. fn:回调函数 即绑定在元素身上的侦听函数
+            // $("div").on({
+            //     click: function() {
+            //         $(this).css("background", "purple")
+            //     },
+            //     mouseenter: function() {
+            //         $(this).css("background", "skyblue")
+            //     },
+            //     mouseleave: function() {
+            //         $(this).css("background", "blue")
+            //     }
+            // })
+
+            // on() 方法优势1：可以绑定多个事件，多个处理事件处理程序。 
+            // 可以写再一起
+            $("div").on("mouseenter mouseleave", function() {
+                // alert(111)
+                $(this).toggleClass("current")
+            })
+
+            // (2) on可以实现事件委托（委派）
+            // on() 方法优势2：可以事件委派操作 。事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。
+            // $("ul li").click() 这种以前的写法会给多个li绑定事件
+            // 给ul绑定事件click事件，点击了li会触发，触发的是li,触发时执行fn, 点击了li会冒泡到父级上，所有触发
+            // 在此之前有bind(), live() delegate()等方法来处理事件绑定或者事件委派，最新版本的请用on替代他们
+            $("ul").on("click", "li", function() {
+                alert(11)
+            })
+
+            // (3) on可以给未来动态创建的元素绑定事件
+
+            // 以前动态创建li元素写法：不能执行alert，因为ol的li还没创建，要写在创建后
+            // $("ol li").click(function() {
+            //     alert(11)
+            // })
+            // var li = $("<li>我是后来创建的</li>")
+            // $("ol").append(li)
+
+            // 用on
+            $("ol").on("click", "li", function() {
+                alert(11)
+            })
+            var li = $("<li>我是后来创建的</li>")
+            $("ol").append(li)
+
+        })
+
+    </script>
+</body>
+
+</html>

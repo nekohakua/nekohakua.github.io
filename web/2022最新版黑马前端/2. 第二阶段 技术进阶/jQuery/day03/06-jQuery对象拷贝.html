@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+
+        $(function() {
+            // jQuery 对象拷贝
+            // 如果想要把某个对象拷贝（合并） 给另外一个对象使用，此时可以使用 $.extend() 方法
+            // $.extend([deep], target, object1, [objectN])    
+            // 1. deep: 如果设为true 为深拷贝， 默认为false  浅拷贝 
+            // 2. target: 要拷贝的目标对象
+            // 3. object1:待拷贝到第一个对象的对象。
+            // 4. objectN:待拷贝到第N个对象的对象。
+            // 5. 浅拷贝是把被拷贝的对象复杂数据类型中的地址拷贝给目标对象(复杂数据类型比如有对象)，修改目标对象会影响被拷贝对象。
+            // 6. 深拷贝，前面加true， 完全克隆(拷贝的对象,而不是地址)，修改目标对象不会影响被拷贝对象。
+
+            // 基本使用
+            // var targetObj = {}
+            // var obj = {
+            //     id: 1,
+            //     name: "andy"
+            // }
+            // $.extend(targetObj, obj)
+            // console.log(targetObj)
+
+            // 如果targetObj已经有数据了
+            // var targetObj = {
+            //     id: 0
+            // }
+            // var obj = {
+            //     id: 1,
+            //     name: "andy"
+            // }
+            // $.extend(targetObj, obj)
+            // // obj的id会覆盖targetObj的id 即会覆盖targetObj 里面原来的数据
+            // console.log(targetObj)
+
+            // 如果数据复杂
+            var targetObj = {
+                id: 0,
+                msg: {
+                    sex: "男"
+                }
+            }
+            var obj = {
+                id: 1,
+                name: "andy",
+                msg: {
+                    age: 18
+                }
+            }
+            // // 1. 浅拷贝把原来对象里面的复杂数据类型地址拷贝给目标对象（targetObj.msg.age = 20）
+            // // sex: "男"会没有
+            // $.extend(targetObj, obj)
+            // // obj的id会覆盖targetObj的id 即会覆盖targetObj 里面原来的数据
+            // console.log(targetObj)
+            // targetObj.msg.age = 20
+            // console.log(targetObj)
+            // console.log(obj)
+
+            // 2. 深拷贝把里面的数据完全复制一份给目标对象 如果里面有不冲突的属性,会合并到一起 
+            $.extend(true, targetObj, obj)
+            // // obj的id会覆盖targetObj的id 即会覆盖targetObj 里面原来的数据
+            // console.log(targetObj)
+            targetObj.msg.age = 20
+            console.log(targetObj) //msg: {sex: '男', age: 20}
+            console.log(obj) //msg: {age: 18}
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

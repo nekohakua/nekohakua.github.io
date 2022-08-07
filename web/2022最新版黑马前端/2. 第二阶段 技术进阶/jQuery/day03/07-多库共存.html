@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        // jQuery使用$作为标示符，随着jQuery的流行,其他 js 库也会用这$作为标识符， 这样一起使用会引起冲突。
+        // 需要一个解决方案，让jQuery 和其他的js库不存在冲突，可以同时存在，这就叫做多库共存。
+        // jQuery 解决方案：
+        // 1. 把里面的 $ 符号 统一改为 jQuery。 比如 jQuery(''div'')
+        // 2.  jQuery 变量规定新的名称：$.noConflict()        var xx = $.noConflict();
+
+        $(function() {
+            // 自己封装的$函数，可以返回选中的元素
+            function $(ele) {
+                return document.querySelector(ele)
+            }
+            console.log($("div"))
+
+            // 1. 如果$ 符号冲突 我们就使用 jQuery
+            // 这时用each()会报错，因为这个$是我自己封装的 把里面的 $ 符号 统一改为 jQuery
+            // $.each()
+            jQuery.each()
+
+            // 2. 让jquery 释放对$ 控制权 让用自己决定
+            // 自定义的名称 效果和jQuery原来的$一样
+            // var suibian = $.noConflict()
+            var suibian = jQuery.noConflict()
+            console.log(suibian("span"))
+            suibian.each()
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <span></span>
+</body>
+
+</html>

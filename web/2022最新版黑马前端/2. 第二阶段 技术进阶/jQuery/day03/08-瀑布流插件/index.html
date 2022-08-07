@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <style type="text/css">
+        #gallery-wrapper {
+            position: relative;
+            max-width: 75%;
+            width: 75%;
+            margin: 50px auto;
+        }
+        
+        img.thumb {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .white-panel {
+            position: absolute;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+        }
+        
+        .white-panel h1 {
+            font-size: 1em;
+        }
+        
+        .white-panel h1 a {
+            color: #A92733;
+        }
+        
+        .white-panel:hover {
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+            margin-top: -5px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="gallery-wrapper">
+        <article class="white-panel">
+            <img src="images/P_000.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_001.jpg" class="thumb">
+            <h1><a href="#">Title 1</a></h1>
+            <p>Description 1</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_002.jpg" class="thumb">
+            <h1><a href="#">Title 1</a></h1>
+            <p>Description 1</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_003.jpg" class="thumb">
+            <h1><a href="#">Title 1</a></h1>
+            <p>Description 1</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_004.jpg" class="thumb">
+            <h1><a href="#">Title 1</a></h1>
+            <p>Description 1</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_005.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_006.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/P_007.jpg" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+
+        <article class="white-panel">
+            <img src="images/1.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/2.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/3.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/4.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/5.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/6.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/7.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/8.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+        <article class="white-panel">
+            <img src="images/9.png" class="thumb">
+            <h1><a href="#">我是轮播图片1</a></h1>
+            <p>里面很精彩哦</p>
+        </article>
+    </section>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/pinterest_grid.js"></script>
+    <script type="text/javascript">
+        // jQuery 功能比较有限，想要更复杂的特效效果，可以借助于 jQuery 插件完成。 
+        // 注意: 这些插件也是依赖于jQuery来完成的，所以必须要先引入jQuery文件，因此也称为 jQuery 插件。
+        // jQuery 插件常用的网站：
+        // 1.  jQuery 插件库  http://www.jq22.com/     
+        // 2.  jQuery 之家   http://www.htmleaf.com/  
+        // jQuery 插件使用步骤：
+        // 1.  引入相关文件。（jQuery 文件 和 插件文件）    
+        // 2.  复制相关html、css、js (调用插件)。
+
+        $(function() {
+            $("#gallery-wrapper").pinterest_grid({
+                // 网格一行显示列数，默认3
+                no_columns: 5,
+                // 网格在X轴方向的padding值，默认10px
+                padding_x: 15,
+                // 网格在Y轴方向的padding值，默认10
+                padding_y: 10,
+                // 网格底部的margin值，默认50px
+                margin_bottom: 50,
+                // 指定在视口多大时一行只显示一个网格
+                single_column_breakpoint: 700
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
