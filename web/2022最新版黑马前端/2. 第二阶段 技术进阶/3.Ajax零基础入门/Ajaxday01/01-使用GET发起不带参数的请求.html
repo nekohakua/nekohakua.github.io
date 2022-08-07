@@ -10,7 +10,31 @@
 </head>
 
 <body>
+    <!-- 
+        浏览器中提供的 XMLHttpRequest 用法比较复杂，所以 jQuery 对 XMLHttpRequest 进行了封装，提供了一系列 Ajax 相关的函数，极大地降低了 Ajax 的使用难度。
+        jQuery 中发起 Ajax 请求最常用的三个方法如下：
+        $.get()
+        $.post()
+        $.ajax()
+     -->
 
+     <button id="btnGET">发起不带参数的GET请求</button>
+
+
+     <script>
+         $(function() {
+             $("#btnGET").on("click", function() {
+                //  $.get(url, [data], [callback])
+                // url(string)要请求的资源地址
+                // data(object)请求资源期间要携带的参数
+                // callback(function)请求成功时的回调函数
+
+                 $.get("http://www.liulongbin.top:3006/api/getbooks", function(res) {
+                     console.log(res)
+                 })
+             })
+         })
+     </script>
 </body>
 
 </html>

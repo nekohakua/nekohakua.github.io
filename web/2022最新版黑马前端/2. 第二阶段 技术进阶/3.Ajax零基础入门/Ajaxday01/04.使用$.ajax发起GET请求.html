@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+  <button id="btnGET">发起GET请求</button>
+
+  <script>
+    $(function () {
+      // $.ajax({
+      //   type: '', // 请求的方式，例如 GET 或 POST
+      //   url: '',  // 请求的 URL 地址
+      //   data: { },// 这次请求要携带的数据
+      //   success: function(res) { } // 请求成功之后的回调函数
+      // })
+
+      $('#btnGET').on('click', function () {
+        $.ajax({
+          type: 'GET',
+          url: 'http://www.liulongbin.top:3006/api/getbooks',
+          data: {
+            id: 1
+          },
+          success: function (res) {
+            console.log(res)
+          }
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>
