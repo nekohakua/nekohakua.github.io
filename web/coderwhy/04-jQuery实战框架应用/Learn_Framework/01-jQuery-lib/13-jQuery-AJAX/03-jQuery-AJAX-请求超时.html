@@ -23,24 +23,24 @@
     // 1.监听文档完全解析完成
     $(function() {
       // 1.timeout
-     var jqXHR =  $.ajax({
+      var jqXHR = $.ajax({
+        // 网站的Dynamic data里面的接口
         url: 'http://httpbin.org/delay/7',  // 后台需要在7秒后才会返回数据给我们
-        method: 'POST',
-        timeout: 5000,  // 配置超时时间
+        method: "POST",
+        // 配置超时时间 超时时间是5000毫秒 如果后台在5秒内返回数据则请求成功，否则失败,然后取消这个请求
+        timeout: 5000,
         success: function(res) {
-          console.log(res)
+          console.log("res=>", res)
         },
         error: function(error) {
-          console.log(error)
+          console.log("error=>", error)
         }
       })
 
       // 取消这个请求
       $('button').click(function() {
-        // abort()
         jqXHR.abort()  // 手动取消请求
       })
-
     })
   </script>
 </body>

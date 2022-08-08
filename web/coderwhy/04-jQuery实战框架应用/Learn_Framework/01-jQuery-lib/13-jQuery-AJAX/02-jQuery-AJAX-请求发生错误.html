@@ -23,17 +23,18 @@
 
       // 500 (后台代码异常)
       // $.ajax({
-      //   url: 'http://httpbin.org/status/500',
+      //   // 去网站：https://httpbin.org/ 点HTTP Methods 点post 输入期待的状态码：500 复制地址
+      //   url: "http://httpbin.org/status/500",
       //   method: "POST",
-      //   success: function() {
-      //     console.log('success')
+      //   success: function(res) {
+      //     console.log(res)
       //   },
       //   error: function(error) {
-      //     console.log("error=>", error)
+      //     console.log(error)
       //   }
       // })
-
-      // 503 (服务器维护)
+      
+      // 503 (服务器维护) 肯定是后台接口有问题
       // $.ajax({
       //   url: 'http://httpbin.org/status/503',
       //   method: "POST",
@@ -45,7 +46,8 @@
       //   }
       // })
 
-      // 403(没有权限获取该资源)
+
+      // 403(没有权限获取该资源) 问问后台我为什么没有权限，是不是请求少了什么 一般可能是没有登录就没有权限 或者你去盗用别人网站的资源
       // $.ajax({
       //   url: 'http://httpbin.org/status/403',
       //   method: "POST",
@@ -57,7 +59,7 @@
       //   }
       // })
 
-      // 404(资源路劲rul没有写对: 前端)
+      // 404(资源路劲rul没有写对: 前端) 大部分是因为前端代码没写对，可能路径写错了 或者后台给的地址是错误的
       // $.ajax({
       //   url: 'http://httpbin.org/status/404',
       //   method: "POST",
@@ -69,17 +71,17 @@
       //   }
       // })
 
-      // $.ajax({
-      //   url: 'http://httpbin.org/sdfxsdfs/sdfsdfsdf/sdfsdf',
-      //   method: "POST",
-      //   success: function() {
-      //     console.log('success')
-      //   },
-      //   error: function(error) {
-      //     console.log("error=>", error)
-      //   }
-      // })
-
+      // 比如乱写url
+      $.ajax({
+        url: 'http://httpbin.org/sdfxsdfs/sdfsdfsdf/sdfsdf',
+        method: "POST",
+        success: function() {
+          console.log('success')
+        },
+        error: function(error) {
+          console.log("error=>", error)
+        }
+      })
       
     })
   </script>
