@@ -18,61 +18,77 @@
 
   <script src="../libs/jquery-3.6.0.js"></script>
   <script>
-    // 1.监听文档完全解析完成
-    $(function() {
+    //   // 2.支持在data中提交参数
+    //   // $.ajax({
+    //   //   url: 'http://httpbin.org/get',
+    //   //   method: "GET",
+    //   //   data: {
+    //   //     cityId: '504100',
+    //   //     keyWord: '小蛮腰'
+    //   //   },
+    //   //   success: function(res) {
+    //   //     console.log(res)
+    //   //   }
+    //   // })
 
-      // console.log(encodeURIComponent('天河公园'))
+    //   // 3.给 get请求添加请求头
+    //   // $.ajax({
+    //   //   url: 'http://httpbin.org/get',
+    //   //   method: "GET",
+    //   //   data: {
+    //   //     cityId: '504100',
+    //   //     keyWord: '小蛮腰'
+    //   //   },
+    //   //   headers: {  // 比如你登录成功之后,后台会返回一个 token
+    //   //      accessToken: 'aaaaabbbbbcccccc' 
+    //   //   },
+    //   //   success: function(res) {
+    //   //     console.log(res)
+    //   //   }
+    //   // })
+
+
+    //   // 4.get简写 
+    //   $.get('http://httpbin.org/get')
+    //     .then(function(res) {  // jQuery 1.8  ; done
+    //       console.log(res)
+    //     })
+    //     .catch(function() {  //  fail
+    //       console.log('catch')
+    //     })
+    //     .always(function() {  // finally  
+    //       console.log('always')
+    //     })
+    // })
+
+    $(function() {
+      // 查看天河公园的编码
+      // console.log(encodeURIComponent('天河公园')) //%E5%A4%A9%E6%B2%B3%E5%85%AC%E5%9B%AD
+
       // 1.url 添加查询字符串
       // $.ajax({
-      //   url: 'http://httpbin.org/get?cityId=404100&keyWord=天河公园',
-      //   method: "GET",
+      //   // ?后面是参数
+      //   url: "http://httpbin.org/get?cityId=404100&keyWord=天河公园",
       //   success: function(res) {
       //     console.log(res)
       //   }
       // })
 
       // 2.支持在data中提交参数
-      // $.ajax({
-      //   url: 'http://httpbin.org/get',
-      //   method: "GET",
-      //   data: {
-      //     cityId: '504100',
-      //     keyWord: '小蛮腰'
-      //   },
-      //   success: function(res) {
-      //     console.log(res)
-      //   }
-      // })
-
-      // 3.给 get请求添加请求头
-      // $.ajax({
-      //   url: 'http://httpbin.org/get',
-      //   method: "GET",
-      //   data: {
-      //     cityId: '504100',
-      //     keyWord: '小蛮腰'
-      //   },
-      //   headers: {  // 比如你登录成功之后,后台会返回一个 token
-      //      accessToken: 'aaaaabbbbbcccccc' 
-      //   },
-      //   success: function(res) {
-      //     console.log(res)
-      //   }
-      // })
-
-
-      // 4.get简写 
-      $.get('http://httpbin.org/get')
-        .then(function(res) {  // jQuery 1.8  ; done
+      $.ajax({
+        // ?后面是参数
+        url: "http://httpbin.org/get",
+        // 默认：method: "GET", 
+        data: {
+          cityId: "404100",
+          keyWord: "小蛮腰"
+        },
+        success: function(res) {
           console.log(res)
-        })
-        .catch(function() {  //  fail
-          console.log('catch')
-        })
-        .always(function() {  // finally  
-          console.log('always')
-        })
-        
+        }
+      })
+
+
 
     })
   </script>
