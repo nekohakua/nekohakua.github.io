@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../16-动态创建表格/css/user.css">
+</head>
+<body>
+    <h1>新增学员</h1>
+    <div class="info">
+      姓名：<input type="text" class="uname">
+      年龄：<input type="text" class="age">
+      性别: <select name="gender" id="" class="gender">
+        <option value="男">男</option>
+        <option value="女">女</option>
+      </select>
+      薪资：<input type="text" class="salary">
+      就业城市：<select name="city" id="" class="city">
+        <option value="北京">北京</option>
+        <option value="上海">上海</option>
+        <option value="广州">广州</option>
+        <option value="深圳">深圳</option>
+        <option value="曹县">曹县</option>
+  
+      </select>
+      <button class="add">录入</button>
+    </div>
+  
+    <h1>就业榜</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>学号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>薪资</th>
+          <th>就业城市</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>1001</td>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+  
+          <td>15000</td>
+          <td>上海</td>
+          <td>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+
+    <script>
+
+        function getLocalData() {
+            let data = localStorage.getItem('data')
+            if (data) {
+                return JSON.parse(data)
+            } else {
+                let arr = [
+                    { stuId: 1001, uname: '超级管理员', age: 18, gender: '男', salary: '20000000000', city: '深圳'},
+                    { stuId: 1002, uname: '令狐霸天', age: 29, gender: '男', salary: '30000', city: '北京' },
+                    { stuId: 1003, uname: '诸葛霸天', age: 39, gender: '男', salary: '2000', city: '北京' },
+                ]
+                localStorage.setItem('data', JSON.stringify(arr))
+            }
+        }
+        getLocalData()
+
+        let tbody = document.querySelector('tbody')
+        let add = document.querySelector('.add')
+        let uname = document.querySelector('.uname')
+        let age = document.querySelector('.age')
+        let gender = document.querySelector('.gender')
+        let salary = document.querySelector('.salary')
+        let city = document.querySelector('.city')
+
+        function render() {
+            let arr = getLocalData()
+            tbody.innerHTML = ''
+            for (let i = 0; i < arr.length; i++) {
+                let tr = document.createElement('tr')
+                tr.innerHTML = `
+                <td>${arr[i].stuId}</td>
+                <td>${arr[i].uname}</td>
+                <td>${arr[i].age}</td>
+                <td>${arr[i].gender}</td>
+                <td>${arr[i].salary}</td>
+                <td>${arr[i].city}</td>
+                <td>
+                <a href="javascript:" data-id="${i}">删除</a>
+                </td>
+                `
+                tbody.appendChild(tr)
+            }
+        }
+        render()
+
+        add.addEventListener('click', function() {
+            let arr = getLocalData()
+            arr.push({
+                stuId: arr[arr.length - 1].stuId + 1,
+                uname: uname.value,
+                age: age.value,
+                gender: gender.value,
+                salary: salary.value,
+                city: city.value
+            })
+            localStorage.setItem('data', JSON.stringify(arr))
+            render()
+            uname.value = age.value = salary.value = gender.value = city.value = ''
+        })
+
+        tbody.addEventListener('click', function(e) {
+            let arr = getLocalData()
+            if (e.target.tagName === 'A') {
+                // alert(11)
+                if (e.target.dataset.id === '0') {
+                    alert('当前数据不能删除')
+                    return
+                }
+                arr.splice(e.target.dataset.id, 1)
+                localStorage.setItem('data', JSON.stringify(arr))
+                render()
+            }
+        })
+    </script>
+</body>
+</html>

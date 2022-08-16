@@ -13,15 +13,33 @@
 
         // 检测 userAgent（浏览器信息）
         !(function () {
-        const userAgent = navigator.userAgent
-        // 验证是否为Android或iPhone
-        const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
-        const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
-        // 如果是Android或iPhone，则跳转至移动站点
-        if (android || iphone) {
-        location.href = 'http://m.jd.com'
-        }
+            const userAgent = navigator.userAgent
+            // 验证是否为Android或iPhone
+            const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+            const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+            // 如果是Android或iPhone，则跳转至移动站点
+            if (android || iphone) {
+                location.href = 'http://m.jd.com'
+            }
         })()
+
+        // !function(){}()
+        // ①函数后的();表示要执行这个函数；
+        // ②而();要求前面必须是一个表达式。（最后有js表达式的定义）。
+        // ③所以“!”的作用是将function(){}函数体转为一个函数表达式。
+
+        // 在function前面加！、+、 -甚至是逗号等到都可以起到函数定义后立即执行的效果，而（）、！、+、-、=等运算符，都将函数声明转换成函数表达式。
+        // 消除了javascript引擎识别函数表达式和函数声明的歧义，告诉javascript引擎这是一个函数表达式，不是函数声明，可以在后面加括号，并立即执行函数的代码。
+
+        // !function(){}()写法和(function(){})()是相同的，下面写法也一样
+        // !function () { /* ... */ }();
+        // ~function () { /* ... */ }();
+        // -function () { /* ... */ }();
+        // +function () { /* ... */ }();
+        // void function () { /* ... */ }();
+        // (function (){/*...*/}());
+        // (function (){/*...*/})();
+
 
 
     </script>

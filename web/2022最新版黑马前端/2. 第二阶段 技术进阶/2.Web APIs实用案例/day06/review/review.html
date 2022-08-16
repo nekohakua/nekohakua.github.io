@@ -149,5 +149,71 @@
             location.reload(true)
         })
     </script> -->
+
+    <!-- 12 -->
+    <!-- <script>
+        !(function () {
+            const userAgent = navigator.userAgent
+            const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+            const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+            if (android || iphone) {
+                location.href = 'https://www.baidu.com/'
+            }
+        })()
+    </script> -->
+
+    <!-- 13 -->
+    <!-- <button class="forward">前进</button>
+    <button class="back">后退</button>
+    <script>
+        let forward = document.querySelector('.forward')
+        let back = document.querySelector('.back')
+        forward.addEventListener('click', function() {
+            history.forward()
+        })
+        back.addEventListener('click', function() {
+            history.back()
+        })
+    </script> -->
+
+    <!-- 14 -->
+
+    <!-- 15 -->
+    <!-- <script>
+        // localStorage.setItem('uname', 'pink老师')
+        // localStorage.setItem('age', '18')
+        // console.log(localStorage.getItem('uname'))
+        // console.log(localStorage.getItem('age'))
+        // localStorage.removeItem('uname')
+        // localStorage.removeItem('age')
+        // console.log(localStorage.getItem('uname'))
+
+        let json = {
+            "uname": "刘德华"
+        }
+        let object = {
+            uname: '刘德华',
+            age: 17,
+            address: '黑马程序员'
+        }
+        // localStorage.setItem('key', object)
+        // console.log(localStorage.getItem('key'))
+        // localStorage.removeItem('key')
+
+        console.log(JSON.stringify(object))
+        localStorage.setItem('key', JSON.stringify(object))
+        console.log(JSON.parse(localStorage.getItem('key')))
+    </script> -->
+
+    <!-- 16 -->
+    <div class="box" data-index="0" data-name="andy"></div>
+    <script>
+        let box = document.querySelector('.box')
+        console.log(box.dataset)
+        console.log(box.dataset.index)
+        box.setAttribute('data-id', 9)
+        console.log(box.getAttribute('data-id'))
+    </script>
+
 </body>
 </html>
