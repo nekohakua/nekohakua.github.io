@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./shield.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        article {
+            max-width: 1240px;
+            margin: 20px auto;
+        }
+
+        table {
+            max-width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        .android {
+            width: 600px;
+        }
+
+        .iOS {
+            width: 1090px;
+        }
+
+        caption {
+            font-weight: 700;
+            text-align: left;
+        }
+
+        td,
+        th {
+            font-size: 14px;
+            border: 1px solid #333;
+            padding: 10px;
+            word-break: break-all;
+            text-align: center;
+        }
+
+        /* .center {
+            text-align: center;
+        } */
+
+    </style>
+
+</head>
+<body>
+    <article>
+        <!-- 安卓 -->
+        <table class="android">
+            <caption>安卓操作系统应用权限列表</caption>
+            <thead>
+                <tr>
+                    <th>权限名称</th>
+                    <th>权限功能说明</th>
+                    <th>使用场景或目的</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">
+                        CAMERA<br>
+                        拍摄
+                    </td>
+                    <td>使用拍摄照片和视频、完成扫描二维码</td>
+                    <td>用户扫描设备配网二维码进行配网</td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        ACCESS_FINE_LOCATION<br>
+                        访问精准定位
+                    </td>
+                    <td>通过全球定位系统（GPS）或网络位置信息（例如基站和WLAN）获取精准地理位置信息</td>
+                    <td>用于蓝牙类设备配网、发现及控制</td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        ACCESS_COARSE_LOCATION<br>
+                        访问粗略位置
+                    </td>
+                    <td>通过网络位置信息（例如基站和WLAN）获取大致地理位置信息</td>
+                    <td>用于蓝牙类设备配网、发现及控制</td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        RECORD_AUDIO<br>
+                        录音
+                    </td>
+                    <td>使用麦克风录制音频</td>
+                    <td>用于灯效律动，跟随麦克风捕捉到的声音渲染灯效</td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        READ_EXTERNAL_STORAGE<br>
+                        读取外置存储器
+                    </td>
+                    <td>提供读取手机储存空间内数据的功能</td>
+                    <td>用于上传配网过程日志，便于排查定位问题</td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        WRITE_EXTERNAL_STORAGE<br>
+                        写入外置存储器
+                    </td>
+                    <td>提供写入外部储存功能</td>
+                    <td>用于存储配网过程日志，便于排查定位问题</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- iOS -->
+        <table class="iOS">
+            <caption>iOS 操作系统应用权限列表</caption>
+            <thead>
+                <tr>
+                    <th>plist   中描述名称</th>
+                    <th>对应功能</th>
+                    <th>使用场景或目的</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">NSPhotoLibraryAddUsageDescription</td>
+                    <td>向相册中添加内容</td>
+                    <td>允许App写入/下载/保存/修改/删除配网日志等信息</td>
+                </tr>
+                <tr>
+                    <td class="center">NSPhotoLibraryUsageDescription</td>
+                    <td>读取相册中内容</td>
+                    <td>允许App上传存储的配网日志信息，方便定位问题</td>
+                </tr>
+                <tr>
+                    <td class="center">NSCameraUsageDescription</td>
+                    <td>使用摄像头</td>
+                    <td>用于扫描设备的二维码进行配网</td>
+                </tr>
+                <tr>
+                    <td class="center">NSLocationAlwaysUsageDescription</td>
+                    <td>持续获取地理位置</td>
+                    <td>用于辅助WiFi类设备配网</td>
+                </tr>
+                <tr>
+                    <td class="center">NSLocationWhenInUseUsageDescription</td>
+                    <td>仅App被使用时获取地理位置</td>
+                    <td>用于辅助WiFi类设备配网</td>
+                </tr>
+                <tr>
+                    <td class="center">NSMicrophoneUsageDescription</td>
+                    <td>使用麦克风</td>
+                    <td>用于灯效律动，跟随麦克风捕捉到的声音渲染灯效</td>
+                </tr>
+                <tr>
+                    <td class="center">NSLocalNetworkUsageDescription</td>
+                    <td>本地网络权限</td>
+                    <td>用于辅助WiFi类设备配网</td>
+                </tr>
+                <tr>
+                    <td class="center">NSBluetoothAlwaysUsageDescription</td>
+                    <td>蓝牙权限</td>
+                    <td>用于蓝牙类设备发现、配网及控制</td>
+                </tr>
+                <tr>
+                    <td class="center">NSBluetoothPeripheralUsageDescription</td>
+                    <td>App使用时获取蓝牙权限</td>
+                    <td>用于蓝牙类设备发现、配网及控制</td>
+                </tr>
+                <tr>
+                    <td class="center">参考</td>
+                    <td><a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202108160018_51010.html?spm=a1zaa.8161610.0.0.547e195cjEQmJg">https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202108160018_51010.html?spm=a1zaa.8161610.0.0.547e195cjEQmJg</a></td>
+                    <td><a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_other/suit_bu1_other202009301003_74306.html?spm=a1zaa.8161610.0.0.547e195cpFNZOw">https://terms.alicdn.com/legal-agreement/terms/suit_bu1_other/suit_bu1_other202009301003_74306.html?spm=a1zaa.8161610.0.0.547e195cpFNZOw</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+</body>
+</html>
