@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script src="../../libs/jquery-3.6.0.js"></script>
+
+    <!-- 01 -->
+    <!-- <script>
+        // $(function() {
+        //     // $.ajax({
+        //     //     url: "http://httpbin.org/get",
+        //     //     type: "GET",
+        //     //     success: function(res) {
+        //     //         console.log(res)
+        //     //     },
+        //     //     error: function(error) {
+        //     //         console.log("error=>", error)
+        //     //     }
+        //     // })
+
+            jQuery.ajax({
+                url: "http://httpbin.org/delete",
+                method: "DELETE",
+                success: function(res) {
+                    console.log(res)
+                }
+            })
+        // })
+    </script> -->
+
+    <!-- 02 -->
+    <!-- <script>
+                $(function() {
+            // $.ajax({
+            //     url: "http://httpbin.org/status/500",
+            //     method: "POST",
+            //     success: function(res) {
+            //         console.log(res)
+            //     },
+            //     error: function(err) {
+            //         console.log(err)
+            //     }
+            // })
+
+            // $.ajax({
+            //     url: "http://httpbin.org/status/503",
+            //     method: "POST",
+            //     success: function(res) {
+            //         console.log(res)
+            //     },
+            //     error: function(error) {
+            //         console.log(error)
+            //     }
+            // })
+
+            // $.ajax({
+            //     url: "http://httpbin.org/status/403",
+            //     method: "POST",
+            //     success: function(res) {
+            //         console.log(res)
+            //     },
+            //     error: function(err) {
+            //         console.log(err)
+            //     }
+            // })
+
+            // $.ajax({
+            //     url: "http://httpbin.org/status/404",
+            //     method: "POST",
+            //     success: function(res) {
+            //         console.log(res)
+            //     },
+            //     error: function(error) {
+            //         console.log(error)
+            //     }
+            // })
+
+            $.ajax({
+                url: "http://httpbin.org/sdfsf/dsfds",
+                method: "POST",
+                success: function(res) {
+                    console.log(res)
+                },
+                error: function(err) {
+                    console.log("error", err)
+                }
+            })
+        })
+    </script> -->
+
+    <!-- 03 -->
+    <!-- <button>取消这个请求</button>
+    <script>
+        $(function() {
+            var jqXHR = $.ajax({
+                url: 'http://httpbin.org/delay/7',
+                method: 'POST',
+                timeout: 5000,
+                success: function(res) {
+                    console.log(res)
+                },
+                error: function(err) {
+                    console.log(err)
+                }
+            })
+
+            $('button').click(function() {
+                console.log(11)
+                jqXHR.abort()
+            })
+        })
+    </script> -->
+
+    <!-- 04 -->
+    
+</body>
+</html>

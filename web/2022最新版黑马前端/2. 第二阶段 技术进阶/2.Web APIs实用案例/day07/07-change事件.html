@@ -26,12 +26,16 @@
 
     <script>
         let input = document.querySelector('input')
-        // change当表单里面的值发生变化，光标失去时触发   
+        // change当表单里面的值发生变化，然后在光标失去时触发   
         // blur是光标失去就触发，不管里面值有没有改变
         // input只要表单输入值就会触发
-        input.addEventListener('change', function() {
-            console.log(1)
-        })
+        
+        // input.addEventListener('input', me)
+        // input.addEventListener('blur', me)
+        input.addEventListener('change', me)
+        function me() {
+            console.log(1111111111111111)
+        }
     </script>
 </body>
 </html>

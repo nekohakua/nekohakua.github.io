@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 05 */
+        span {
+            width: 250px;
+            height: 30px;
+            vertical-align: middle;
+            line-height: 30px;
+            padding-left: 15px;
+        }
+
+        .error {
+            color: red;
+            background: url(../error1.png) no-repeat left center;
+        }
+
+        .right {
+            color: green;
+            background: url(../right.png) no-repeat left center;
+        }
+    </style>
 </head>
 <body>
     <!-- 01 -->
@@ -36,5 +56,73 @@
     </script> -->
 
     <!-- 04 -->
+    <!-- <script>
+        // console.log(/[abc]/.test(''))
+        // console.log(/[abc]/.test('ah'))
+
+        // console.log(/[^a-z]/.test('a'))
+        // console.log(/[^a-z]/.test('9'))
+
+        // console.log(/^[abc]$/.test('abc'))
+        // console.log(/^[abc]$/.test('a'))
+        // console.log(/^[abc]$/.test('b'))
+        // console.log(/^[abc]$/.test('c'))
+        // console.log(/^[a-zA-z]$/.test('d'))
+        // console.log(/^[a-zA-z]$/.test('dd'))
+
+        // console.log(/^[a-zA-Z0-9-_]$/.test('-'))
+
+        // console.log(/^a/.test('a'))
+        // console.log(/^a/.test('ba'))
+
+        console.log(/^abc+$/.test('abccccccccccccccc')) //true
+        console.log(/^abc$/.test('abccccccccccccccc')) //0
+    </script> -->
+
+    <!-- 05 -->
+    <!-- <input type="text">
+    <span></span>
+    <script>
+        let input = document.querySelector('input')
+        let span = input.nextElementSibling
+        input.addEventListener('blur', function() {
+            if (/^[a-zA-Z0-9-_]{6,16}$/.test(input.value)) {
+                span.className = 'right'
+                span.innerHTML = '输入正确'
+            } else {
+                span.classList = 'error'
+                span.innerHTML = '只能输入英文字母,数字,下划线或者短横线组成，并且用户名长度为 6~16位'
+            }
+        })
+        console.log(/a/i.test('A'))
+    </script> -->
+
+    <!-- 06 -->
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <div></div>
+    <script>
+        let textarea = document.querySelector('textarea')
+        let btn = document.querySelector('button')
+        let div = document.querySelector('div')
+        btn.addEventListener('click', function() {
+            div.innerHTML = textarea.value.replace(/傻逼/g, '**')
+        })
+    </script> -->
+
+    <!-- 07 -->
+    <input type="text">
+    <input type="password">
+    <script>
+        let input = document.querySelector('input')
+        // input.addEventListener('input', me)
+        // input.addEventListener('blur', me)
+        input.addEventListener('change', me)
+        function me() {
+            console.log(1111111111111111)
+        }
+    </script>
+
+
 </body>
 </html>

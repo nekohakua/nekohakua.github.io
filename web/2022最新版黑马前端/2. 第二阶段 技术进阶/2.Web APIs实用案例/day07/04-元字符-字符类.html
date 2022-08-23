@@ -18,6 +18,8 @@
 
         // [ ] 里面加上 - 连字符：使用连字符 - 表示一个范围
         // 注意：只能取一个，并且还限制了开头和结尾
+
+
         console.log(/^[abc]$/.test('abc')) //false
         // 只有这三种为真
         console.log(/^[abc]$/.test('a')) //true
@@ -26,8 +28,15 @@
 
         // 26个英文字母选其一个,并且不区分大小写
         console.log(/^[a-zA-Z]$/.test('d')) //1
+        console.log(/^[a-zA-z]$/.test('dd')) //0
         console.log(/^[a-zA-Z]$/.test('D')) //1
         console.log(/^[a-zA-Z]$/.test('DD')) //0
+        // [^a-z]匹配除了a-z的
+        console.log(/[^a-z]/.test('a')) //0
+        console.log(/[^a-z]/.test('9')) //1
+        console.log(/^a/.test('a')) //1
+        console.log(/^a/.test('ba')) //0
+
 
         // 26个英文字母选其一个,并且不区分大小写,可以出现数字
         console.log(/^[a-zA-Z0-9]$/.test('6')) //1
@@ -35,8 +44,9 @@
         // 26个英文字母选其一个,并且不区分大小写,可以出现数字，可以出现-和_
         console.log(/^[a-zA-Z0-9-_]$/.test('6')) //1
 
-        // 修饰只跟前面一个位置
-        console.log(/^abc+$/.test('abcc')) //true
+        // 修饰只跟前面一个位置,以a开头,c结束【精确匹配】，1个或多个c
+        console.log(/^abc+$/.test('abccccccccccc')) //true
+        console.log(/^abc$/.test('abccccccccccccccc')) //0
 
     </script>
 </body>
