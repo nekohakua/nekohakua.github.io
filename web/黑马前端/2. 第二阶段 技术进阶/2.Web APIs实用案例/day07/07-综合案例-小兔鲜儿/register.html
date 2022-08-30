@@ -200,7 +200,9 @@
       </div>
     </div>
   </div>
-  <script>
+
+  <script src="./js/register.js"></script>
+  <!-- <script>
     // 经常喜欢在这里写立即执行函数，避免影响
     (function () {
       // 需求①1： 发送验证码
@@ -229,9 +231,9 @@
       // 之所以返回 布尔值，是为了 最后的提交按钮做准备
       let username = document.querySelector('[name=username]')
       // console.log(username)
-      username.addEventListener('change', virifyUsername)
+      username.addEventListener('change', verifyUsername)
       // 验证用户名的函数
-      function virifyUsername() {
+      function verifyUsername() {
         // console.log(11)
         // 获取提示错误的span
         let span = username.nextElementSibling
@@ -253,9 +255,9 @@
       // 正则: /^1(3\d|4[5-9]|5[0-35-9]|6[567]|7[0-8]|8\d|9[0-35-9])\d{8}$/
       // 其余同上
       let phone = document.querySelector('[name=phone]')
-      phone.addEventListener('change', virifyPhone)
+      phone.addEventListener('change', verifyPhone)
         // 验证手机号的函数
-        function virifyPhone() {
+        function verifyPhone() {
         // console.log(11)
         // 获取提示错误的span
         let span = phone.nextElementSibling
@@ -277,9 +279,9 @@
       // 正则 /^\d{6}$/
       // 其余同上
       let codeInput = document.querySelector('input[name=code]')
-      codeInput.addEventListener('change', virifyCode)
+      codeInput.addEventListener('change', verifyCode)
         // 验证验证码的函数
-        function virifyCode() {
+        function verifyCode() {
         // console.log(11)
         // 获取提示错误的span
         let span = codeInput.nextElementSibling
@@ -301,9 +303,9 @@
       // 正则 /^[a-zA-Z0-9-_]{6,20}$/
       // 其余同上
       let password = document.querySelector('input[name=password]')
-      password.addEventListener('change', virifypassword)
+      password.addEventListener('change', verifypassword)
         // 验证密码的函数
-        function virifypassword() {
+        function verifypassword() {
         // console.log(11)
         // 获取提示错误的span
         let span = password.nextElementSibling
@@ -325,8 +327,8 @@
       // 如果本次密码不等于上面输入的密码则返回错误信息
       // 其余同上
       let confirm = document.querySelector('[name=confirm]')
-      confirm.addEventListener('change', virifyConfirm)
-      function virifyConfirm() {
+      confirm.addEventListener('change', verifyConfirm)
+      function verifyConfirm() {
         let span = confirm.nextElementSibling
         if(confirm.value !== password.value) {
           span.innerHTML = '两次密码不一致'
@@ -356,19 +358,19 @@
       form.addEventListener('submit', function(e) {
         // 先阻止提交，即阻止默认行为  等验证通过后提交
         // 当验证不通过时阻止提交
-        if(!virifyUsername()) {
+        if(!verifyUsername()) {
           e.preventDefault()
         }
-        if(!virifyPhone()) {
+        if(!verifyPhone()) {
           e.preventDefault()
         }
-        if(!virifyCode()) {
+        if(!verifyCode()) {
           e.preventDefault()
         }
-        if(!virifypassword()) {
+        if(!verifypassword()) {
           e.preventDefault()
         }
-        if(!virifyConfirm()) {
+        if(!verifyConfirm()) {
           e.preventDefault()
         }
         // 没有勾选阻止提交
@@ -380,7 +382,7 @@
 
     }());
 
-  </script>
+  </script> -->
 </body>
 
 </html>
