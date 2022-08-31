@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 变量提升 -->
+    <!-- <script>
+        // js引擎会先解析代码，获取所有的被声明的变量，然后一行行执行
+        // 导致所有变量的声明语句被提升到代码的头部，这既是变量提升（hoisting）
+
+        console.log(a) //undefined
+        var a = 1
+        console.log(a) //1
+        // 上面两行相当于如下
+        // var a
+        // console.log(a)
+        // a = 1
+        // console.log(a)
+
+        // 对于var命令来说，JavaScript 的区块不构成单独的作用域（scope）
+        {
+            var a = 999;
+        }
+        console.log(a) // 999
+    </script> -->
+
+    <!-- 2 标识符 -->
+    <!-- <script>
+        // 标识符规制
+        // 【1】第一个字符可以是 任意的字母 $ _
+        // 【2】第二个字符可以是 任意的字母 $ _ 0-9 
+
+        // 以下合法
+        // arg0
+        // _tmp
+        // $elem
+        // π
+
+        // 中文是合法的标识符，可以用作变量名。
+        var 临时变量 = 1
+        console.log(临时变量) //1
+
+        /*
+        JavaScript 有一些保留字，不能用作标识符：arguments、break、case、catch、class、
+        const、continue、debugger、default、delete、do、else、enum、eval、export、
+        extends、false、finally、for、function、if、implements、import、in、instanceof、
+        interface、let、new、null、package、private、protected、public、return、
+        static、super、switch、this、throw、true、try、typeof、var、void、while、with、yield。
+        */ 
+    </script> -->
+
+    <!-- 3 注释 -->
+    <script>
+        function countdown(n) {
+            // while (n --> 0) console.log(n);
+        }
+        countdown(3)
+        // 2
+        // 1
+        // 0
+
+        // 上面代码中，n --> 0实际上会当作n-- > 0，因此输出2、1、0。
+    </script>
+
+    <!-- 4 标签 -->
+    <!-- <script>
+        // 标签通常与break语句和continue语句配合使用，跳出特定的循环。
+        top:
+            for (var i = 0; i < 3; i++){
+                    for (var j = 0; j < 3; j++){
+                    if (i === 1 && j === 1) break top;
+                    console.log('i=' + i + ', j=' + j);
+                }
+            }
+            // i=0, j=0
+            // i=0, j=1
+            // i=0, j=2
+            // i=1, j=0
+
+        console.log('----------------------------------------------------')
+
+        top:
+            for (var i = 0; i < 3; i++) {
+                    for (var j = 0; j < 3; j++){
+                    if (i === 1 && j === 1) continue top;
+                    console.log('i=' + i + ', j=' + j);
+                }
+            }
+            // i=0, j=0
+            // i=0, j=1
+            // i=0, j=2
+            // i=1, j=0
+            // i=2, j=0
+            // i=2, j=1
+            // i=2, j=2
+
+        console.log('----------------------------------------------------')
+
+        foo: {
+                console.log(1);
+                break foo;
+                console.log('本行不会输出');
+            }
+            console.log(2);
+            // 1
+            // 2
+    </script> -->
+</body>
+</html>

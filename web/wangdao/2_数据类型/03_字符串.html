@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 字符串的方法 -->
+    <!-- <script>
+        // 字符串可以使用数组的方括号运算符，用来返回某个位置的字符（位置编号从0开始）。
+        // 如果方括号中的数字超过字符串的长度，或者方括号中根本不是数字，则返回undefined。
+        var s = 'hello'
+        console.log(s[0]) //h
+        console.log(s[3]) //l
+        console.log(s[9]) //undefined
+
+        // 直接对字符串使用方括号运算符
+        console.log('hello'[1]) //e
+
+        console.log(s.length) //5
+    </script> -->
+
+    <!-- 2 字符集 -->
+    <script>
+        // 对于码点在U+10000到U+10FFFF之间的字符，JavaScript 总是认为它们是两个字符（length属性为2）
+        console.log('𝌆'.length) //2
+    </script>
+</body>
+</html>

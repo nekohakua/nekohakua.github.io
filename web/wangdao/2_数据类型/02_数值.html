@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 parseInt() -->
+    <script>
+        // parseInt方法用于将字符串转为整数。
+
+        // 如果字符串前面有空格，那么会自动去掉空格
+        console.log(parseInt('    1')) //1
+
+        // parseInt的参数不是字符串，那么参数会被转换成字符串
+        console.log(parseInt(2222222222222)) //2222222222222
+
+        // 字符串转为整数的时候，是一个个字符依次转换，如果遇到不能转为数字的字符，就不再进行下去，返回已经转好的部分。
+        console.log(parseInt('333aw')) //333
+        console.log(parseInt('333.12')) //333
+
+        // 如果字符串的第一个字符不能转化为数字（后面跟着数字的正负号除外），返回NaN
+        console.log(parseInt('a4')) //NaN
+        console.log(parseInt('')) //NaN
+        console.log(parseInt('+')) //NaN
+        console.log(parseInt('+4')) //4
+
+        // 对于那些会自动转为科学计数法的数字，parseInt会将科学计数法的表示方法视为字符串，因此导致一些奇怪的结果
+        console.log(parseInt(1000000000000000000000.5)) // 1
+        // 等同于
+        console.log(parseInt('1e+21')) //1
+
+        console.log(parseInt(0.0000008)) //8
+        // 等同于
+        console.log(parseInt('8e-7')) //8
+
+    </script>
+</body>
+</html>

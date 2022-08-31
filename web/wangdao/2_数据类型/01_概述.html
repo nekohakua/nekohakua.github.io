@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 typeof null -->
+    <!-- <script>
+        console.log(typeof null) // "object"
+        // 历史原因导致，js被设计之初没有没有考虑null，只是当作objeck的一个特殊值
+        // 后来null独立出来，作为一种单独的数据类型，为了兼容以前的代码，typeof null返回object就没法改变了。
+    </script> -->
+
+    <!-- 2 -->
+    <!-- <script>
+        console.log(9007199254740992 + 2)
+    </script> -->
+
+    <!-- 3 科学计数法 -->
+    <!-- <script>
+        console.log(123e+3) //123000 123*(10的3次幂)
+        console.log(123e3) //123000 123*(10的3次幂)
+        console.log(123e-3) //0.123
+    </script> -->
+
+    <!-- 4 进制 -->
+    <script>
+        // 十进制：没有前导0的数值。
+        // 八进制：有前缀0o或0O的数值，或者有前导0、且只用到0-7的八个阿拉伯数字的数值。
+        // 十六进制：有前缀0x或0X的数值。
+        // 二进制：有前缀0b或0B的数值。
+
+        // 默认情况下，JavaScript 内部会自动将八进制、十六进制、二进制转为十进制。下面是一些例子。
+        console.log(0xff) //255
+        console.log(0o377) //255
+        console.log(0b11) //3
+
+        // 通常来说，有前导0的数值会被视为八进制，但是如果前导0后面有数字8和9，则该数值被视为十进制。
+        console.log(0888) //888
+        console.log(0777) //511
+        // 前导0表示八进制，处理时很容易造成混乱。ES5 的严格模式和 ES6，已经废除了这种表示法，但是浏览器为了兼容以前的代码，目前还继续支持这种表示法。
+    </script>
+</body>
+</html>
