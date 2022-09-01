@@ -255,7 +255,7 @@
     </script> -->
 
     <!-- 10 -->
-    <script>
+    <!-- <script>
         // JavaScript 允许函数有不定数目的参数
         // arguments对象包含了函数运行时的所有参数，arguments[0]就是第一个参数，arguments[1]就是第二个参数，以此类推。这个对象只有在函数体内部，才可以使用。
         var f1 = function (one) {
@@ -310,7 +310,143 @@
             console.log(arguments.callee === f6)
         }
         f6() // true
+    </script> -->
 
+    <!-- 11 闭包 -->
+    <!-- <script>
+        // 上面代码中，函数f2就在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。
+        // 但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是 JavaScript 语言特有的"链式作用域"结构（chain scope），
+        // 子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。
+        function f1() {
+            var n = 999
+            f2()
+            function f2() {
+                console.log(n) // 999
+            }
+        }
+        f1()
+
+        // 下面方法也可以读取函数内部变量
+        function f3() {
+            var n3 = 888
+            function f4() {
+                console.log(n3)
+            }
+            return f4
+        }
+        var result = f3()
+        result() //888
+
+        // 闭包的最大用处有两个，一个是可以读取外层函数内部的变量，另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。
+        // 下面代码中，start是函数createIncrementor的内部变量。通过闭包，start的状态被保留了，每一次调用都是在上一次调用的基础上进行计算。
+        // 从中可以看到，闭包inc使得函数createIncrementor的内部环境，一直存在。所以，闭包可以看作是函数内部作用域的一个接口。
+        function createIncrementor(start) {
+            return function () {
+                return start++
+            }
+        }
+        var inc = createIncrementor(5)
+        console.log(inc()) //5
+        console.log(inc()) //6
+        console.log(inc()) //7
+        // 为什么闭包能够返回外层函数的内部变量？原因是闭包（上例的inc）用到了外层变量（start），
+        // 导致外层函数（createIncrementor）不能从内存释放。只要闭包没有被垃圾回收机制清除，外层函数提供的运行环境也不会被清除，它的内部变量就始终保存着当前值，供闭包读取。
+
+        // 闭包的另一个用处，是封装对象的私有属性和私有方法。
+        function Person(name) {
+            var _age
+            function getAge() {
+                return _age
+            }
+            function setAge(n) {
+                _age = n
+            }
+
+            return {
+                name: name,
+                getAge: getAge,
+                setAge: setAge
+            }
+        }
+        var p1 = Person('我')
+        console.log(p1)
+        p1.setAge(25)
+        console.log(p1.getAge()) //25
+        // 上面代码中，函数Person的内部变量_age，通过闭包getAge和setAge，变成了返回对象p1的私有变量。
+        // 注意，外层函数每次运行，都会生成一个新的闭包，而这个闭包又会保留外层函数的内部变量，所以内存消耗很大。因此不能滥用闭包，否则会造成网页的性能问题。
+    </script> -->
+
+    <!-- 12 立即调用的函数表达式 -->
+    <!-- <script>
+        // 圆括号()跟在函数名之后，表示调用该函数。
+        // 有时，我们需要在定义函数之后，立即调用该函数。这时，你不能在函数的定义之后加上圆括号，这会产生语法错误。
+        // function(){ /* code */ }() // SyntaxError: Unexpected token (
+        // JavaScript 规定，如果function关键字出现在行首，一律解释成语句。因此，引擎看到行首是function关键字之后，认为这一段都是函数的定义，不应该以圆括号结尾，所以就报错了。
+        // 语句
+        // function f() {}
+        // 表达式
+        // var f = function f() {}
+        // 当作表达式时，函数可以定义后直接加圆括号调用。
+        // 因为function作为表达式，引擎就把函数定义当作一个值。这种情况下，就不会报错。
+        var f = function f(){ return 1}()
+        console.log(f) //1
+
+        // 函数定义后立即调用的解决方法，就是不要让function出现在行首，让引擎将其理解成一个表达式。最简单的处理，就是将其放在一个圆括号里面。
+        // 这就叫做“立即调用的函数表达式”（Immediately-Invoked Function Expression），简称 IIFE。
+        // 两种写法最后的分号都是必须的。如果省略分号，遇到连着两个 IIFE，可能就会报错。
+        // 两行之间没有分号，JavaScript 会将它们连在一起解释，将第二行解释为第一行的参数。
+        ;(function(){
+            console.log(1)
+        }());
+        // 或者
+        (function(){
+            console.log(2)
+        })();
+
+        // 推而广之，任何让解释器以表达式来处理函数定义的方法，都能产生同样的效果
+        var i = function(){ console.log(999) }(); //999
+        true && function(){ console.log(99) }(); //99
+        0, function(){ console.log(11) }(); //11
+        !function () { console.log(22) }(); //22
+        ~function () { console.log(33) }(); //33
+        -function () { console.log(44) }(); //44
+        +function () { console.log(55) }(); //55
+        1 + 1;
+
+        // 通常情况下，只对匿名函数使用这种“立即执行的函数表达式”。
+        // 它的目的有两个：一是不必为函数命名，避免了污染全局变量；二是 IIFE 内部形成了一个单独的作用域，可以封装一些外部无法读取的私有变量。
+        (function () {
+            var tmp = {}
+            return tmp
+        }());
+    </script> -->
+
+    <!-- 13 eval命令 -->
+    <script>
+        // eval命令接受一个字符串作为参数，并将这个字符串当作语句执行。
+        eval('console.log(1)') //1
+
+        // eval没有自己的作用域，都在当前作用域内执行，因此可能会修改当前作用域的变量的值，造成安全问题。
+        var a = 2
+        eval('a = 3')
+        console.log(a) //3
+
+        // 为了防止这种风险，JavaScript 规定，如果使用严格模式，eval内部声明的变量，不会影响到外部作用域。
+        ;(function f() {
+            'use strict'
+            eval('var foo = 123')
+            console.log(foo)  // ReferenceError: foo is not defined
+        })()
+
+        // 不过，即使在严格模式下，eval依然可以读写当前作用域的变量。
+        ;(function f() {
+            'use strict'
+            var foo = 4
+            eval('foo = 5')
+            console.log(foo)  // 5
+        })()
+
+        // 由于安全风险和不利于 JavaScript 引擎优化执行速度，一般不推荐使用。通常情况下，eval最常见的场合是解析 JSON 数据的字符串，不过正确的做法应该是使用原生的JSON.parse方法。
     </script>
 </body>
 </html>
