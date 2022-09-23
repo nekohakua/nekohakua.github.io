@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 01 -->
+    <script>
+        // 如果运算子是对象，会转为原始类型的值，再进行比较。
+        // 对象转换成原始类型的值，算法是先调用valueOf方法；如果返回的还是对象，再接着调用toString方法
+        var x = [2]
+        console.log(x > '11') //true
+        // 等同于 [2].valueOf().toString() > '11'
+        // 即 '2' > '11'
+
+        x.valueOf = function() {
+            return 1
+        }
+        console.log(x > '11') //false
+        // 等同于 [2].valueOf() > '11'
+        // 即 '1' > '11'
+
+        // 两个对象之间的比较也是如此。
+        console.log([2] > [1]) // true
+        // 等同于 [2].valueOf().toString() > [1].valueOf().toString()
+        // 即 '2' > '1'
+
+        console.log([2] > [11]) // true
+        // 等同于 [2].valueOf().toString() > [11].valueOf().toString()
+        // 即 '2' > '11'
+
+        console.log({ x: 2 } >= { x: 1 }) // true
+        // 等同于 { x: 2 }.valueOf().toString() >= { x: 1 }.valueOf().toString()
+        // 即 '[object Object]' >= '[object Object]'
+    </script>
+</body>
+</html>

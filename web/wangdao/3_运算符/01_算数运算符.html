@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 01 -->
+    <script>
+        // 对象转换成原始类型的值，算法是先调用valueOf方法；如果返回的还是对象，再接着调用toString方法
+
+        // 我们定义obj对象的valueOf方法返回1，于是obj + 2就得到了3。这个例子中，由于valueOf方法直接返回一个原始类型的值
+        var obj = {
+            toString: function() {
+                return 'hello'
+            },
+            valueOf: function () {
+                return 1
+            },
+        }
+        console.log(obj + 2) //3
+
+        // 对象obj的toString方法返回字符串hello
+        var obj2 = {
+            toString: function() {
+                return 'hello'
+            }
+        }
+        console.log(obj2 + 1) //hello1
+
+        var obj3 = {
+            toString: function() {
+                return 'hello'
+            },
+            valueOf: function () {
+                return 1
+            }
+        }
+        console.log(obj3 + 1) //2
+
+        // 一般优先执行valueOf方法。这里有一个特例，如果运算子是一个Date对象的实例，那么会优先执行toString方法。
+        var obj4 = new Date()
+        obj4.valueOf = function() {
+            return 1
+        }
+        obj4.toString = function() {
+            return 'hello'
+        }
+        console.log(obj4 + 1) //hello1
+    </script>
+
+    <!-- 02 -->
+    <script>
+        // ^ 异或 相异为1 同为0
+        console.log(1 ^ 0) //1
+        console.log(0 ^ 1) //1
+        console.log(0 ^ 0) //0
+        console.log(1 ^ 1) //0
+    </script>
+</body>
+</html>

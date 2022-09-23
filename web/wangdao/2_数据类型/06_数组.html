@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 01 -->
+    <!-- <script>
+        // 任何数据类型都可以放入数组
+        var arr = [
+            [1, 2, 3],
+            {a: 1},
+            function() {return 0}
+        ]
+        for (var i in arr) {
+            console.log(`${i}`, arr[i])
+        }
+    </script> -->
+
+    <!-- 02 数组的本质-->
+    <!-- <script>
+        // 数组本质上是一种特殊的对象
+        console.log(typeof [1, 2, 3]) //object
+
+        // 数组的特殊之处在于它的键值是依次排序的整数（0，1，2...n）
+        var arr = ['a', 'b', 'c']
+        // Object.keys方法返回数组的所有键名。
+        console.log(Object.keys(arr)) //['0', '1', '2']
+        
+        // JavaScript 语言规定，对象的键名一律为字符串，所以，数组的键名其实也是字符串。之所以可以用数值读取，是因为非字符串的键名会被转为字符串。
+        console.log(arr['0']) //'a'
+        console.log(arr[0]) //'a'
+
+        // 注意，这点在赋值时也成立。一个值总是先转成字符串，再作为键名进行赋值。
+        var arr1 = []
+        arr1[1.00] = 6
+        console.log(arr1[1]) //6
+        
+        // 对象有两种读取成员的方法：点结构（object.key）和方括号结构（object[key]）。但是，对于数值的键名，不能使用点结构。
+        //arr.0 //报错
+    </script> -->
+
+    <!-- 03 数组的length -->
+    <!-- <script>
+        var arr = ['a', 'b', 'c']
+        // 如果人为设置length大于当前元素个数，则数组的成员数量会增加到这个值，新增的位置都是空位。
+        arr[1000] = 'd'
+        console.log(arr[999]) //undefined
+        console.log(arr.length) //1001
+        // 清空数组的一个有效方法，就是将length属性设为0。
+        arr.length = 0
+        console.log(arr) //[]
+
+        // 值得注意的是，由于数组本质上是一种对象，所以可以为数组添加属性，但是这不影响length属性的值。
+        var arr1 = []
+        // 将数组的键分别设为字符串和小数，结果都不影响length属性。因为，length属性的值就是等于最大的数字键加1，而这个数组没有整数键，所以length属性保持为0。
+        arr1['p'] = 'pp'
+        arr1[2.1] = 2.1
+        console.log(arr1.length) //0
+
+        // 如果数组的键名是添加超出范围的数值，该键名会自动转为字符串。
+        var arr2 = []
+        arr2[-1] = -11
+        // 为数组arr添加了两个不合法的数字键，结果length属性没有发生变化。这些数字键都变成了字符串键名。最后两行之所以会取到值，是因为取键值时，数字键名会默认转为字符串。
+        console.log(arr2.length) //0
+        console.log(arr2[-1]) //-11
+    </script> -->
+
+    <!-- 04 in运算符-->
+    <!-- <script>
+        // 检查某个键名是否存在的运算符in，适用于对象，也适用于数组。
+        var arr = ['a', 'b', 'c']
+        console.log(2 in arr) //true
+        console.log('2' in arr) //true
+        console.log(100 in arr) //false
+
+        // 注意，如果数组的某个位置是空位，in运算符返回false。
+        var arr1 = []
+        arr1[100] = 100
+        console.log(100 in arr1) //true
+        console.log(1 in arr1) //false
+    </script> -->
+
+    
+    <!-- 05 for...in -->
+    <script>
+        // for...in循环不仅可以遍历对象，也可以遍历数组，毕竟数组只是一种特殊对象。
+        // 但是，for...in不仅会遍历数组所有的数字键，还会遍历非数字键。所以，不推荐使用for...in遍历数组。
+        var a = [1, 2, 3]
+        a.foo = 'foo'
+        for (var i in a) {
+            console.log(a[i])
+        }
+        //1
+        //2
+        //3
+        //foo
+        var obj = {
+            '1': 'a',
+            '2': 'b',
+            '3': 'c'
+        }
+        for (var i in obj) {
+            console.log(obj[i])
+        }
+        //a
+        //b
+        //c
+
+        // 数组的forEach方法，也可以用来遍历数组
+        var colors = ['red', 'green', 'blue'];
+        colors.forEach(function (color) {
+            console.log(color)
+        })
+        // red
+        // green
+        // blue
+    </script>
+</body>
+</html>
