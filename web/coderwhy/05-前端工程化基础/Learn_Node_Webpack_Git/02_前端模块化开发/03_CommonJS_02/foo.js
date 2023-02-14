@@ -18,15 +18,15 @@ function sayHello() {
 // console.log(exports.name, "----")
 // console.log(exports.age, "----")
 // console.log(exports.sayHello, "----")
-// console.log(exports === module.exports)
+// console.log(exports === module.exports) // true   
 
 // // 3.开发中常见的写法
-// 写了{}说明创建了新对象，所以module.exports不再指向exports了，看day1的04图
+// 写了{}说明创建了新对象，所以module.exports不再指向exports了，而是指向新对象了,看day1的04图
 module.exports = {
   name,
   age,
   sayHello
 }
-exports.name = "exports.name" //这样改，运行main后没效果了
+exports.name = "exports.name" //这样改，运行main后没效果了,因为require找的是module.exports,module.exports指向新对象了,而exports指向没有改变
 module.exports.name = "module.exports.name"
 

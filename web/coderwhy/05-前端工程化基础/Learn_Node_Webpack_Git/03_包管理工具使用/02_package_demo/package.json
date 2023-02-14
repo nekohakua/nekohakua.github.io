@@ -1,0 +1,22 @@
+{
+  "name": "02_package_demo",
+  "version": "1.0.6",
+  "description": "a demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/main.js",
+    "build": "webpack xxx.js"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "webpack": "^5.75.0"
+  }
+}

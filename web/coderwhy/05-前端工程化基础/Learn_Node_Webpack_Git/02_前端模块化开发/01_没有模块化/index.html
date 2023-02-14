@@ -8,6 +8,7 @@
 </head>
 <body>
   
+  //  通过script引入的aaa.js和bbb.js都是在全局作用域下，用var时同名的变量的值变成最后用var声明的,用let时第二个同名变量已经定义了报错，以前的解决是用立即执行函数
   <script src="./aaa.js"></script>
   <script src="./bbb.js"></script>
   <script src="./util.js"></script>

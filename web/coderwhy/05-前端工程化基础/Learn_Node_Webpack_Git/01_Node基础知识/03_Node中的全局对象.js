@@ -1,6 +1,6 @@
-// 只是浏览器的全局对象
+// window只是浏览器的全局对象
 // console.log(window)
-// 1.类似于window的全局对象
+// 1.类似于window的node的全局对象
 // console.log(global)
 
 
@@ -24,6 +24,7 @@
 
 
 // 5.定时器方法
+// node实现的定时器，不是浏览器实现的
 // setTimeout(() => {
 //   console.log("setTimeout")
 // }, 2000);
@@ -45,7 +46,7 @@
 // // 6.全局对象
 // 在浏览器里var a = 1会加到window全局变量，在node里var a = 1不会加到global全局变量里
 // console.log(global)
-// globalThis：统一浏览器和node的全局变量的写法，指向它们全局变量
+// globalThis：统一浏览器和node的全局变量的写法，分别指向它们全局变量window和global
 console.log(globalThis)
 console.log(global === globalThis)
 // 面试题：node的全局变量和浏览器的全局变量有什么区别

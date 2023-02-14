@@ -1,0 +1,1 @@
+(()=>{const o="Hello World";function n(o){console.log(o.length)}function l(o,n){return o+n}console.log(o),n(o),n("coderwhy"),l(20,30),l(111,222)})();
