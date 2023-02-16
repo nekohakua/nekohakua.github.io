@@ -1,0 +1,9 @@
+.content {
+    font-size: 20px;
+    color: red;
+
+    /* 用户不能选中 需要加浏览器前缀，通过postcss-loader适配前缀 */
+    user-select: none;
+    /* 最后两位时透明度,但是很多浏览器不支持，所以用postcss-preset-env适配 */
+    background-color: #66666666;
+}
