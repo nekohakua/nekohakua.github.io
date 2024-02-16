@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <ul>
+        <li v-for="(value, key, index) in info">{{value}} - {{key}} - {{index}}</li>
+    </ul>
+
+    <!-- 可迭代对象都可以遍历 -->
+    <ul>
+        <li v-for="item in message">{{item}}</li>
+    </ul>
+
+    <!-- 了解 -->
+    <ul>
+        <li v-for="item in 10">{{item}}</li>
+    </ul>
+        
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data() {
+        return {
+          message: "Hello Vue",
+          movies: [],
+          info: { name: "why", age: 18, height: 1.88 } 
+        }
+      },
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
+<!-- https://snippet-generator.app/在该网站中生成代码片段 -->

@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <h2>{{ fullname }}</h2>
+
+    <button @click="setFullname">设置fullname</button>
+  </div>
+  
+  <script src="../lib/vue.js"></script>
+  <script>
+    // 1.创建app
+    const app = Vue.createApp({
+      // data: option api
+      data() {
+        return {
+          firstname: "coder",
+          lastname: "why"
+        }
+      },
+    
+      computed: {
+        //   fullname() {
+        //   return this.firstname + " " + this.lastname
+        //   }
+        //   的语法糖
+
+        //   完整写法
+          fullname: {
+              get: function() {
+                  return this.firstname + " " + this.lastname
+              },
+              set: function(value) {
+                  const names = value.split(" ")
+                  console.log("name", names)
+                  this.firstname = names[0]
+                  this.lastname = names[1]
+              }
+
+          }
+      },
+      methods: {
+          setFullname() {
+              this.fullname = "kobe bryant"
+          }
+      }
+    })
+
+    // 2.挂载app
+    app.mount("#app")
+  </script>
+</body>
+</html>
+<!-- https://snippet-generator.app/在该网站中生成代码片段 -->
